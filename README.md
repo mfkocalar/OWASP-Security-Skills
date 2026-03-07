@@ -1,7 +1,5 @@
 # OWASP Top 10 Security Skill
 
-_A lightweight plug‑in for your AI assistant that turns it into a
-security-minded co‑developer._
 
 Drop this folder into your model’s skill directory, and from that point
 on, any web-related prompt—an API design, a React component, or a
