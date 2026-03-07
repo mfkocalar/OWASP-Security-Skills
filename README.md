@@ -30,7 +30,7 @@ Getting started is fast:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/OWASP-Top10-Skills.git
+   git clone https://github.com/mfksec/OWASP-Top10-Skills.git
    cd OWASP-Top10-Skills
    ```
 2. Link or copy it into your assistant’s skill folder:
