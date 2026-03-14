@@ -1,5 +1,5 @@
-// Vulnerable example for injection testing
-// For detailed guidance, see: owasp-top10-skills.md#1-injection
+// SQL Injection Example
+// For detailed guidance, see: owasp-comprehensive-security-skills.md#section-1-owasp-top-10-2025
 //
 // This example demonstrates SQL injection via unsafe string concatenation.
 // The 'id' parameter is directly concatenated into the SQL query without

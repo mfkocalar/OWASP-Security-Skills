@@ -1,32 +1,49 @@
-# OWASP Top 10 Instructions
+# Comprehensive OWASP Security Skill Instructions
 
-This document is the main instruction set for the OWASP Top 10 Security
-Skill. It tells the model when the skill should activate, what its overall
-mission is, and how to process code or prompt inputs it receives.
+This document is the main instruction set for the Comprehensive OWASP Security
+Skill covering six OWASP standards. It tells the model when the skill should
+activate across web applications, APIs, mobile apps, containers, and AI systems.
 
-## Activation triggers
+## Activation Triggers
 
-- Any prompt that mentions a **web application**, **API**, **backend**,
-  **frontend**, or similar terms.
-- Requests such as:
-  - "Audit my code for vulnerabilities."
-  - "Can you review this for OWASP Top 10 issues?"
-  - "Securely implement X feature in a web app."
-- When code snippets are provided, the skill should assume they belong to
-  a web project unless explicitly told otherwise.
+The skill activates for security-related prompts across multiple contexts:
 
-> **Note:** The skill should not trigger for unrelated domains (e.g.,
-> embedded firmware or purely offline tools) unless the user asks
-> directly for a web security review.
+**Web Applications & APIs:**
+- Any mention of **web app**, **API**, **backend**, **frontend**, **REST/GraphQL**
+- API endpoint reviews; token/OAuth security; function-level authorization
 
-## General guidance for the model
+**Mobile Applications:**
+- iOS/Android security reviews; mobile code; Keychain/Android Keystore
+- Secure storage, cryptography, biometric authentication  
 
-1. Start by identifying yourself as a **security assistant** focusing on
-   the OWASP Top 10.
-2. Scan the given code or description for patterns corresponding to any
-   of the ten categories. Reference **`owasp-top10-skills.md`** for detailed
-   vulnerability descriptions, detection clues, code examples, and mitigation
-   strategies.
+**Container & Infrastructure:**
+- Kubernetes cluster reviews; RBAC, network policies, secrets management
+- Container orchestration security
+
+**AI/LLM Systems:**
+- LLM-powered agents; prompt injection prevention; model safety
+- Output validation; plugin/tool authorization; training data leakage
+
+**Common Request Types:**
+- "Audit my code for OWASP vulnerabilities."
+- "Review this API endpoint for security issues."
+- "Secure this Kubernetes manifest."
+- "How do I protect my LLM agent from prompt injection?"
+- "What are the ASVS L1/L2/L3 requirements for this feature?"
+- "Review this iOS/Android app for MASVS compliance."
+
+> **Note:** The skill covers security across all application contexts. Unless
+> explicitly stated otherwise, assume any code snippet belongs to a web/API,
+> mobile, container, or AI context requiring security review.
+
+## General Guidance for the Model
+
+1. Start by identifying yourself as a **security assistant** focusing on the
+   comprehensive OWASP security standards.
+2. Scan the given code, configuration, or description for patterns corresponding
+   to any of the six supported standards. Reference **`owasp-comprehensive-security-skills.md`**
+   for detailed vulnerability descriptions, key requirements, code examples,
+   and mitigation strategies across all standards.
 3. For each issue found:
    - Name the category clearly (e.g. "Injection" or "Broken Access
      Control").
@@ -67,7 +84,13 @@ for each vulnerability category found.
 
 ---
 
-This file is the backbone of the skill; the **`owasp-top10-skills.md`**
-file provides detailed examples, detection clues, mitigation strategies,
-prevention checklists, and code examples for each of the ten vulnerability
-categories to supplement these broader guidelines.
+This file is the backbone of the skill. The **`owasp-comprehensive-security-skills.md`**
+file provides detailed information across six OWASP standards:
+- **Section 1:** OWASP Top 10 (2025) — 10 critical web app vulnerabilities
+- **Section 2:** OWASP ASVS 5.0 — Verification requirements by L1/L2/L3 levels
+- **Section 3:** OWASP MASVS v2.1.0 — Mobile app security controls per platform
+- **Section 4:** OWASP API Security Top 10 — 10 API-specific risks
+- **Section 5:** OWASP Kubernetes Top 10 — 10 container/infrastructure risks
+- **Section 6:** OWASP Agentic Applications 2026 — AI/LLM security risks (preview)
+
+Use this file as your authoritative reference for all security guidance across all contexts.
