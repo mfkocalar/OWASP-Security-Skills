@@ -47,7 +47,7 @@ function vulnerable_encrypt_data(sensitiveData) {
 // ^^ Token exposed in plaintext! Attacker can sniff network traffic
 
 // ===== VULNERABLE: Secrets in Code/Logs =====
-function vulnerable_api_call(api_key) {
+function vulnerable_api_call() {
     // VULNERABLE: API key in plaintext
     const api_key = "sk-abc123xyz789defgh1234567890"; // Hardcoded!
     
