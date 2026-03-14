@@ -37,9 +37,9 @@ install_skill() {
     # Create directory if it doesn't exist
     mkdir -p "$(dirname "$install_dir")"
     
-    # Verify current directory is OWASP-Top10-Skills repo
+    # Verify current directory is OWASP-Security-Skills repo
     if [ ! -f "owasp-comprehensive-security-skills.md" ]; then
-        echo -e "${RED}✗ Error: Please run this script from the OWASP-Top10-Skills directory${NC}"
+        echo -e "${RED}✗ Error: Please run this script from the OWASP-Security-Skills directory${NC}"
         return 1
     fi
     

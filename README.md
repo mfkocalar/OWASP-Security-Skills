@@ -24,7 +24,7 @@ Getting started is fast:
 1. Clone the repo:
    ```bash
    git clone https://github.com/mfkocalar/OWASP-Security-Skills.git
-   cd OWASP-Top10-Skills
+   cd OWASP-Security-Skills
    ```
 2. Link or copy it into your assistant's skill folder:
    - **Claude:** `~/.claude/skills/owasp-security`

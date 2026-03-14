@@ -340,7 +340,7 @@
       },
       {
         "method": "symlink",
-        "command": "ln -s /path/to/OWASP-Top10-Skills ~/.claude/skills/owasp-security",
+        "command": "ln -s /path/to/OWASP-Security-Skills ~/.claude/skills/owasp-security",
         "instructions": "Create symbolic link to repository"
       },
       {

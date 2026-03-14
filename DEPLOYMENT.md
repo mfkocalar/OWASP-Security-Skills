@@ -5,7 +5,7 @@
 ### Option 1: Interactive Installation (Recommended)
 
 ```bash
-cd OWASP-Top10-Skills
+cd OWASP-Security-Skills
 ./install.sh
 ```
 
@@ -21,21 +21,21 @@ This script will:
 For **Claude Desktop** (macOS/Linux):
 ```bash
 mkdir -p ~/.claude/skills
-ln -s /path/to/OWASP-Top10-Skills ~/.claude/skills/owasp-security
+ln -s /path/to/OWASP-Security-Skills ~/.claude/skills/owasp-security
 # Restart Claude Desktop
 ```
 
 For **GitHub Copilot:
 ```bash
 mkdir -p ~/.copilot/skills
-ln -s /path/to/OWASP-Top10-Skills ~/.copilot/skills/owasp-security
+ln -s /path/to/OWASP-Security-Skills ~/.copilot/skills/owasp-security
 # Restart your IDE
 ```
 
 For **Other Assistants**:
 ```bash
 # Copy directory to your assistant's skills folder
-cp -r OWASP-Top10-Skills ~/.agents/skills/owasp-security
+cp -r OWASP-Security-Skills ~/.agents/skills/owasp-security
 ```
 
 ---
@@ -138,7 +138,7 @@ To customize activation rules:
 **Problem:** Some example files are missing
 **Solution:**
 ```bash
-cd OWASP-Top10-Skills
+cd OWASP-Security-Skills
 ./install.sh  # Select "4" for test only
 ```
 
@@ -201,7 +201,7 @@ This will verify all files are present.
 The skill is actively maintained. To get latest updates:
 
 ```bash
-cd OWASP-Top10-Skills
+cd OWASP-Security-Skills
 git pull origin main
 # No reinstallation needed if symlinked
 ```
