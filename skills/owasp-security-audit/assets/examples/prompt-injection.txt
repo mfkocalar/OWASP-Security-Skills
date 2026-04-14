@@ -161,8 +161,9 @@ class ToolPermission(Enum):
     ADMIN = "admin"
 
 class AuthorizedToolExecutor:
-    def __init__(self, user_role: str):
+    def __init__(self, user_role: str, tools: Dict[str, Callable]):
         self.user_role = user_role
+        self.tools = tools
         self.tool_permissions = {
             "view_orders": ToolPermission.READ_ONLY,
             "view_audit_logs": ToolPermission.ADMIN,
@@ -194,14 +195,14 @@ class AuthorizedToolExecutor:
         self.audit_log(f"Tool '{tool_name}' called by {self.user_role}")
         
         # Execute the tool
-        tool = tools[tool_name]
+        tool = self.tools[tool_name]
         return tool(**kwargs)
     
     def audit_log(self, message: str):
         print(f"[AUDIT] {message}")
 
 # Usage
-executor = AuthorizedToolExecutor(user_role="customer")
+executor = AuthorizedToolExecutor(user_role="customer", tools=tools)
 
 # SECURE: Access denied with audit logging
 try:
