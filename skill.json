@@ -1,7 +1,7 @@
 {
   "name": "Comprehensive OWASP Security Skill",
-  "version": "1.0.0",
-  "description": "Six-standard security reference: OWASP Top 10 (2025), ASVS 5.0, MASVS v2.1.0, API Security Top 10, Kubernetes Top 10, and Agentic Applications 2026",
+  "version": "1.1.0",
+  "description": "Seven-standard security reference: OWASP Top 10 (2025), ASVS 5.0, MASVS v2.1.0, API Security Top 10, Kubernetes Top 10, Agentic Applications 2026, and Secure Coding Practices",
   "author": "Security Education Community",
   "license": "MIT",
   "repository": "https://github.com/mfkocalar/OWASP-Security-Skills",
@@ -14,6 +14,8 @@
     "api-security",
     "kubernetes",
     "llm-security",
+    "secure-coding-practices",
+    "secure-development",
     "vulnerability-assessment",
     "code-review"
   ],
@@ -53,6 +55,12 @@
       "version": "2026 (Preview)",
       "coverage": "AI/LLM system security (emerging standard)",
       "section": "Section 6"
+    },
+    {
+      "name": "OWASP Secure Coding Practices",
+      "version": "Latest",
+      "coverage": "14 core secure development domains with 100+ checklist items",
+      "section": "Secure Coding Practices Skill"
     }
   ],
   "activation": {
@@ -177,6 +185,37 @@
           "Is this MASVS compliant?",
           "List API Security Top 10 risks"
         ]
+      },
+      {
+        "context": "secure_coding_practices",
+        "keywords": [
+          "secure coding",
+          "SCP",
+          "input validation",
+          "output encoding",
+          "authentication",
+          "session management",
+          "access control",
+          "cryptography",
+          "error handling",
+          "logging",
+          "data protection",
+          "communication security",
+          "database security",
+          "file management",
+          "memory management",
+          "coding practices",
+          "secure development",
+          "best practices"
+        ],
+        "example_prompts": [
+          "Review this code for secure coding practices",
+          "Audit this for OWASP SCP compliance",
+          "Is this input validation secure?",
+          "Check this authentication implementation against best practices",
+          "Review for secure data protection patterns",
+          "Audit this code against the 14 secure coding domains"
+        ]
       }
     ],
     "auto_activate": true,
@@ -188,6 +227,20 @@
       "instructions": "owasp-css.instructions.md",
       "readme": "README.md",
       "contributing": "CONTRIBUTING.md"
+    },
+    "skills": {
+      "owasp_security_audit": "skills/owasp-security-audit/",
+      "secure_coding_practices": "skills/secure-coding-practices/"
+    },
+    "secure_coding_practices": {
+      "skill_file": "skills/secure-coding-practices/SKILL.md",
+      "guide": "skills/secure-coding-practices/secure-coding-practices.md",
+      "readme": "skills/secure-coding-practices/README.md",
+      "checklist": "skills/secure-coding-practices/references/scp-checklist.md",
+      "patterns": "skills/secure-coding-practices/references/secure-patterns.md",
+      "urls": "skills/secure-coding-practices/references/owasp-urls.json",
+      "vulnerable_python": "skills/secure-coding-practices/assets/examples/vulnerable-examples.py",
+      "vulnerable_javascript": "skills/secure-coding-practices/assets/examples/vulnerable-examples.js"
     },
     "examples": {
       "top10_a01": "examples/broken-access-control.py",
@@ -204,13 +257,18 @@
   "functionality": {
     "code_review": {
       "enabled": true,
-      "description": "Analyze code for OWASP vulnerabilities",
-      "standards": ["Top 10", "ASVS", "MASVS", "API Security"]
+      "description": "Analyze code for OWASP vulnerabilities and secure coding practices",
+      "standards": ["Top 10", "ASVS", "MASVS", "API Security", "Secure Coding Practices"]
     },
     "security_assessment": {
       "enabled": true,
       "description": "Comprehensive security assessment across standards",
-      "standards": ["All 6 standards"]
+      "standards": ["All 7 standards"]
+    },
+    "secure_coding_audit": {
+      "enabled": true,
+      "description": "Audit code against 14 secure coding domains with 100+ checklist items",
+      "standards": ["Secure Coding Practices"]
     },
     "configuration_audit": {
       "enabled": true,
@@ -220,18 +278,24 @@
     "compliance_check": {
       "enabled": true,
       "description": "Verify compliance with security standards",
-      "standards": ["ASVS", "MASVS", "Kubernetes Top 10"]
+      "standards": ["ASVS", "MASVS", "Kubernetes Top 10", "Secure Coding Practices"]
     },
     "vulnerability_guidance": {
       "enabled": true,
       "description": "Detailed mitigation strategies for identified risks",
-      "standards": ["All 6 standards"]
+      "standards": ["All 7 standards"]
+    },
+    "secure_patterns": {
+      "enabled": true,
+      "description": "Secure code patterns and best practices for common tasks",
+      "standards": ["Secure Coding Practices"],
+      "languages": ["Python", "JavaScript", "SQL", "General"]
     },
     "example_demonstration": {
       "enabled": true,
       "description": "Show vulnerable vs secure code patterns",
-      "standard_files": 9,
-      "total_lines": 1840
+      "standard_files": 11,
+      "total_lines": 2500
     }
   },
   "models": {

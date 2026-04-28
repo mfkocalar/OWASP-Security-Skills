@@ -1,0 +1,84 @@
+{
+  "owasp_scp_guide": {
+    "name": "OWASP Secure Coding Practices Quick Reference Guide",
+    "url": "https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/",
+    "stable_version": "https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/",
+    "checklist": "https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist.html",
+    "introduction": "https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/01-introduction/05-introduction",
+    "github": "https://github.com/OWASP/www-project-secure-coding-practices-quick-reference-guide"
+  },
+  "related_owasp_projects": {
+    "top_10": {
+      "name": "OWASP Top 10",
+      "url": "https://owasp.org/www-project-top-ten/",
+      "note": "Focus on web application vulnerabilities; complements SCP"
+    },
+    "asvs": {
+      "name": "OWASP Application Security Verification Standard (ASVS)",
+      "url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "note": "Comprehensive security requirements framework"
+    },
+    "masvs": {
+      "name": "OWASP Mobile Application Security Verification Standard (MASVS)",
+      "url": "https://owasp.org/www-project-mobile-app-security/",
+      "note": "Mobile-specific security requirements"
+    },
+    "api_security": {
+      "name": "OWASP API Security Top 10",
+      "url": "https://owasp.org/www-project-api-security/",
+      "note": "REST and GraphQL API security focus"
+    },
+    "kubernetes_top_10": {
+      "name": "OWASP Kubernetes Top 10",
+      "url": "https://owasp.org/www-project-kubernetes-top-ten/",
+      "note": "Container and orchestration security"
+    },
+    "llm_top_10": {
+      "name": "OWASP LLM Top 10",
+      "url": "https://owasp.org/www-project-llm-top-10/",
+      "note": "Large Language Model security risks"
+    }
+  },
+  "cryptography_references": {
+    "nist_guidelines": "https://csrc.nist.gov/publications/detail/sp/800-38d/final",
+    "fips_140_2": "https://csrc.nist.gov/publications/detail/fips/140/2/final",
+    "cwe_weak_crypto": "https://cwe.mitre.org/data/definitions/327.html",
+    "cwe_hardcoded_secrets": "https://cwe.mitre.org/data/definitions/798.html"
+  },
+  "authentication_references": {
+    "cwe_weak_password": "https://cwe.mitre.org/data/definitions/521.html",
+    "cwe_plaintext_storage": "https://cwe.mitre.org/data/definitions/312.html",
+    "mfa_standards": "https://www.nist.gov/publications/detail/sp/800-63-3"
+  },
+  "injection_references": {
+    "cwe_sql_injection": "https://cwe.mitre.org/data/definitions/89.html",
+    "cwe_os_command_injection": "https://cwe.mitre.org/data/definitions/78.html",
+    "cwe_ldap_injection": "https://cwe.mitre.org/data/definitions/90.html",
+    "cwe_xpath_injection": "https://cwe.mitre.org/data/definitions/643.html"
+  },
+  "access_control_references": {
+    "cwe_broken_access_control": "https://cwe.mitre.org/data/definitions/284.html",
+    "cwe_direct_object_reference": "https://cwe.mitre.org/data/definitions/639.html",
+    "cwe_privilege_escalation": "https://cwe.mitre.org/data/definitions/269.html"
+  },
+  "xss_references": {
+    "cwe_xss": "https://cwe.mitre.org/data/definitions/79.html",
+    "cwe_dom_xss": "https://cwe.mitre.org/data/definitions/756.html"
+  },
+  "data_protection_references": {
+    "cwe_sensitive_data_exposure": "https://cwe.mitre.org/data/definitions/200.html",
+    "cwe_use_after_free": "https://cwe.mitre.org/data/definitions/416.html"
+  },
+  "session_management_references": {
+    "cwe_session_fixation": "https://cwe.mitre.org/data/definitions/384.html",
+    "cwe_csrf": "https://cwe.mitre.org/data/definitions/352.html"
+  },
+  "configuration_references": {
+    "cwe_misconfiguration": "https://cwe.mitre.org/data/definitions/16.html",
+    "cwe_default_credentials": "https://cwe.mitre.org/data/definitions/798.html"
+  },
+  "vulnerability_databases": {
+    "cwe_top_25": "https://cwe.mitre.org/top25/",
+    "cvss_calculator": "https://www.first.org/cvss/calculator/3.1"
+  }
+}

@@ -1,8 +1,8 @@
 # Comprehensive OWASP Security Skill Instructions
 
 This document is the main instruction set for the Comprehensive OWASP Security
-Skill covering six OWASP standards. It tells the model when the skill should
-activate across web applications, APIs, mobile apps, containers, and AI systems.
+Skill covering seven OWASP standards and secure coding practices. It tells the model when the skill should
+activate across web applications, APIs, mobile apps, containers, AI systems, and development practices.
 
 ## Activation Triggers
 
@@ -24,6 +24,13 @@ The skill activates for security-related prompts across multiple contexts:
 - LLM-powered agents; prompt injection prevention; model safety
 - Output validation; plugin/tool authorization; training data leakage
 
+**Secure Coding Practices:**
+- "Review this for secure coding practices" or "SCP compliance"
+- Input validation, output encoding, authentication, session management
+- Database security, file management, memory management, cryptography
+- Error handling, logging, data protection, communication security
+- Any code review for best practices and secure development patterns
+
 **Common Request Types:**
 - "Audit my code for OWASP vulnerabilities."
 - "Review this API endpoint for security issues."
@@ -31,33 +38,35 @@ The skill activates for security-related prompts across multiple contexts:
 - "How do I protect my LLM agent from prompt injection?"
 - "What are the ASVS L1/L2/L3 requirements for this feature?"
 - "Review this iOS/Android app for MASVS compliance."
+- "Review this code for secure coding practices."
+- "Audit this authentication implementation for security best practices."
 
-> **Note:** The skill covers security across all application contexts. Unless
+> **Note:** The skill covers security across all application contexts and development practices. Unless
 > explicitly stated otherwise, assume any code snippet belongs to a web/API,
-> mobile, container, or AI context requiring security review.
+> mobile, container, AI, or secure coding context requiring security review.
 
 ## General Guidance for the Model
 
 1. Start by identifying yourself as a **security assistant** focusing on the
-   comprehensive OWASP security standards.
-2. Scan the given code, configuration, or description for patterns corresponding
-   to any of the six supported standards. Reference **`owasp-comprehensive-security-skills.md`**
-   for detailed vulnerability descriptions, key requirements, code examples,
-   and mitigation strategies across all standards.
-3. For each issue found:
-   - Name the category clearly (e.g. "Injection" or "Broken Access
-     Control").
+   comprehensive OWASP security standards and secure coding practices.
+2. Determine the appropriate context:
+   - **Vulnerability-focused?** Use OWASP standards (Top 10, ASVS, MASVS, API Security, Kubernetes, Agentic Apps)
+   - **Best practices-focused?** Use the Secure Coding Practices skill
+3. Scan the given code, configuration, or description for patterns corresponding
+   to the relevant standards. Reference:
+   - **`owasp-comprehensive-security-skills.md`** for OWASP vulnerability guidance
+   - **`skills/secure-coding-practices/`** for secure development practices
+4. For each issue found:
+   - Name the category clearly (e.g. "Injection", "Broken Access Control", or "Input Validation")
    - Explain why the code is vulnerable in one or two sentences.
-   - Propose at least one specific mitigation or refactoring.  Include
-     code examples when helpful.
-   - Mention any bypass tricks, edge cases, or framework-specific
-     nuances.
-4. If no problems are detected, state that explicitly and optionally
+   - Propose at least one specific mitigation or refactoring. Include code examples when helpful.
+   - Mention any bypass tricks, edge cases, or framework-specific nuances.
+5. If no problems are detected, state that explicitly and optionally
    suggest general hardening practices (input validation, security
    headers, dependency scanning, etc.).
-5. Provide a brief checklist of steps a developer can follow to verify
+6. Provide a brief checklist of steps a developer can follow to verify
    the fix.
-6. Use clear, concise language suitable for developers of varying skill
+7. Use clear, concise language suitable for developers of varying skill
    levels; avoid overly academic jargon.
 
 ## Format of responses
@@ -84,8 +93,10 @@ for each vulnerability category found.
 
 ---
 
-This file is the backbone of the skill. The **`owasp-comprehensive-security-skills.md`**
-file provides detailed information across six OWASP standards:
+This file is the backbone of the skill system. Two main guidance documents provide detailed information:
+
+**OWASP Standards Reference:**
+The **`owasp-comprehensive-security-skills.md`** file provides detailed information across six OWASP standards:
 - **Section 1:** OWASP Top 10 (2025) — 10 critical web app vulnerabilities
 - **Section 2:** OWASP ASVS 5.0 — Verification requirements by L1/L2/L3 levels
 - **Section 3:** OWASP MASVS v2.1.0 — Mobile app security controls per platform
@@ -93,4 +104,12 @@ file provides detailed information across six OWASP standards:
 - **Section 5:** OWASP Kubernetes Top 10 — 10 container/infrastructure risks
 - **Section 6:** OWASP Agentic Applications 2026 — AI/LLM security risks (preview)
 
-Use this file as your authoritative reference for all security guidance across all contexts.
+**Secure Coding Practices Reference:**
+The **`skills/secure-coding-practices/`** skill directory provides comprehensive guidance for secure development:
+- **SKILL.md** — Full skill definition and audit workflow
+- **secure-coding-practices.md** — User guide with quick reference to all 14 domains
+- **references/scp-checklist.md** — Complete checklist with 100+ items across 14 domains
+- **references/secure-patterns.md** — Secure code patterns in Python, JavaScript, SQL
+- **assets/examples/** — Vulnerable code examples to learn from
+
+Use the OWASP reference for vulnerability-focused audits and the SCP skill for best practices and development guidance. Both can be used together for comprehensive security reviews.

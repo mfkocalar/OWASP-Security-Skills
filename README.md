@@ -1,20 +1,20 @@
 # Comprehensive OWASP Security Skill
 
-A unified security reference skill covering six OWASP standards for developers building secure web applications, APIs, mobile apps, containers, and AI/LLM systems.
+A unified security reference skill covering seven OWASP standards and secure coding practices for developers building secure web applications, APIs, mobile apps, containers, AI/LLM systems, and secure code development.
 
-Drop this folder into your model's skill directory, and any security-related prompt—code reviews, architecture decisions, auth implementation, or deployment configuration—will trigger deep security analysis focused on the OWASP standards most relevant to your context.
+Drop this folder into your model's skill directory, and any security-related prompt—code reviews, architecture decisions, auth implementation, secure coding reviews, or deployment configuration—will trigger deep security analysis focused on the OWASP standards and best practices most relevant to your context.
 
 ---
 
 ## 🔍 What It Does
 
-This skill doesn't just flag problems; it teaches and guides across multiple security domains:
+This comprehensive skill system doesn't just flag problems; it teaches and guides across multiple security domains:
 
 - **Reads your code, configuration, or description** and identifies security risks across all supported contexts.
-- **References the appropriate OWASP standard** for your specific use case (web app, API, mobile, K8s, AI).
+- **References the appropriate OWASP standard or secure coding practice** for your specific use case (web app, API, mobile, K8s, AI, or development best practices).
 - **Recommends concrete remedies** with code examples, configuration patterns, and step-by-step fixes.
 - **Warns about clever bypasses** and edge cases attackers exploit.
-- **Adapts to your context** — automatically selects relevant guidance for web apps, APIs, containerized systems, mobile apps, or AI agents.
+- **Adapts to your context** — automatically selects relevant guidance for web apps, APIs, containerized systems, mobile apps, AI agents, or secure development practices.
 
 
 ## 📥 Installation
@@ -43,7 +43,7 @@ Getting started is fast:
 Now the skill is live for any security-related prompt.
 
 
-## 🎯 Coverage: Six OWASP Standards
+## 🎯 Coverage: Seven OWASP Standards
 
 ### **OWASP Top 10 (2025)** — Web Application Security
 Critical risks: Broken Access Control, Cryptographic Failures, Injection, Insecure Design, Security Misconfiguration, Vulnerable Components, Authentication Failures, Software Integrity, Logging Failures, SSRF.
@@ -62,6 +62,9 @@ Detailed requirements across L1 (Basic), L2 (Standard), L3 (Advanced) for: Authe
 
 ### **OWASP Agentic Applications 2026 (Preview)** — AI/LLM Security
 10 emerging risks: Prompt Injection, Insufficient Input Validation, Insecure Output Handling, Model Poisoning, Denial of Service, Unauthorized Tool Access, Training Data Leakage, Excessive Autonomy, Inadequate Logging, Supply Chain Risks.
+
+### **OWASP Secure Coding Practices Quick Reference Guide** — Secure Development Practices
+14 domains covering core secure coding principles: Input Validation, Output Encoding, Authentication, Session Management, Access Control, Cryptography, Error Handling & Logging, Data Protection, Communication Security, System Configuration, Database Security, File Management, Memory Management, and General Coding Practices.
 
 
 ## 🚀 Quick Start
@@ -134,6 +137,15 @@ List the top API Security risks for my endpoint
 Show me ASVS L1/L2/L3 requirements for authentication
 ```
 
+### Secure Coding Practices (SCP)
+```
+Review this code for secure coding practices
+Audit this for OWASP SCP compliance
+Is this input validation secure?
+Check this authentication implementation against best practices
+Review for secure data protection patterns
+```
+
 ## 🧪 Examples
 
 **9 intentionally vulnerable code samples** in `examples/` let you test the skill across all domains.  
@@ -154,6 +166,15 @@ Each example shows **VULNERABLE patterns** alongside **SECURE implementations** 
 - **[examples/k8s-rbac.yaml](examples/k8s-rbac.yaml)** — Overly permissive RBAC & unencrypted secrets (OWASP Kubernetes Top 10)
 - **[examples/prompt-injection.txt](examples/prompt-injection.txt)** — Direct/indirect LLM prompt injection patterns (OWASP Agentic Applications 2026)
 
+### Secure Coding Practices Examples:
+
+The new `secure-coding-practices` skill includes comprehensive examples and patterns:
+
+- **[skills/secure-coding-practices/references/scp-checklist.md](skills/secure-coding-practices/references/scp-checklist.md)** — Complete checklist for all 14 secure coding domains
+- **[skills/secure-coding-practices/references/secure-patterns.md](skills/secure-coding-practices/references/secure-patterns.md)** — Secure code patterns in Python, JavaScript, and SQL
+- **[skills/secure-coding-practices/assets/examples/vulnerable-examples.py](skills/secure-coding-practices/assets/examples/vulnerable-examples.py)** — Vulnerable Python patterns to avoid
+- **[skills/secure-coding-practices/assets/examples/vulnerable-examples.js](skills/secure-coding-practices/assets/examples/vulnerable-examples.js)** — Vulnerable JavaScript patterns to avoid
+
 ### How to Use Examples:
 
 Paste code into prompts to trigger skill analysis:
@@ -169,14 +190,21 @@ The skill identifies vulnerabilities, explains risks, and shows how to apply the
 
 ## 📖 Comprehensive Reference
 
-The core reference is **`owasp-comprehensive-security-skills.md`** — a unified guide combining all six OWASP standards with:
+The project includes multiple comprehensive references:
+
+**Main Reference:** **`owasp-comprehensive-security-skills.md`** — a unified guide combining all six OWASP standards with:
 - Key vulnerability descriptions
 - Detection clues
 - Mitigation strategies & code examples
 - Prevention checklists
 - Cross-standard references for unified security architecture
 
-Use this for deep dives into specific standards or cross-referencing security requirements across contexts.
+**Secure Coding Practices:** **`skills/secure-coding-practices/`** — dedicated skill for secure development practices with:
+- **scp-checklist.md** — 14 domains with 100+ specific checklist items
+- **secure-patterns.md** — secure implementation patterns by domain
+- **SKILL.md** — comprehensive audit workflow and detection signals
+
+Use the main reference for deep dives into specific OWASP standards or cross-referencing security requirements across contexts. Use the SCP skill for general secure coding best practices and development guidance.
 
 ---
 
@@ -197,4 +225,11 @@ Found an issue or have an improvement? Contributions welcome. See [CONTRIBUTING.
 
 ---
 
-**Status:** Actively maintained. Covers OWASP standards as of March 2026. Agentic Applications section based on preview materials; will be updated when fully released.
+## 🆕 What's New
+
+- **Secure Coding Practices Skill** — Added dedicated `secure-coding-practices` skill providing audits against the 14 core secure coding domains with 100+ checklist items, secure patterns, and vulnerable examples.
+- **Enhanced Structure** — Organized skills under dedicated directories with comprehensive reference materials, examples, and usage guides.
+
+---
+
+**Status:** Actively maintained. Covers OWASP standards as of April 2026. Includes both vulnerability-focused audits (OWASP standards) and development-focused guidance (Secure Coding Practices).
