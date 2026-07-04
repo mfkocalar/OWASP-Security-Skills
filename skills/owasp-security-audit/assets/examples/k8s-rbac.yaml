@@ -45,7 +45,7 @@ spec:
     image: myapp:latest  # VULNERABLE: No tag (always pulls latest)
     securityContext:
       privileged: true  # DANGEROUS: Full host access!
-      runAsUser: 0   # DANGEROUS: Runs as root (UID 0 = root)
+      runAsUser: 0      # DANGEROUS: Runs as root (UID 0)
     # MISSING: No resource limits - can exhaust node resources
     # MISSING: No readinessProbe/livenessProbe
     volumeMounts:

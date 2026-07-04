@@ -4,8 +4,8 @@
 
 set -euo pipefail  # Exit on error, undefined variable, or pipe failure
 
-# Cleanup on exit
-trap 'echo -e "\n${YELLOW}Installation interrupted or failed${NC}" >&2' EXIT
+# Warn only if the script exits with a non-zero status (error or interruption)
+trap 'code=$?; [ "$code" -ne 0 ] && echo -e "\n${YELLOW}Installation interrupted or failed${NC}" >&2' EXIT
 
 # Colors for output
 RED='\033[0;31m'

@@ -1,7 +1,7 @@
 {
   "name": "Comprehensive OWASP Security Skill",
   "version": "1.1.0",
-  "description": "Seven-standard security reference: OWASP Top 10 (2025), ASVS 5.0, MASVS v2.1.0, API Security Top 10, Kubernetes Top 10, Agentic Applications 2026, and Secure Coding Practices",
+  "description": "Security reference covering six OWASP standards (Top 10 2025, ASVS 5.0, MASVS v2.1.0, API Security Top 10, Kubernetes Top 10, Agentic Applications 2026) plus the OWASP Secure Coding Practices guide",
   "author": "Security Education Community",
   "license": "MIT",
   "repository": "https://github.com/mfkocalar/OWASP-Security-Skills",
@@ -400,7 +400,7 @@
     "prompt_injection": {
       "file": "examples/prompt-injection.txt",
       "lines": 280,
-      "language": "Python",
+      "language": "Text",
       "standard": "OWASP Agentic Applications 2026",
       "vulnerabilities": ["AG01", "AG03", "AG05", "AG06"],
       "demonstrates": ["prompt validation", "output filtering", "tool authorization"]
@@ -436,8 +436,15 @@
     }
   },
   "changelog": {
-    "1.0.0": {
+    "1.1.0": {
       "date": "2026-03-14",
+      "changes": [
+        "Added the Secure Coding Practices skill (14 domains, checklist, secure patterns)",
+        "Organized packaged skills under skills/ with references, scripts, and assets"
+      ]
+    },
+    "1.0.0": {
+      "date": "2026-03-01",
       "changes": [
         "Initial release",
         "6 OWASP standards integrated",
@@ -450,7 +457,7 @@
   },
   "roadmap": [
     {
-      "version": "1.1.0",
+      "version": "1.2.0",
       "features": [
         "Add examples for A04, A06, A08, A10",
         "Language-specific examples (Java, Go, Rust)",
@@ -459,7 +466,7 @@
       ]
     },
     {
-      "version": "1.2.0",
+      "version": "1.3.0",
       "features": [
         "Interactive security quiz mode",
         "Live code sandbox with vulnerability detection",

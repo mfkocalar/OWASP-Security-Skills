@@ -28,8 +28,10 @@ orders_db = {
 @app.route("/vulnerable/user/<int:user_id>", methods=["GET"])
 def vulnerable_get_user(user_id):
     """
-    VULNERABLE: No authorization check. Any authenticated user can view
-    any other user's profile, including email and other sensitive data.
+    VULNERABLE (A01): No authentication AND no authorization check. Any caller -
+    authenticated or not - can read any user's profile, including email and other
+    sensitive data. The secure version below adds @require_auth (authentication)
+    plus an ownership/role check (authorization) to fix both gaps.
     """
     if user_id not in users_db:
         return jsonify({"error": "User not found"}), 404
@@ -119,7 +121,11 @@ def secure_get_user(user_id):
     """
     current_user_id = session.get("user_id")
     current_user = users_db.get(current_user_id)
-    
+
+    # Validate the session's user still exists before checking roles
+    if current_user is None:
+        return jsonify({"error": "User not found"}), 404
+
     # Authorization logic:
     # 1. User can view their own profile
     # 2. Admin can view any profile
@@ -142,7 +148,11 @@ def secure_refund_order(order_id):
     """
     current_user_id = session.get("user_id")
     current_user = users_db.get(current_user_id)
-    
+
+    # Validate the session's user still exists before checking roles
+    if current_user is None:
+        return jsonify({"error": "User not found"}), 404
+
     if order_id not in orders_db:
         return jsonify({"error": "Order not found"}), 404
     

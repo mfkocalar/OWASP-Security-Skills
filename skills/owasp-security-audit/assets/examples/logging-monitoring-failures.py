@@ -128,10 +128,10 @@ class SecureLogger:
         if not self.logger.handlers:
             handler = logging.FileHandler('/var/log/security.log')
             
-            # Use JSON formatter for structured logging
-            formatter = logging.Formatter(
-                '%(message)s'
-            )
+            # SECURE: Emit the pure JSON payload only. The event dict already carries
+            # 'timestamp' and 'severity', so prefixing asctime/name/levelname would
+            # break the Logstash JSON filter (which anchors on /^{.*}$/).
+            formatter = logging.Formatter('%(message)s')
             handler.setFormatter(formatter)
             self.logger.addHandler(handler)
     
@@ -326,24 +326,19 @@ def secure_audit_log(event_type, severity='INFO'):
         def wrapper(*args, **kwargs):
             logger = SecureLogger()
             
-            # Extract relevant audit information
-            # Safely extract user_id from function arguments
+            # Safely extract user_id for caller attribution. Prefer an explicit
+            # user_id/username kwarg; otherwise fall back to the first non-self
+            # positional argument if it is a string; finally default to 'system'
+            # for unattributed background calls.
             user_id = kwargs.get('user_id') or kwargs.get('username')
-            
-            # If not in kwargs, try to extract from positional args
-            # (skip 'self' at index 0 for methods)
-            if not user_id and len(args) > 1:
-                # Try common parameter positions: username (index 1), user_id (index 1)
-                user_id = args[1] if isinstance(args[1], str) else None
-            
-            # Fall back to 'system' only if user cannot be determined
+            if not user_id and len(args) > 1 and isinstance(args[1], str):
+                user_id = args[1]
             user_id = user_id or 'system'
-            
             details = {
                 'function': func.__name__,
                 'timestamp': datetime.utcnow().isoformat()
             }
-            
+
             try:
                 result = func(*args, **kwargs)
                 logger.log_security_event(
