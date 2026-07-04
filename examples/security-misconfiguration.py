@@ -1,5 +1,5 @@
 # OWASP Top 10 - A05: Security Misconfiguration
-# For detailed guidance, see: owasp-comprehensive-security-skills.md#section-1-owasp-top-10-2025
+# For detailed guidance, see: owasp-comprehensive-security-skills.md#section-1-owasp-top-10-2021
 #
 # This example demonstrates security misconfiguration issues including:
 # - Debug mode enabled in production

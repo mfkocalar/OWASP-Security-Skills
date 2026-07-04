@@ -4,16 +4,16 @@ A developer-focused security reference covering six OWASP standards for securing
 
 ## Quick Navigation
 
-1. [OWASP Top 10 (2025)](#section-1-owasp-top-10-2025)
+1. [OWASP Top 10 (2021)](#section-1-owasp-top-10-2021)
 2. [OWASP ASVS 5.0](#section-2-owasp-asvs-50-application-security-verification-standard)
 3. [OWASP MASVS v2.1.0](#section-3-owasp-masvs-v210-mobile-security)
 4. [OWASP API Security Top 10](#section-4-owasp-api-security-top-10-2023)
-5. [OWASP Kubernetes Top 10](#section-5-owasp-kubernetes-top-10-2025-draft)
-6. [OWASP Agentic Applications 2026](#section-6-owasp-agentic-applications-2026-preview)
+5. [OWASP Kubernetes Top 10](#section-5-owasp-kubernetes-top-10-2022)
+6. [OWASP Agentic Applications 2026](#section-6-owasp-agentic-applications-2026)
 
 ---
 
-## Section 1: OWASP Top 10 (2025)
+## Section 1: OWASP Top 10 (2021)
 
 The OWASP Top 10 represents the most critical security risks in web applications.
 
@@ -456,7 +456,7 @@ app.delete('/api/users/:id', requireRole('admin'), (req, res) => {
 
 ---
 
-## Section 5: OWASP Kubernetes Top 10 (2025) — Container & Infrastructure Security
+## Section 5: OWASP Kubernetes Top 10 (2022) — Container & Infrastructure Security
 
 Kubernetes deployments introduce unique security vectors: RBAC misconfiguration, exposed etcd, insecure network policies.
 
@@ -679,9 +679,9 @@ spec:
 
 ---
 
-## Section 6: OWASP Agentic Applications 2026 (Preview)
+## Section 6: OWASP Agentic Applications 2026
 
-> **Status:** This is a new, evolving standard in preview. Content reflects current best practices and is subject to updates as AI security matures.
+> **Status:** Released by the OWASP GenAI Security Project in December 2025 as the 2026 edition. Note: the `AG01`–`AG10` codes below are this guide's own shorthand and are **not** official OWASP identifiers — the published taxonomy uses `LLM01`–`LLM10` (LLM Applications) and `ASI01`–`ASI10` (Agentic Applications). Cross-check against the official lists before citing.
 
 AI and LLM-powered agents introduce novel security risks: prompt injection, data leakage through model outputs, unauthorized tool access, and training data poisoning.
 

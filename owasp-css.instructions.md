@@ -97,12 +97,12 @@ This file is the backbone of the skill system. Two main guidance documents provi
 
 **OWASP Standards Reference:**
 The **`owasp-comprehensive-security-skills.md`** file provides detailed information across six OWASP standards:
-- **Section 1:** OWASP Top 10 (2025) — 10 critical web app vulnerabilities
+- **Section 1:** OWASP Top 10 (2021) — 10 critical web app vulnerabilities
 - **Section 2:** OWASP ASVS 5.0 — Verification requirements by L1/L2/L3 levels
 - **Section 3:** OWASP MASVS v2.1.0 — Mobile app security controls per platform
 - **Section 4:** OWASP API Security Top 10 — 10 API-specific risks
 - **Section 5:** OWASP Kubernetes Top 10 — 10 container/infrastructure risks
-- **Section 6:** OWASP Agentic Applications 2026 — AI/LLM security risks (preview)
+- **Section 6:** OWASP Agentic Applications 2026 — AI/LLM security risks (released Dec 2025)
 
 **Secure Coding Practices Reference:**
 The **`skills/secure-coding-practices/`** skill directory provides comprehensive guidance for secure development:

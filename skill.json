@@ -1,7 +1,7 @@
 {
   "name": "Comprehensive OWASP Security Skill",
   "version": "1.1.0",
-  "description": "Security reference covering six OWASP standards (Top 10 2025, ASVS 5.0, MASVS v2.1.0, API Security Top 10, Kubernetes Top 10, Agentic Applications 2026) plus the OWASP Secure Coding Practices guide",
+  "description": "Security reference covering six OWASP standards (Top 10 2021, ASVS 5.0, MASVS v2.1.0, API Security Top 10 2023, Kubernetes Top 10 2022, Agentic Applications 2026) plus the OWASP Secure Coding Practices guide",
   "author": "Security Education Community",
   "license": "MIT",
   "repository": "https://github.com/mfkocalar/OWASP-Security-Skills",
@@ -21,8 +21,8 @@
   ],
   "standards": [
     {
-      "name": "OWASP Top 10 (2025)",
-      "version": "2025",
+      "name": "OWASP Top 10 (2021)",
+      "version": "2021",
       "coverage": "10 critical web application vulnerabilities",
       "section": "Section 1"
     },
@@ -46,14 +46,14 @@
     },
     {
       "name": "OWASP Kubernetes Top 10",
-      "version": "2025",
+      "version": "2022",
       "coverage": "10 container/infrastructure security risks",
       "section": "Section 5"
     },
     {
       "name": "OWASP Agentic Applications",
-      "version": "2026 (Preview)",
-      "coverage": "AI/LLM system security (emerging standard)",
+      "version": "2026",
+      "coverage": "AI/LLM system security (released December 2025)",
       "section": "Section 6"
     },
     {

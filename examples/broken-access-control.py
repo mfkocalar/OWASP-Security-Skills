@@ -1,5 +1,5 @@
 # OWASP Top 10 - A01: Broken Access Control
-# For detailed guidance, see: owasp-comprehensive-security-skills.md#section-1-owasp-top-10-2025
+# For detailed guidance, see: owasp-comprehensive-security-skills.md#section-1-owasp-top-10-2021
 #
 # This example demonstrates broken access control vulnerabilities where users can
 # access resources they shouldn't have permission to view or modify.

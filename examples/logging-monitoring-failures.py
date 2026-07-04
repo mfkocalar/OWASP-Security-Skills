@@ -1,6 +1,6 @@
 """
 OWASP Top 10 - A09: Logging & Monitoring Failures
-For detailed guidance, see: owasp-comprehensive-security-skills.md#section-1-owasp-top-10-2025
+For detailed guidance, see: owasp-comprehensive-security-skills.md#section-1-owasp-top-10-2021
 
 This example demonstrates logging and monitoring failures including:
 - Missing security event logging

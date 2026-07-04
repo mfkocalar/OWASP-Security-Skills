@@ -24,12 +24,12 @@ covers six OWASP standards:
 
 | Standard | Scope |
 |----------|-------|
-| **OWASP Top 10 (2025)** | Web application risks — access control, crypto, injection, misconfiguration, SSRF, and more |
+| **OWASP Top 10 (2021)** | Web application risks — access control, crypto, injection, misconfiguration, SSRF, and more |
 | **OWASP ASVS 5.0** | Application security verification requirements (L1 / L2 / L3) |
 | **OWASP MASVS v2.1.0** | Mobile app security controls (iOS / Android) |
 | **OWASP API Security Top 10 (2023)** | API-specific risks — BOLA, broken auth, resource consumption, and more |
-| **OWASP Kubernetes Top 10** | Container and cluster risks — RBAC, secrets, workload config, network policy |
-| **OWASP Agentic Applications 2026** *(preview)* | AI/LLM risks — prompt injection, tool access, output handling |
+| **OWASP Kubernetes Top 10 (2022)** | Container and cluster risks — RBAC, secrets, workload config, network policy |
+| **OWASP Agentic Applications 2026** | AI/LLM risks — prompt injection, tool access, output handling |
 
 A companion skill covers the **OWASP Secure Coding Practices Quick Reference
 Guide** — 14 domains of general secure-development guidance (see
@@ -103,7 +103,7 @@ vulnerable pattern with a secure implementation and an explanation.
 | [cryptographic-failures.js](examples/cryptographic-failures.js) | Weak hashing, plaintext storage, missing TLS (A02) |
 | [injection.js](examples/injection.js) | SQL injection via string concatenation (A03) |
 | [security-misconfiguration.py](examples/security-misconfiguration.py) | Debug mode, default creds, missing headers (A05) |
-| [xss.html](examples/xss.html) | Reflected XSS via `innerHTML` (A07) |
+| [xss.html](examples/xss.html) | Reflected XSS via `innerHTML` (A03: Injection) |
 | [logging-monitoring-failures.py](examples/logging-monitoring-failures.py) | Missing logs, secrets in logs, no alerting (A09) |
 | [api-auth-bypass.js](examples/api-auth-bypass.js) | JWT and CORS flaws (API Security Top 10) |
 | [k8s-rbac.yaml](examples/k8s-rbac.yaml) | Overly permissive RBAC, unencrypted secrets (Kubernetes Top 10) |
