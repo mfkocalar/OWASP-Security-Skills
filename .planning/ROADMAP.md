@@ -29,7 +29,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. `.claude-plugin/marketplace.json` exists and lists the plugin, resolvable via a local/self-hosted source
   3. `skills/owasp-security-audit/` and `skills/secure-coding-practices/` sit at plugin root (never inside `.claude-plugin/`), and each skill's examples are canonical and self-contained per skill (no fragile cross-directory or symlink references)
   4. The target skill-directory convention (`SKILL.md` + `references/` + `scripts/` + `assets/`) is documented so later phases have a fixed structure to file content into
-**Plans**: TBD
+**Plans**: 3 plans
+- [ ] 01-01-PLAN.md — Plugin & marketplace manifests (plugin.json + marketplace.json)
+- [ ] 01-02-PLAN.md — Skill-directory convention doc (docs/SKILL-STRUCTURE.md) + PKG-03 structural lock
+- [ ] 01-03-PLAN.md — Break-surface patches (install.sh + README) & legacy retirement (skill.json + root examples/)
 
 ### Phase 2: OWASP Top 10 Version Refresh
 **Goal**: The Top 10 reference accurately reflects the 2025 Final edition, with every citation of it consistent across the repo.
@@ -81,7 +84,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Plugin/Marketplace Foundation | 0/TBD | Not started | - |
+| 1. Plugin/Marketplace Foundation | 0/3 | Not started | - |
 | 2. OWASP Top 10 Version Refresh | 0/TBD | Not started | - |
 | 3. Remaining Standards Verification & Refresh | 0/TBD | Not started | - |
 | 4. SKILL.md Conversion & Legacy Retirement | 0/TBD | Not started | - |
