@@ -632,7 +632,9 @@ existing canonical location:
 shapes) are `[CITED]` directly from official docs fetched this session — not training-data recall,**
 satisfying the project's #1 accuracy constraint for the highest-priority research item.
 
-## Open Questions
+## Open Questions (RESOLVED)
+
+> Both questions were substantively answered below and their recommendations are implemented in the Phase 1 plans (Q1 → plan 01-03 Task 3 tracks the deferral in STATE.md; Q2 → plan 01-01 Task 2 uses matching marketplace/plugin names). Retained for auditability.
 
 1. **Should DEPLOYMENT.md and TESTING.md be patched in this phase too?**
    - What we know: Both files reference `skill.json` extensively (DEPLOYMENT.md: 4 mentions;
