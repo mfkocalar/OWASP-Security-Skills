@@ -26,8 +26,8 @@ Requirements for this modernization milestone. Each maps to roadmap phases.
 
 ### Packaging — Plugin & Marketplace
 
-- [ ] **PKG-01**: `.claude-plugin/plugin.json` exists at repo root with required plugin identity fields
-- [ ] **PKG-02**: `.claude-plugin/marketplace.json` exists and lists the plugin(s) for distribution
+- [x] **PKG-01**: `.claude-plugin/plugin.json` exists at repo root with required plugin identity fields
+- [x] **PKG-02**: `.claude-plugin/marketplace.json` exists and lists the plugin(s) for distribution
 - [ ] **PKG-03**: `skills/` stays at plugin root (never inside `.claude-plugin/`); each skill's examples are canonical per-skill so they survive copy-on-install (no fragile cross-dir/symlink references)
 - [ ] **PKG-04**: Install is verified end-to-end on a clean environment (`claude plugin validate`, marketplace add, install, activation smoke test)
 - [ ] **PKG-05**: A single canonical version source drives all version strings (no drift across manifest, README, and skills)
@@ -78,8 +78,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PKG-01 | Phase 1 | Pending |
-| PKG-02 | Phase 1 | Pending |
+| PKG-01 | Phase 1 | Complete |
+| PKG-02 | Phase 1 | Complete |
 | PKG-03 | Phase 1 | Pending |
 | CONT-01 | Phase 2 | Pending |
 | CONT-02 | Phase 2 | Pending |
@@ -103,6 +103,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ADPT-04 | Phase 5 | Pending |
 
 **Coverage:**
+
 - v1 requirements: 23 total
 - Mapped to phases: 23 (Phase 1: 3, Phase 2: 2, Phase 3: 3, Phase 4: 6, Phase 5: 9)
 - Unmapped: 0 ✓
