@@ -124,3 +124,34 @@ skills/secure-coding-practices/
 ```
 
 Note that `secure-coding-practices` has no `scripts/` directory — confirming that subdirectory is optional, not required, per rule 3 above.
+
+## Verified Compliance (PKG-03)
+
+The structural invariants below were checked against the live repository and are recorded here so a future phase can re-run the exact same checks without re-deriving them.
+
+**Check 1 — No symlinks anywhere in the skills tree:**
+
+```bash
+find skills -type l
+```
+
+Expected/actual result: empty output (no lines). Confirmed — zero symlinks exist under `skills/`. All example files are plain-file copies.
+
+**Check 2 — Both skill directories sit at plugin root, not inside `.claude-plugin/`:**
+
+```bash
+find skills -maxdepth 1 -type d
+```
+
+Expected/actual result: `skills`, `skills/owasp-security-audit`, `skills/secure-coding-practices`. Confirmed — both directories are direct children of `skills/`, itself a plugin-root sibling of `.claude-plugin/`. Neither skill directory is nested inside `.claude-plugin/`.
+
+**Check 3 — Each skill owns its own `assets/examples/` with the expected file counts:**
+
+```bash
+ls skills/owasp-security-audit/assets/examples | wc -l
+ls skills/secure-coding-practices/assets/examples | wc -l
+```
+
+Expected/actual result: `9` and `2` respectively. Confirmed — `owasp-security-audit/assets/examples/` contains its 9 canonical files (api-auth-bypass.js, broken-access-control.py, cryptographic-failures.js, injection.js, k8s-rbac.yaml, logging-monitoring-failures.py, prompt-injection.txt, security-misconfiguration.py, xss.html); `secure-coding-practices/assets/examples/` contains its 2 canonical files (vulnerable-examples.js, vulnerable-examples.py). No file appears in both directories — each skill's example set is fully self-contained.
+
+**Conclusion:** PKG-03's structural invariants — skills at plugin root, no symlinks, per-skill canonical examples — are satisfied by the current repository state as of this check.
