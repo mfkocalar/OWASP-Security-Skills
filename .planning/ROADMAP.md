@@ -13,7 +13,7 @@ This milestone takes a mature, working repo of two OWASP-grounded skills — `ow
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Plugin/Marketplace Foundation** - Stand up `.claude-plugin/plugin.json` + `marketplace.json` and lock the target skill-directory convention that every later phase builds on
+- [x] **Phase 1: Plugin/Marketplace Foundation** - Stand up `.claude-plugin/plugin.json` + `marketplace.json` and lock the target skill-directory convention that every later phase builds on (completed 2026-07-20)
 - [ ] **Phase 2: OWASP Top 10 Version Refresh** - Rewrite the Top 10 reference from 2021 to 2025 (Final) with correct category IDs, consistent everywhere it's cited
 - [ ] **Phase 3: Remaining Standards Verification & Refresh** - Citation-harden ASVS, MASVS, API Security, LLM, Agentic Apps, and Kubernetes; re-derive secure-coding-practices against the living OWASP Developer Guide
 - [ ] **Phase 4: SKILL.md Conversion & Legacy Retirement** - Convert both skills to spec-compliant frontmatter, retire legacy routing/manifest files, remap examples to new category IDs
@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `skills/owasp-security-audit/` and `skills/secure-coding-practices/` sit at plugin root (never inside `.claude-plugin/`), and each skill's examples are canonical and self-contained per skill (no fragile cross-directory or symlink references)
   4. The target skill-directory convention (`SKILL.md` + `references/` + `scripts/` + `assets/`) is documented so later phases have a fixed structure to file content into
 
-**Plans**: 2/3 plans executed
+**Plans**: 3/3 plans complete
 **Wave 1**
 
 - [x] 01-01-PLAN.md — Plugin & marketplace manifests (plugin.json + marketplace.json)
@@ -41,7 +41,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
-- [ ] 01-03-PLAN.md — Break-surface patches (install.sh + README) & legacy retirement (skill.json + root examples/)
+- [x] 01-03-PLAN.md — Break-surface patches (install.sh + README) & legacy retirement (skill.json + root examples/)
 
 ### Phase 2: OWASP Top 10 Version Refresh
 
@@ -105,7 +105,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Plugin/Marketplace Foundation | 2/3 | In Progress|  |
+| 1. Plugin/Marketplace Foundation | 3/3 | Complete   | 2026-07-20 |
 | 2. OWASP Top 10 Version Refresh | 0/TBD | Not started | - |
 | 3. Remaining Standards Verification & Refresh | 0/TBD | Not started | - |
 | 4. SKILL.md Conversion & Legacy Retirement | 0/TBD | Not started | - |

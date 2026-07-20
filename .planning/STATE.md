@@ -4,17 +4,17 @@ milestone: v1.0
 milestone_name: milestone
 current_phase: 01
 current_phase_name: plugin-marketplace-foundation
-status: executing
-stopped_at: Completed 01-02-PLAN.md
-last_updated: "2026-07-20T10:57:36.714Z"
+status: verifying
+stopped_at: Completed 01-03-PLAN.md
+last_updated: "2026-07-20T11:03:20.114Z"
 last_activity: 2026-07-20
 last_activity_desc: Phase 01 execution started
 progress:
   total_phases: 5
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
-  percent: 0
+  completed_plans: 3
+  percent: 20
 ---
 
 # Project State
@@ -30,7 +30,7 @@ See: .planning/PROJECT.md (updated 2026-07-19)
 
 Phase: 01 (plugin-marketplace-foundation) — EXECUTING
 Plan: 3 of 3
-Status: Ready to execute
+Status: Phase complete — ready for verification
 Last activity: 2026-07-20 — Phase 01 execution started
 
 Progress: [░░░░░░░░░░] 0%
@@ -57,6 +57,7 @@ Progress: [░░░░░░░░░░] 0%
 *Updated after each plan completion*
 | Phase 01-plugin-marketplace-foundation P01 | 5min | 2 tasks | 2 files |
 | Phase 01 P02 | 4min | 2 tasks | 1 files |
+| Phase 01 P03 | 1min | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,7 @@ Recent decisions affecting current work:
 - [Phase 01]: marketplace.json lists a single plugin entry via a github source object (mfkocalar/OWASP-Security-Skills, D-04), no version key on the entry so plugin.json 0.1.0 stays authoritative
 - [Phase 01]: docs/SKILL-STRUCTURE.md locked as the single canonical skill-directory convention doc (not folded into CONTRIBUTING or a repo-root CONVENTIONS.md) — Avoids collision with .planning/codebase/CONVENTIONS.md; gives phases 2-4 a fixed reference to file content into (D-07)
 - [Phase 01]: PKG-03 structural compliance (no symlinks, skills at plugin root, per-skill canonical assets/examples/) verified and recorded inline in docs/SKILL-STRUCTURE.md — Makes the invariant auditable in later phases without re-deriving the checks
+- [Phase 01]: install.sh and README.md patched to per-skill canonical paths before root skill.json/examples/ removal (D-05, D-08); DEPLOYMENT.md/TESTING.md staleness tracked for Phase 5
 
 ### Pending Todos
 
@@ -99,6 +101,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-20T10:57:36.708Z
-Stopped at: Completed 01-02-PLAN.md
+Last session: 2026-07-20T11:03:20.109Z
+Stopped at: Completed 01-03-PLAN.md
 Resume file: None
