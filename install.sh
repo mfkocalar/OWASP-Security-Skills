@@ -136,8 +136,7 @@ fi
 
 case $choice in
     1)
-        install_skill "Claude Desktop" ".claude/skills/owasp-security"
-        if [ $? -eq 0 ]; then
+        if install_skill "Claude Desktop" ".claude/skills/owasp-security"; then
             verify_installation "${SKILLS_BASE}/.claude/skills/owasp-security"
             echo -e "\n${GREEN}Next steps:${NC}"
             echo "  1. Restart Claude Desktop"
@@ -146,8 +145,7 @@ case $choice in
         fi
         ;;
     2)
-        install_skill "GitHub Copilot" ".copilot/skills/owasp-security"
-        if [ $? -eq 0 ]; then
+        if install_skill "GitHub Copilot" ".copilot/skills/owasp-security"; then
             verify_installation "${SKILLS_BASE}/.copilot/skills/owasp-security"
             echo -e "\n${GREEN}Next steps:${NC}"
             echo "  1. Restart GitHub Copilot"
@@ -165,8 +163,7 @@ case $choice in
             exit 1
         fi
         
-        install_skill "Custom" "$custom_path"
-        if [ $? -eq 0 ]; then
+        if install_skill "Custom" "$custom_path"; then
             verify_installation "${SKILLS_BASE}/${custom_path}"
         fi
         ;;
