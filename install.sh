@@ -162,7 +162,13 @@ case $choice in
             echo -e "${RED}Error: Custom path cannot be empty${NC}"
             exit 1
         fi
-        
+
+        # Reject traversal segments so the install target cannot escape SKILLS_BASE
+        if [[ "$custom_path" == *".."* ]]; then
+            echo -e "${RED}Error: Custom path must not contain '..'${NC}"
+            exit 1
+        fi
+
         if install_skill "Custom" "$custom_path"; then
             verify_installation "${SKILLS_BASE}/${custom_path}"
         fi
