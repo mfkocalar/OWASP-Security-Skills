@@ -5,15 +5,15 @@ milestone_name: milestone
 current_phase: 01
 current_phase_name: plugin-marketplace-foundation
 status: executing
-stopped_at: Phase 1 context gathered
-last_updated: "2026-07-20T10:52:25.185Z"
+stopped_at: Completed 01-02-PLAN.md
+last_updated: "2026-07-20T10:57:36.714Z"
 last_activity: 2026-07-20
 last_activity_desc: Phase 01 execution started
 progress:
   total_phases: 5
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -29,7 +29,7 @@ See: .planning/PROJECT.md (updated 2026-07-19)
 ## Current Position
 
 Phase: 01 (plugin-marketplace-foundation) — EXECUTING
-Plan: 2 of 3
+Plan: 3 of 3
 Status: Ready to execute
 Last activity: 2026-07-20 — Phase 01 execution started
 
@@ -56,6 +56,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-plugin-marketplace-foundation P01 | 5min | 2 tasks | 2 files |
+| Phase 01 P02 | 4min | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -70,6 +71,8 @@ Recent decisions affecting current work:
 - secure-coding-practices re-derived against the living OWASP Developer Guide / Cheat Sheet Series / Proactive Controls, since the SCP Quick Reference Guide is officially archived
 - [Phase 01]: plugin.json version reset to 0.1.0 (D-02), intentionally breaking legacy 1.1.0 lineage; contains only official closed-schema fields, no legacy skill.json custom fields ported (D-03)
 - [Phase 01]: marketplace.json lists a single plugin entry via a github source object (mfkocalar/OWASP-Security-Skills, D-04), no version key on the entry so plugin.json 0.1.0 stays authoritative
+- [Phase 01]: docs/SKILL-STRUCTURE.md locked as the single canonical skill-directory convention doc (not folded into CONTRIBUTING or a repo-root CONVENTIONS.md) — Avoids collision with .planning/codebase/CONVENTIONS.md; gives phases 2-4 a fixed reference to file content into (D-07)
+- [Phase 01]: PKG-03 structural compliance (no symlinks, skills at plugin root, per-skill canonical assets/examples/) verified and recorded inline in docs/SKILL-STRUCTURE.md — Makes the invariant auditable in later phases without re-deriving the checks
 
 ### Pending Todos
 
@@ -95,6 +98,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-20T10:50:21.765Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-plugin-marketplace-foundation/01-CONTEXT.md
+Last session: 2026-07-20T10:57:36.708Z
+Stopped at: Completed 01-02-PLAN.md
+Resume file: None

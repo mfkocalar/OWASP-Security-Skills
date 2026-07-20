@@ -33,11 +33,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `skills/owasp-security-audit/` and `skills/secure-coding-practices/` sit at plugin root (never inside `.claude-plugin/`), and each skill's examples are canonical and self-contained per skill (no fragile cross-directory or symlink references)
   4. The target skill-directory convention (`SKILL.md` + `references/` + `scripts/` + `assets/`) is documented so later phases have a fixed structure to file content into
 
-**Plans**: 1/3 plans executed
+**Plans**: 2/3 plans executed
 **Wave 1**
 
 - [x] 01-01-PLAN.md — Plugin & marketplace manifests (plugin.json + marketplace.json)
-- [ ] 01-02-PLAN.md — Skill-directory convention doc (docs/SKILL-STRUCTURE.md) + PKG-03 structural lock
+- [x] 01-02-PLAN.md — Skill-directory convention doc (docs/SKILL-STRUCTURE.md) + PKG-03 structural lock
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
@@ -105,7 +105,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Plugin/Marketplace Foundation | 1/3 | In Progress|  |
+| 1. Plugin/Marketplace Foundation | 2/3 | In Progress|  |
 | 2. OWASP Top 10 Version Refresh | 0/TBD | Not started | - |
 | 3. Remaining Standards Verification & Refresh | 0/TBD | Not started | - |
 | 4. SKILL.md Conversion & Legacy Retirement | 0/TBD | Not started | - |
