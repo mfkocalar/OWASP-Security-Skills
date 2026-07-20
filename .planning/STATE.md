@@ -83,6 +83,7 @@ None yet.
 - Phase 3 research gap: Agentic Applications Top 10 (2026) exact ASI01–ASI10 category names were only paraphrased in research; must be pulled from the primary OWASP PDF before finalizing that reference file.
 - Phase 3 will need an explicit, documented SCP scoping call (frozen historical checklist vs. re-sourced from Developer Guide) before content work begins — flagged in research, not yet decided.
 - Phase 5 should re-check current Claude Code version status for documented packaging regressions (symlink-to-cache, Windows path collapse, marketplace "0 skills" bug) before assuming they still apply.
+- [Phase 01]: DEPLOYMENT.md and TESTING.md still reference the now-removed root `skill.json` and root `examples/` (DEPLOYMENT.md: 4 mentions; TESTING.md: 7+ mentions including a "Test 7.2: skill.json Completeness" section) — documentation-only staleness, deferred to Phase 5 doc-polish per 01-RESEARCH.md Open Question #1.
 
 ## Deferred Items
 
