@@ -84,7 +84,6 @@ verify_installation() {
         "owasp-comprehensive-security-skills.md"
         "owasp-css.instructions.md"
         "README.md"
-        "skill.json"
     )
     
     local all_present=true
@@ -98,11 +97,11 @@ verify_installation() {
     done
     
     # Check examples directory
-    local example_count=$(find "${install_dir}/examples" -type f | wc -l)
+    local example_count=$(find "${install_dir}/skills/owasp-security-audit/assets/examples" -type f | wc -l)
     if [ "$example_count" -ge 9 ]; then
-        echo -e "  ${GREEN}✓${NC} examples/ ($example_count files)"
+        echo -e "  ${GREEN}✓${NC} skills/owasp-security-audit/assets/examples/ ($example_count files)"
     else
-        echo -e "  ${RED}✗${NC} examples/ (expected 9, found $example_count)"
+        echo -e "  ${RED}✗${NC} skills/owasp-security-audit/assets/examples/ (expected 9, found $example_count)"
         all_present=false
     fi
     
@@ -143,7 +142,7 @@ case $choice in
             echo -e "\n${GREEN}Next steps:${NC}"
             echo "  1. Restart Claude Desktop"
             echo "  2. Ask: 'Review this code for OWASP vulnerabilities'"
-            echo "  3. Paste any example from examples/ folder"
+            echo "  3. Paste any example from skills/owasp-security-audit/assets/examples/ folder"
         fi
         ;;
     2)
