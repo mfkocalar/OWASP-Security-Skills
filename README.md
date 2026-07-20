@@ -84,30 +84,34 @@ More examples:
 ```
 owasp-comprehensive-security-skills.md   Unified reference for the six OWASP standards
 owasp-css.instructions.md                Activation triggers and model guidance
-skill.json                               Skill manifest and metadata
 install.sh                               Interactive installer
-examples/                                9 vulnerable/secure code samples
 skills/
   owasp-security-audit/                  Structured audit skill (references, scripts, assets)
+    assets/examples/                     9 vulnerable/secure code samples
   secure-coding-practices/               Secure Coding Practices skill (checklist, patterns)
+    assets/examples/                     2 vulnerable/secure code samples
 ```
 
 ## Examples
 
-The [`examples/`](examples/) directory contains **9 code samples**, each pairing a
-vulnerable pattern with a secure implementation and an explanation.
+Examples live per-skill under each skill's `assets/examples/` directory: **9 samples**
+in [`skills/owasp-security-audit/assets/examples/`](skills/owasp-security-audit/assets/examples/)
+covering the OWASP Top 10 and related standards, plus **2 samples** in
+[`skills/secure-coding-practices/assets/examples/`](skills/secure-coding-practices/assets/examples/)
+for secure coding practices. Each pairs a vulnerable pattern with a secure implementation
+and an explanation.
 
 | File | Focus |
 |------|-------|
-| [broken-access-control.py](examples/broken-access-control.py) | Missing authorization / IDOR (A01) |
-| [cryptographic-failures.js](examples/cryptographic-failures.js) | Weak hashing, plaintext storage, missing TLS (A02) |
-| [injection.js](examples/injection.js) | SQL injection via string concatenation (A03) |
-| [security-misconfiguration.py](examples/security-misconfiguration.py) | Debug mode, default creds, missing headers (A05) |
-| [xss.html](examples/xss.html) | Reflected XSS via `innerHTML` (A03: Injection) |
-| [logging-monitoring-failures.py](examples/logging-monitoring-failures.py) | Missing logs, secrets in logs, no alerting (A09) |
-| [api-auth-bypass.js](examples/api-auth-bypass.js) | JWT and CORS flaws (API Security Top 10) |
-| [k8s-rbac.yaml](examples/k8s-rbac.yaml) | Overly permissive RBAC, unencrypted secrets (Kubernetes Top 10) |
-| [prompt-injection.txt](examples/prompt-injection.txt) | Direct/indirect LLM prompt injection (Agentic Applications 2026) |
+| [broken-access-control.py](skills/owasp-security-audit/assets/examples/broken-access-control.py) | Missing authorization / IDOR (A01) |
+| [cryptographic-failures.js](skills/owasp-security-audit/assets/examples/cryptographic-failures.js) | Weak hashing, plaintext storage, missing TLS (A02) |
+| [injection.js](skills/owasp-security-audit/assets/examples/injection.js) | SQL injection via string concatenation (A03) |
+| [security-misconfiguration.py](skills/owasp-security-audit/assets/examples/security-misconfiguration.py) | Debug mode, default creds, missing headers (A05) |
+| [xss.html](skills/owasp-security-audit/assets/examples/xss.html) | Reflected XSS via `innerHTML` (A03: Injection) |
+| [logging-monitoring-failures.py](skills/owasp-security-audit/assets/examples/logging-monitoring-failures.py) | Missing logs, secrets in logs, no alerting (A09) |
+| [api-auth-bypass.js](skills/owasp-security-audit/assets/examples/api-auth-bypass.js) | JWT and CORS flaws (API Security Top 10) |
+| [k8s-rbac.yaml](skills/owasp-security-audit/assets/examples/k8s-rbac.yaml) | Overly permissive RBAC, unencrypted secrets (Kubernetes Top 10) |
+| [prompt-injection.txt](skills/owasp-security-audit/assets/examples/prompt-injection.txt) | Direct/indirect LLM prompt injection (Agentic Applications 2026) |
 
 Paste any sample into a prompt to see the skill in action:
 
