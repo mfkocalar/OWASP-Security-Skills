@@ -22,6 +22,7 @@ A security engineer or developer can install the collection into Claude Code and
 - ✓ `quick_scan.py` regex-based lead scanner — existing
 - ✓ Paired vulnerable/secure code examples (Python, JavaScript, YAML, HTML) — existing
 - ✓ Symlink-based installer (`install.sh`) for Claude / Copilot / custom targets — existing
+- ✓ Repo packaged as a Claude Code plugin with `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json`, skills at plugin root, skill-directory convention documented (`docs/SKILL-STRUCTURE.md`) — Validated in Phase 1: Plugin/Marketplace Foundation (PKG-01, PKG-02, PKG-03)
 
 ### Active
 
@@ -32,7 +33,6 @@ A security engineer or developer can install the collection into Claude Code and
 - [ ] `secure-coding-practices` re-derived against the living OWASP Developer Guide / Cheat Sheet Series / Proactive Controls (the SCP Quick Reference Guide is archived by OWASP)
 - [ ] Both skills restructured into the official Anthropic Agent Skills format (`SKILL.md` frontmatter: folder-matching `name` ≤64 chars, `description` ≤1024 chars; progressive-disclosure `references/`/`scripts/`/`assets/`)
 - [ ] Legacy Copilot-style `owasp-css.instructions.md`, custom `skill.json`, and the ~900-line `owasp-comprehensive-security-skills.md` retired/replaced under the spec; routing preserved via per-skill descriptions
-- [ ] Repo packaged as a Claude Code plugin with `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json` (skills stay at plugin root)
 - [ ] Public-release polish: LICENSE (currently missing), strong README, clear docs, working examples, low-friction/cross-platform install, and discoverability aimed at broad adoption
 - [ ] Version accuracy verified — no OWASP edition, control ID, or standard change relies on unverified training-data recall
 
@@ -90,4 +90,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-07-19 after initialization*
+*Last updated: 2026-07-20 after Phase 1 (Plugin/Marketplace Foundation) completion*
