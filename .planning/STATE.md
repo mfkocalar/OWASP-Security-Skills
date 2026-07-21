@@ -2,18 +2,18 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 2
-current_phase_name: OWASP Top 10 Version Refresh
+current_phase: 02
+current_phase_name: owasp-top-10-version-refresh
 status: executing
-stopped_at: Phase 2 context gathered
-last_updated: "2026-07-21T11:13:21.989Z"
-last_activity: 2026-07-20
-last_activity_desc: Phase 01 complete, transitioned to Phase 2
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-07-21T12:36:35.006Z"
+last_activity: 2026-07-21
+last_activity_desc: Phase 02 execution started
 progress:
   total_phases: 5
   completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
+  total_plans: 5
+  completed_plans: 4
   percent: 20
 ---
 
@@ -24,14 +24,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-07-19)
 
 **Core value:** A security engineer or developer can install the collection into Claude Code and get accurate, current, OWASP-grounded security review — reference content matching the latest published OWASP editions, packaging matching the official skill spec.
-**Current focus:** Phase 01 — plugin-marketplace-foundation
+**Current focus:** Phase 02 — owasp-top-10-version-refresh
 
 ## Current Position
 
-Phase: 2 — OWASP Top 10 Version Refresh
-Plan: Not started
+Phase: 02 (owasp-top-10-version-refresh) — EXECUTING
+Plan: 2 of 2
 Status: Ready to execute
-Last activity: 2026-07-20 — Phase 01 complete, transitioned to Phase 2
+Last activity: 2026-07-21 — Phase 02 execution started
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -58,6 +58,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-plugin-marketplace-foundation P01 | 5min | 2 tasks | 2 files |
 | Phase 01 P02 | 4min | 2 tasks | 1 files |
 | Phase 01 P03 | 1min | 3 tasks | 3 files |
+| Phase 02 P01 | 1min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,9 @@ Recent decisions affecting current work:
 - [Phase 01]: docs/SKILL-STRUCTURE.md locked as the single canonical skill-directory convention doc (not folded into CONTRIBUTING or a repo-root CONVENTIONS.md) — Avoids collision with .planning/codebase/CONVENTIONS.md; gives phases 2-4 a fixed reference to file content into (D-07)
 - [Phase 01]: PKG-03 structural compliance (no symlinks, skills at plugin root, per-skill canonical assets/examples/) verified and recorded inline in docs/SKILL-STRUCTURE.md — Makes the invariant auditable in later phases without re-deriving the checks
 - [Phase 01]: install.sh and README.md patched to per-skill canonical paths before root skill.json/examples/ removal (D-05, D-08); DEPLOYMENT.md/TESTING.md staleness tracked for Phase 5
+- [Phase 02]: top10.md rewritten topic-first against OWASP's official 2025 mapping (no numeric find-and-replace); 6 of 10 categories changed number and/or topic — Prevents mis-attributing 2021 content to the wrong 2025 category ID
+- [Phase 02]: SSRF folded into A01 as a labeled CWE-918 sub-section; A03 Software Supply Chain Failures and A10 Mishandling of Exceptional Conditions written fresh from verified OWASP source text — SSRF technical content unchanged, only home category moved; A03/A10 have no 2021 equivalent content to adapt
+- [Phase 02]: edition recorded as 2025 (Final) with source URL https://owasp.org/Top10/2025/ and retrieval date 2026-07-21 in both top10.md and owasp-urls.json — Satisfies D-04/D-05 sourcing gate; avoids presenting a draft as final
 
 ### Pending Todos
 
@@ -101,6 +105,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-21T09:24:55.464Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-owasp-top-10-version-refresh/02-CONTEXT.md
+Last session: 2026-07-21T12:34:30.992Z
+Stopped at: Completed 02-01-PLAN.md
+Resume file: None

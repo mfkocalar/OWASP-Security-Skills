@@ -54,11 +54,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Every place a Top 10 category ID or name appears (skill body, references, examples, README, manifest) uses the 2025 label — no 2021-era IDs (A04, A06, A08, A10 old-style) remain anywhere
   3. The edition is recorded as Final (not RC) with an official OWASP source URL and retrieval date attached
 
-**Plans**: 2 plans
+**Plans**: 1/2 plans executed
 
 **Wave 1**
 
-- [ ] 02-01-PLAN.md — Rewrite top10.md to the 2025 Final edition (topic-mapped) + record the Final edition/source URL/retrieval date in owasp-urls.json
+- [x] 02-01-PLAN.md — Rewrite top10.md to the 2025 Final edition (topic-mapped) + record the Final edition/source URL/retrieval date in owasp-urls.json
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
@@ -114,7 +114,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Plugin/Marketplace Foundation | 3/3 | Complete    | 2026-07-20 |
-| 2. OWASP Top 10 Version Refresh | 0/2 | Not started | - |
+| 2. OWASP Top 10 Version Refresh | 1/2 | In Progress|  |
 | 3. Remaining Standards Verification & Refresh | 0/TBD | Not started | - |
 | 4. SKILL.md Conversion & Legacy Retirement | 0/TBD | Not started | - |
 | 5. Packaging Validation & Credibility Polish | 0/TBD | Not started | - |
