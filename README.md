@@ -24,7 +24,7 @@ covers six OWASP standards:
 
 | Standard | Scope |
 |----------|-------|
-| **OWASP Top 10 (2021)** | Web application risks — access control, crypto, injection, misconfiguration, SSRF, and more |
+| **OWASP Top 10 (2025)** | Web application risks — access control incl. SSRF, misconfiguration, supply chain, cryptographic failures, injection, insecure design, exceptional conditions, and more |
 | **OWASP ASVS 5.0** | Application security verification requirements (L1 / L2 / L3) |
 | **OWASP MASVS v2.1.0** | Mobile app security controls (iOS / Android) |
 | **OWASP API Security Top 10 (2023)** | API-specific risks — BOLA, broken auth, resource consumption, and more |
@@ -104,10 +104,10 @@ and an explanation.
 | File | Focus |
 |------|-------|
 | [broken-access-control.py](skills/owasp-security-audit/assets/examples/broken-access-control.py) | Missing authorization / IDOR (A01) |
-| [cryptographic-failures.js](skills/owasp-security-audit/assets/examples/cryptographic-failures.js) | Weak hashing, plaintext storage, missing TLS (A02) |
-| [injection.js](skills/owasp-security-audit/assets/examples/injection.js) | SQL injection via string concatenation (A03) |
-| [security-misconfiguration.py](skills/owasp-security-audit/assets/examples/security-misconfiguration.py) | Debug mode, default creds, missing headers (A05) |
-| [xss.html](skills/owasp-security-audit/assets/examples/xss.html) | Reflected XSS via `innerHTML` (A03: Injection) |
+| [cryptographic-failures.js](skills/owasp-security-audit/assets/examples/cryptographic-failures.js) | Weak hashing, plaintext storage, missing TLS (A04) |
+| [injection.js](skills/owasp-security-audit/assets/examples/injection.js) | SQL injection via string concatenation (A05) |
+| [security-misconfiguration.py](skills/owasp-security-audit/assets/examples/security-misconfiguration.py) | Debug mode, default creds, missing headers (A02) |
+| [xss.html](skills/owasp-security-audit/assets/examples/xss.html) | Reflected XSS via `innerHTML` (A05: Injection) |
 | [logging-monitoring-failures.py](skills/owasp-security-audit/assets/examples/logging-monitoring-failures.py) | Missing logs, secrets in logs, no alerting (A09) |
 | [api-auth-bypass.js](skills/owasp-security-audit/assets/examples/api-auth-bypass.js) | JWT and CORS flaws (API Security Top 10) |
 | [k8s-rbac.yaml](skills/owasp-security-audit/assets/examples/k8s-rbac.yaml) | Overly permissive RBAC, unencrypted secrets (Kubernetes Top 10) |

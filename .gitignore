@@ -22,6 +22,8 @@ build/
 *.cache
 .env
 .env.local
+__pycache__/
+*.pyc
 
 # IDE and editor files
 .eslintignore
