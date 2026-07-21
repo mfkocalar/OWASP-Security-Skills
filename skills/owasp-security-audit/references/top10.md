@@ -18,10 +18,11 @@ suffix in headers); the edition itself is recorded here and in
 
 ## What changed: 2021 to 2025
 
-Six of the eight categories that carried over both moved rank *and* several
-were renamed — this is not a simple renumbering. Every section below is
-built from its **topic**, never from a numeric find-and-replace against the
-2021 file.
+Nine of the ten 2025 categories carried over from 2021 — only A10
+(Mishandling of Exceptional Conditions) is net-new. Of those nine, five
+moved rank (A02–A06) and four were renamed (A03, A07–A09) — this is not a
+simple renumbering. Every section below is built from its **topic**, never
+from a numeric find-and-replace against the 2021 file.
 
 | 2025 ID | 2025 Name | 2021 origin | Change |
 |---|---|---|---|
