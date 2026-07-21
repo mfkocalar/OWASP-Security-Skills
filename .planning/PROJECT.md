@@ -23,12 +23,12 @@ A security engineer or developer can install the collection into Claude Code and
 - ✓ Paired vulnerable/secure code examples (Python, JavaScript, YAML, HTML) — existing
 - ✓ Symlink-based installer (`install.sh`) for Claude / Copilot / custom targets — existing
 - ✓ Repo packaged as a Claude Code plugin with `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json`, skills at plugin root, skill-directory convention documented (`docs/SKILL-STRUCTURE.md`) — Validated in Phase 1: Plugin/Marketplace Foundation (PKG-01, PKG-02, PKG-03)
+- ✓ OWASP Top 10 reference refreshed 2021 → 2025 (Final) using OWASP's official topic-based ID mapping — new A03 Software Supply Chain Failures, new A10 Mishandling of Exceptional Conditions, SSRF folded into A01 (CWE-918), A02 reordered — and made consistent across every cited file in the loaded skill path — Validated in Phase 2: OWASP Top 10 Version Refresh (CONT-01, CONT-02)
 
 ### Active
 
 <!-- This milestone. All are hypotheses until shipped and validated. -->
 
-- [ ] OWASP Top 10 refreshed 2021 → 2025 (Final), using OWASP's official ID mapping — new A03 Supply Chain, new A10 Exceptional Conditions, SSRF folded into A01, A02 reordered
 - [ ] Remaining standards citation-hardened to their (already-correct) editions: ASVS 5.0.0, MASVS 2.1.0, API Security Top 10 (2023), LLM Top 10 (2025), Agentic Apps (2026); Kubernetes cites 2022 (2025 still draft)
 - [ ] `secure-coding-practices` re-derived against the living OWASP Developer Guide / Cheat Sheet Series / Proactive Controls (the SCP Quick Reference Guide is archived by OWASP)
 - [ ] Both skills restructured into the official Anthropic Agent Skills format (`SKILL.md` frontmatter: folder-matching `name` ≤64 chars, `description` ≤1024 chars; progressive-disclosure `references/`/`scripts/`/`assets/`)
@@ -90,4 +90,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-07-20 after Phase 1 (Plugin/Marketplace Foundation) completion*
+*Last updated: 2026-07-21 after Phase 2 (OWASP Top 10 Version Refresh) completion*
