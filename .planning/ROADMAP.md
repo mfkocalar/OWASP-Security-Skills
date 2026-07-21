@@ -14,7 +14,7 @@ This milestone takes a mature, working repo of two OWASP-grounded skills — `ow
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Plugin/Marketplace Foundation** - Stand up `.claude-plugin/plugin.json` + `marketplace.json` and lock the target skill-directory convention that every later phase builds on (completed 2026-07-20)
-- [ ] **Phase 2: OWASP Top 10 Version Refresh** - Rewrite the Top 10 reference from 2021 to 2025 (Final) with correct category IDs, consistent everywhere it's cited
+- [x] **Phase 2: OWASP Top 10 Version Refresh** - Rewrite the Top 10 reference from 2021 to 2025 (Final) with correct category IDs, consistent everywhere it's cited (completed 2026-07-21)
 - [ ] **Phase 3: Remaining Standards Verification & Refresh** - Citation-harden ASVS, MASVS, API Security, LLM, Agentic Apps, and Kubernetes; re-derive secure-coding-practices against the living OWASP Developer Guide
 - [ ] **Phase 4: SKILL.md Conversion & Legacy Retirement** - Convert both skills to spec-compliant frontmatter, retire legacy routing/manifest files, remap examples to new category IDs
 - [ ] **Phase 5: Packaging Validation & Credibility Polish** - Verify clean-environment install end-to-end and ship the public-release trust signals (LICENSE, coverage matrix, README, CONTRIBUTING, discoverability)
@@ -54,7 +54,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Every place a Top 10 category ID or name appears (skill body, references, examples, README, manifest) uses the 2025 label — no 2021-era IDs (A04, A06, A08, A10 old-style) remain anywhere
   3. The edition is recorded as Final (not RC) with an official OWASP source URL and retrieval date attached
 
-**Plans**: 1/2 plans executed
+**Plans**: 2/2 plans complete
 
 **Wave 1**
 
@@ -62,7 +62,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
-- [ ] 02-02-PLAN.md — Consistency sweep of Top 10 IDs/names/edition labels/citation URLs across the loaded path (SKILL.md mirror pair, vulnerable-patterns.md, quick_scan.py, README.md)
+- [x] 02-02-PLAN.md — Consistency sweep of Top 10 IDs/names/edition labels/citation URLs across the loaded path (SKILL.md mirror pair, vulnerable-patterns.md, quick_scan.py, README.md)
 
 ### Phase 3: Remaining Standards Verification & Refresh
 
@@ -114,7 +114,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Plugin/Marketplace Foundation | 3/3 | Complete    | 2026-07-20 |
-| 2. OWASP Top 10 Version Refresh | 1/2 | In Progress|  |
+| 2. OWASP Top 10 Version Refresh | 2/2 | Complete   | 2026-07-21 |
 | 3. Remaining Standards Verification & Refresh | 0/TBD | Not started | - |
 | 4. SKILL.md Conversion & Legacy Retirement | 0/TBD | Not started | - |
 | 5. Packaging Validation & Credibility Polish | 0/TBD | Not started | - |
