@@ -15,10 +15,10 @@ reference.
 | Language   | Category                   | Full example file                          |
 | ---------- | -------------------------- | ------------------------------------------ |
 | Python     | A01 Broken Access Control  | `assets/examples/broken-access-control.py` |
-| JavaScript | A02 Cryptographic Failures | `assets/examples/cryptographic-failures.js` |
-| JavaScript | A03 Injection (SQL)        | `assets/examples/injection.js`              |
-| Python     | A05 Security Misconfig     | `assets/examples/security-misconfiguration.py` |
-| HTML/JS    | A03 XSS                    | `assets/examples/xss.html`                  |
+| JavaScript | A04 Cryptographic Failures | `assets/examples/cryptographic-failures.js` |
+| JavaScript | A05 Injection (SQL)        | `assets/examples/injection.js`              |
+| Python     | A02 Security Misconfig     | `assets/examples/security-misconfiguration.py` |
+| HTML/JS    | A05 XSS                    | `assets/examples/xss.html`                  |
 | Python     | A09 Logging Failures       | `assets/examples/logging-monitoring-failures.py` |
 | JavaScript | API1/API2/API5 auth bypass | `assets/examples/api-auth-bypass.js`        |
 | YAML       | K01/K03/K08 K8s            | `assets/examples/k8s-rbac.yaml`             |
@@ -80,7 +80,7 @@ app.delete('/api/users/:id', auth, requireRole('admin'), handler);
 
 ---
 
-## A02 — Cryptographic Failures
+## A04 — Cryptographic Failures
 
 ### Python — password hashing
 
@@ -125,7 +125,7 @@ except KeyError:
 
 ---
 
-## A03 — Injection
+## A05 — Injection
 
 ### Python — parameterized SQL
 
@@ -161,7 +161,7 @@ p.textContent = `Hello, ${user.name}`;
 el.replaceChildren(p);
 ```
 
-### Python — JSON instead of pickle (A08 overlap)
+### Python — JSON instead of pickle (A08 overlap, Software or Data Integrity Failures)
 
 ```python
 # VULNERABLE
@@ -175,7 +175,7 @@ obj = json.loads(request.data)  # then validate with pydantic/schema
 
 ---
 
-## A05 — Security Misconfiguration
+## A02 — Security Misconfiguration
 
 ### Python / Flask — headers & debug
 
@@ -244,7 +244,7 @@ def login(): ...
 
 ---
 
-## A09 — Logging & Monitoring
+## A09 — Logging & Alerting
 
 ### Python — structured + redacted
 
@@ -264,7 +264,7 @@ emit("auth.login.failure", email=email, reason="bad_password",
 
 ---
 
-## A10 / API7 — SSRF
+## A01 (SSRF, CWE-918) / API7 — SSRF
 
 ```python
 # VULNERABLE
