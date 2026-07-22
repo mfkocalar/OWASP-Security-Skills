@@ -5,10 +5,10 @@ milestone_name: milestone
 current_phase: 03
 current_phase_name: Remaining Standards Verification & Refresh
 status: verifying
-stopped_at: Phase 03 verification — gaps found (CONT-03 / ASVS edition mismatch)
+stopped_at: Phase 03 gap 03-04 planned & verified; ready to execute --gaps-only
 last_updated: "2026-07-22T10:19:03.766Z"
 last_activity: 2026-07-22
-last_activity_desc: Phase 03 executed (3/3 plans); verification found 1 gap (CONT-03/ASVS)
+last_activity_desc: Planned + verified gap-closure plan 03-04 (CONT-03/ASVS)
 progress:
   total_phases: 5
   completed_phases: 2
@@ -29,9 +29,9 @@ See: .planning/PROJECT.md (updated 2026-07-19)
 ## Current Position
 
 Phase: 03 (Remaining Standards Verification & Refresh) — EXECUTING
-Plan: 3 of 3
-Status: Verification found gaps — CONT-03 (ASVS 5.0.0 banner over 4.0.3 body) needs gap closure
-Last activity: 2026-07-22 — Phase 03 verified: gaps found (CONT-03/ASVS)
+Plan: gap 03-04 ready (base 03-01/02/03 complete)
+Status: Gap plan 03-04 planned & verified — run /gsd-execute-phase 03 --gaps-only
+Last activity: 2026-07-22 — Planned + verified gap-closure plan 03-04 (CONT-03/ASVS)
 
 Progress: [░░░░░░░░░░] 0%
 
