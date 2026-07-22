@@ -75,11 +75,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. The Kubernetes reference cites the 2022 stable edition as primary, with the 2025 draft explicitly footnoted as in-progress and not presented as final
   3. `secure-coding-practices` content is re-derived against the living OWASP Developer Guide / Cheat Sheet Series / Proactive Controls, with the archived SCP Quick Reference Guide noted as historical origin, not cited as a current source
 
-**Plans**: 3 plans
+**Plans**: 1/3 plans executed
 
 **Wave 1** *(all three plans are independent — no file overlap, fully parallel)*
 
-- [ ] 03-01-PLAN.md — Edition-verification notes for ASVS 5.0.0, MASVS 2.1.0, API Security 2023, LLM 2025 + Agentic 2026 (CONT-03)
+- [x] 03-01-PLAN.md — Edition-verification notes for ASVS 5.0.0, MASVS 2.1.0, API Security 2023, LLM 2025 + Agentic 2026 (CONT-03)
 - [ ] 03-02-PLAN.md — Kubernetes 2022-primary/2025-footnote tighten + owasp-urls.json citation-hardening (CONT-03, CONT-04)
 - [ ] 03-03-PLAN.md — secure-coding-practices living-source crosswalk + archived-QRG re-anchor (CONT-05)
 
@@ -121,6 +121,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Plugin/Marketplace Foundation | 3/3 | Complete    | 2026-07-20 |
 | 2. OWASP Top 10 Version Refresh | 2/2 | Complete    | 2026-07-21 |
-| 3. Remaining Standards Verification & Refresh | 0/3 | Planned | - |
+| 3. Remaining Standards Verification & Refresh | 1/3 | In Progress|  |
 | 4. SKILL.md Conversion & Legacy Retirement | 0/TBD | Not started | - |
 | 5. Packaging Validation & Credibility Polish | 0/TBD | Not started | - |

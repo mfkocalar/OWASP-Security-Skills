@@ -2,18 +2,18 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 3
+current_phase: 03
 current_phase_name: Remaining Standards Verification & Refresh
 status: executing
-stopped_at: Phase 3 context gathered
-last_updated: "2026-07-22T09:58:38.890Z"
-last_activity: 2026-07-21
-last_activity_desc: Phase 02 complete, transitioned to Phase 3
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-07-22T10:09:03.295Z"
+last_activity: 2026-07-22
+last_activity_desc: Completed 03-01-PLAN.md
 progress:
   total_phases: 5
   completed_phases: 2
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 8
+  completed_plans: 6
   percent: 40
 ---
 
@@ -24,14 +24,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-07-19)
 
 **Core value:** A security engineer or developer can install the collection into Claude Code and get accurate, current, OWASP-grounded security review — reference content matching the latest published OWASP editions, packaging matching the official skill spec.
-**Current focus:** Phase 02 — owasp-top-10-version-refresh
+**Current focus:** Phase 03 — Remaining Standards Verification & Refresh
 
 ## Current Position
 
-Phase: 3 — Remaining Standards Verification & Refresh
-Plan: Not started
-Status: Ready to execute
-Last activity: 2026-07-21 — Phase 02 complete, transitioned to Phase 3
+Phase: 03 (Remaining Standards Verification & Refresh) — EXECUTING
+Plan: 2 of 3
+Status: Executing Phase 03
+Last activity: 2026-07-22 — Completed 03-01-PLAN.md
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -61,6 +61,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01 P03 | 1min | 3 tasks | 3 files |
 | Phase 02 P01 | 1min | 2 tasks | 2 files |
 | Phase 02 P02 | 14min | 3 tasks | 6 files |
+| Phase 03 P01 | 6min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -83,6 +84,8 @@ Recent decisions affecting current work:
 - [Phase 02]: edition recorded as 2025 (Final) with source URL https://owasp.org/Top10/2025/ and retrieval date 2026-07-21 in both top10.md and owasp-urls.json — Satisfies D-04/D-05 sourcing gate; avoids presenting a draft as final
 - [Phase 02]: Renumbered vulnerable-patterns.md and quick_scan.py Top 10 labels by topic (not literal number substitution) to avoid mislabeling categories that swap numbers across the 2021->2025 edition change — Old-A05 Misconfig moves to new-A02 while old-A03 Injection moves to new-A05; converting the non-colliding mapping first avoided double-converting an already-renumbered label
 - [Phase 02]: Added __pycache__/ and *.pyc to .gitignore after the plan's own py_compile verification step left an untracked build artifact — Rule 3 blocking/untracked-file cleanup per task_commit_protocol; prevents recurring untracked pollution on every future verification run
+- [Phase 03]: Mirrored Phase 2's top10.md edition-note convention verbatim for ASVS/MASVS/API/LLM/Agentic edition notes (per D-03)
+- [Phase 03]: Agentic Apps 2026 note quotes the primary 2025-12-09 OWASP announcement verbatim and confirms Final status, resolving the STATE.md ASI-name paraphrase gap (per D-04)
 
 ### Pending Todos
 
@@ -90,7 +93,7 @@ None yet.
 
 ### Blockers/Concerns
 
-- Phase 3 research gap: Agentic Applications Top 10 (2026) exact ASI01–ASI10 category names were only paraphrased in research; must be pulled from the primary OWASP PDF before finalizing that reference file.
+- RESOLVED [03-01]: Agentic Applications Top 10 (2026) ASI01–ASI10 category names confirmed verbatim against the primary 2025-12-09 OWASP announcement (zero discrepancy); llm-agentic.md provenance note upgraded accordingly.
 - Phase 3 will need an explicit, documented SCP scoping call (frozen historical checklist vs. re-sourced from Developer Guide) before content work begins — flagged in research, not yet decided.
 - Phase 5 should re-check current Claude Code version status for documented packaging regressions (symlink-to-cache, Windows path collapse, marketplace "0 skills" bug) before assuming they still apply.
 - [Phase 01]: DEPLOYMENT.md and TESTING.md still reference the now-removed root `skill.json` and root `examples/` (DEPLOYMENT.md: 4 mentions; TESTING.md: 7+ mentions including a "Test 7.2: skill.json Completeness" section) — documentation-only staleness, deferred to Phase 5 doc-polish per 01-RESEARCH.md Open Question #1.
@@ -109,6 +112,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-21T14:45:01.980Z
-Stopped at: Phase 3 context gathered
+Last session: 2026-07-22T10:09:03.290Z
+Stopped at: Completed 03-01-PLAN.md
 Resume file: .planning/phases/03-remaining-standards-verification-refresh/03-CONTEXT.md

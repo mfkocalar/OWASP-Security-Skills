@@ -11,7 +11,7 @@ Requirements for this modernization milestone. Each maps to roadmap phases.
 
 - [x] **CONT-01**: `owasp-security-audit` Top 10 reference is updated 2021 → 2025 (Final) using OWASP's official category mapping (new A03 Supply Chain Failures, new A10 Exceptional Conditions, SSRF folded into A01, reordered A02)
 - [x] **CONT-02**: Top 10 category IDs, names, and cross-references are consistent everywhere they appear (skill body, references, examples, README, manifest)
-- [ ] **CONT-03**: ASVS 5.0.0, MASVS 2.1.0, API Security Top 10 (2023), LLM Top 10 (2025), and Agentic Apps (2026) references are citation-hardened with verified edition, official source URL, and retrieval date
+- [x] **CONT-03**: ASVS 5.0.0, MASVS 2.1.0, API Security Top 10 (2023), LLM Top 10 (2025), and Agentic Apps (2026) references are citation-hardened with verified edition, official source URL, and retrieval date
 - [ ] **CONT-04**: Kubernetes reference cites the 2022 stable edition; the 2025 draft is footnoted as in-progress (not presented as final)
 - [ ] **CONT-05**: `secure-coding-practices` is re-derived against the living OWASP Developer Guide / Cheat Sheet Series / Proactive Controls (the archived SCP Quick Reference Guide origin is noted)
 - [ ] **CONT-06**: Paired vulnerable/secure examples are re-validated against the updated standard requirement text (especially Top 10 2025) and mapped to the correct new category IDs
@@ -83,7 +83,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PKG-03 | Phase 1 | Complete |
 | CONT-01 | Phase 2 | Complete |
 | CONT-02 | Phase 2 | Complete |
-| CONT-03 | Phase 3 | Pending |
+| CONT-03 | Phase 3 | Complete |
 | CONT-04 | Phase 3 | Pending |
 | CONT-05 | Phase 3 | Pending |
 | FMT-01 | Phase 4 | Pending |
