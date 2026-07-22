@@ -12,11 +12,25 @@ this writing:**
    - Index: <https://genai.owasp.org/llm-top-10/>
    - PDF: <https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf>
 
+   **Edition verification:** LLM Top 10 2025 confirmed current — live index
+   lists exactly `LLM01:2025`–`LLM10:2025`, matching this file. No 2026
+   LLM-specific edition found (2026 work is the separate Agentic project).
+   Source: <https://genai.owasp.org/llm-top-10/>. Retrieved 2026-07-22.
+
 2. **OWASP Top 10 for Agentic Applications (2026 edition)** — agentic
    risks on top of LLM risks; released 2025-12-09 by the Agentic
    Security Initiative under the OWASP GenAI Security Project.
    - Announcement: <https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/>
    - Resource page: <https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/>
+
+   **Edition verification:** Agentic Apps Top 10 2026 confirmed **Final**,
+   not RC/draft — the official 2025-12-09 announcement states verbatim:
+   "Today, with immense pride, we release the OWASP Top 10 for Agentic AI
+   Applications." `ASI01`–`ASI10` names below match the primary source
+   exactly (verified against goteleport.com-style third-party paraphrases
+   and rejected those variants — see Pitfall 3 in RESEARCH.md).
+   Source: <https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/>.
+   Retrieved 2026-07-22.
 
 > Earlier drafts of this project called the Agentic list "Preview" and
 > used invented codes like `AG01–AG10`. Those codes are **not** part
