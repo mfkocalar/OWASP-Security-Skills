@@ -1,8 +1,35 @@
 # OWASP Secure Coding Practices — Comprehensive Checklist
 
-> **Reference:** https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist.html
+> **Historical origin:** https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist.html — see the Living-Source Crosswalk below for current, actively-maintained sources.
 
 This is the complete OWASP Secure Coding Practices checklist organized by domain. Use this for audits, compliance reviews, and to validate code against each requirement.
+
+## Living-Source Crosswalk
+
+> The OWASP Secure Coding Practices Quick Reference Guide (QRG) linked above
+> is the **archived historical origin** of this checklist — OWASP's own
+> project page states the QRG project "has now been archived... migrated to
+> various sections within the OWASP Developer Guide." The checklist items
+> below remain valid guidance; the table maps each domain to its current
+> **living** source for anyone who wants deeper/updated reading.
+> Retrieved 2026-07-22.
+
+| # | SCP Domain | Living-source anchor | URL | Confidence |
+|---|---|---|---|---|
+| 1 | Input Validation | Input Validation Cheat Sheet + Proactive Control C3 | https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html | VERIFIED |
+| 2 | Output Encoding | XSS Prevention Cheat Sheet + Injection Prevention Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html | CITED |
+| 3 | Authentication and Password Management | Authentication Cheat Sheet + Password Storage Cheat Sheet + MFA Cheat Sheet + Proactive Control C7 | https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html | CITED |
+| 4 | Session Management | Session Management Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html | CITED |
+| 5 | Access Control | Authorization Cheat Sheet + Proactive Control C1 | https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html | CITED |
+| 6 | Cryptographic Practices | Cryptographic Storage Cheat Sheet + Proactive Control C2 | https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html | CITED |
+| 7 | Error Handling and Logging | Error Handling Cheat Sheet + Logging Cheat Sheet + Proactive Control C9 | https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html | VERIFIED |
+| 8 | Data Protection | Developer Guide "Protect Data Everywhere" + Cryptographic Storage Cheat Sheet | https://devguide.owasp.org/en/04-design/02-web-app-checklist/08-protect-data/ | CITED |
+| 9 | Communication Security | Transport Layer Security Cheat Sheet + HSTS Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html | CITED |
+| 10 | System Configuration | Docker Security Cheat Sheet + Proactive Control C5 | https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html | CITED |
+| 11 | Database Security | Database Security Cheat Sheet + SQL Injection Prevention Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Database_Security_Cheat_Sheet.html | VERIFIED |
+| 12 | File Management | File Upload Cheat Sheet (partial anchor — covers upload validation, not path-traversal/serving items) | https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html | CITED — weaker anchor |
+| 13 | Memory Management | OWASP Developer Guide (no dedicated language-agnostic page located — flagged for spot-check) | https://devguide.owasp.org/ | ASSUMED — weak anchor |
+| 14 | General Coding Practices | OWASP Top 10 Proactive Controls (2024, current stable) + Proactive Control C6 | https://top10proactive.owasp.org/archive/2024/the-top-10/ | VERIFIED |
 
 ## 1. Input Validation
 
