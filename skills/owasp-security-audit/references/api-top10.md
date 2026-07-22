@@ -8,6 +8,11 @@ rate/resource consumption, and inter-API trust.
 **Source:** OWASP API Security Project 2023 edition —
 <https://owasp.org/API-Security/editions/2023/en/0x11-t10/>.
 
+**Edition verification:** API Security Top 10 2023 confirmed current — no
+newer edition found; `API1:2023`–`API10:2023` match this file item-for-item.
+Source: <https://owasp.org/API-Security/editions/2023/en/0x11-t10/>.
+Retrieved 2026-07-22.
+
 ## How to read this file
 
 Each of the ten items has: a one-paragraph summary, detection signals

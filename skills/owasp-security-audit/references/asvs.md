@@ -8,7 +8,11 @@ a narrative standard like the Top 10.
 
 **Source:** OWASP Application Security Verification Standard —
 <https://owasp.org/www-project-application-security-verification-standard/>.
-Version 5.0 is the current release as of this writing.
+
+**Edition verification:** ASVS 5.0.0 confirmed as the current stable release
+(not a release candidate), released 2025-05-30 at Global AppSec EU Barcelona.
+Source: <https://owasp.org/www-project-application-security-verification-standard/>.
+Retrieved 2026-07-22. No newer stable edition found as of this date.
 
 ## Verification levels
 

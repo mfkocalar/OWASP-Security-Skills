@@ -6,9 +6,13 @@ untrusted, the user may be hostile, and the binary ships to the
 attacker. MASVS codifies what to do about that.
 
 **Source:** OWASP Mobile Application Security Verification Standard —
-<https://mas.owasp.org/MASVS/>. Version 2.1.0 is the current release as
-of this writing; confirm against the MAS site if citing version
-text verbatim.
+<https://mas.owasp.org/MASVS/>.
+
+**Edition verification:** MASVS 2.1.0 confirmed current — GitHub release tag
+`v2.1.0`, published 2024-01-18, added the MASVS-PRIVACY category.
+Source: <https://mas.owasp.org/MASVS/> (also see
+<https://github.com/OWASP/masvs/releases/tag/v2.1.0>). Retrieved 2026-07-22.
+No newer tag found.
 
 ## Structure
 
