@@ -245,9 +245,13 @@ When reviewing against ASVS:
    testable yes/no.
 3. Escalate to L2 for any sensitive-data app; L3 only when the user
    asks for it or the domain is regulated.
-4. In the report, cite the chapter + level: "Ch. 2 L2 — requirement
+4. In the report, cite the chapter + level, and label which ASVS
+   edition the requirement ID belongs to: "Ch. 2 L2 — requirement
    V2.1.5 (MFA for sensitive operations) — not met; no MFA step in
-   `/admin/users/delete`".
+   `/admin/users/delete`." `V2.1.5` here is a **4.0.3 identifier**;
+   under ASVS 5.0.0 the same control lives in the renumbered V6
+   (Authentication) series. Before this lands in a compliance
+   deliverable, confirm the exact requirement ID against the edition you are auditing.
 
 The OWASP ASVS checklist is published as a spreadsheet/CSV; pull it
 down and map findings to specific requirement IDs for a real
