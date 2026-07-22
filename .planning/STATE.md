@@ -4,17 +4,17 @@ milestone: v1.0
 milestone_name: milestone
 current_phase: 03
 current_phase_name: Remaining Standards Verification & Refresh
-status: verifying
-stopped_at: Phase 03 gap 03-04 planned & verified; ready to execute --gaps-only
-last_updated: "2026-07-22T10:19:03.766Z"
+status: executing
+stopped_at: Completed 03-04-PLAN.md (gap closure); Phase 03 complete
+last_updated: "2026-07-22T14:29:22.944Z"
 last_activity: 2026-07-22
-last_activity_desc: Planned + verified gap-closure plan 03-04 (CONT-03/ASVS)
+last_activity_desc: Completed 03-04-PLAN.md gap closure (CONT-03/ASVS); Phase 03 complete
 progress:
   total_phases: 5
-  completed_phases: 2
-  total_plans: 8
-  completed_plans: 8
-  percent: 40
+  completed_phases: 3
+  total_plans: 9
+  completed_plans: 9
+  percent: 60
 ---
 
 # Project State
@@ -28,12 +28,12 @@ See: .planning/PROJECT.md (updated 2026-07-19)
 
 ## Current Position
 
-Phase: 03 (Remaining Standards Verification & Refresh) — EXECUTING
-Plan: gap 03-04 ready (base 03-01/02/03 complete)
-Status: Gap plan 03-04 planned & verified — run /gsd-execute-phase 03 --gaps-only
-Last activity: 2026-07-22 — Planned + verified gap-closure plan 03-04 (CONT-03/ASVS)
+Phase: 03 (Remaining Standards Verification & Refresh) — COMPLETE (4/4 plans)
+Plan: 4 of 4 (gap closure 03-04 complete)
+Status: Phase 03 complete; ready to advance to Phase 4
+Last activity: 2026-07-22 — Completed 03-04-PLAN.md gap closure (CONT-03/ASVS)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██████░░░░] 60%
 
 ## Performance Metrics
 
@@ -64,6 +64,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 03 P01 | 6min | 2 tasks | 4 files |
 | Phase 03 P02 | 6 | 2 tasks | 2 files |
 | Phase 03 P03 | 8min | 3 tasks | 3 files |
+| Phase 03 P04 | 2min | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -92,6 +93,7 @@ Recent decisions affecting current work:
 - [Phase 03]: owasp-urls.json: all remaining CONT-03 codes (ASVS/MASVS/API1-10/LLM01-10/ASI01-10) upgraded to verified provenance with retrieval_date 2026-07-22; K01-10 dated only, no 2025 K0x added
 - [Phase 03]: QRG framed as archived historical origin (not removed/replaced); 14-row Living-Source Crosswalk added to scp-checklist.md + scp_domain_crosswalk mirrored into SCP's owasp-urls.json, satisfying CONT-05 without touching the 100+-item checklist body (D-01, D-02)
 - [Phase 03]: File Management and Memory Management crosswalk anchors explicitly flagged weak/ASSUMED (cited-weak / assumed confidence) rather than silently upgraded to verified, per 03-RESEARCH.md Assumptions A2/A3
+- [Phase 03 gap 03-04]: Reframed asvs.md edition note + reporting exemplar to disclose 4.0.3 body numbering vs. verified 5.0.0 current edition (locked source-free reframe, not a re-anchor to the 5.0.0 V-series) — Closes CONT-03/CR-01 verifier gap without inventing unverified 5.0.0 requirement IDs
 
 ### Pending Todos
 
@@ -118,6 +120,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-22T10:18:55.817Z
+Last session: 2026-07-22T14:28:51.804Z
 Stopped at: Completed 03-01-PLAN.md
 Resume file: .planning/phases/03-remaining-standards-verification-refresh/03-CONTEXT.md
