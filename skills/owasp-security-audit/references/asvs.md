@@ -14,6 +14,17 @@ a narrative standard like the Top 10.
 Source: <https://owasp.org/www-project-application-security-verification-standard/>.
 Retrieved 2026-07-22. No newer stable edition found as of this date.
 
+**Numbering disclosure:** the chapter numbers and requirement-ID examples in
+this reference follow the ASVS **4.0.3** taxonomy, not 5.0.0 — for example,
+Authentication is Chapter 2 / the V2 series under 4.0.3. ASVS 5.0.0 renumbered
+the chapters into a new V-series: Authentication became V6, Session Management
+V7, Authorization V8, Cryptography V11, Configuration V13, and Validation was
+split into V1 (Encoding & Sanitization) / V2 (Validation & Business Logic). A
+full re-mapping of this summary to the 5.0.0 V-series is intentionally
+deferred and tracked as a known, documented limitation — treat the chapter
+structure below as a 4.0.3-numbered summary, and confirm exact requirement IDs
+against whichever ASVS edition you are actually auditing.
+
 ## Verification levels
 
 ASVS defines three cumulative levels:
