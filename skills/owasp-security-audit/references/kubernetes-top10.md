@@ -7,10 +7,14 @@ cluster configuration, RBAC, NetworkPolicies, or anything under a
 **Source & edition.** Content below is pinned to the **2022 edition**
 of the OWASP Kubernetes Top 10, which remains the canonical project
 page: <https://owasp.org/www-project-kubernetes-top-ten/> (2022 index
-at `/2022/en/src/`). OWASP has published a 2025 edition that renumbers
-several items (secrets → K03, network segmentation → K05, auth → K09);
-if you review a cluster against 2025 requirements, verify each mapping
-against the 2025 per-item pages before citing codes [?].
+at `/2022/en/src/`). Retrieved 2026-07-22.
+
+**2025 edition status (footnote):** OWASP's own project page/GitHub
+README states only "2025 Top 10 Risks now available — Feedback welcome,"
+with no version tag and no formal GitHub release published as of
+2026-07-22 — this is **in progress, not final**. Do not cite 2025 K0x
+codes as authoritative; if reviewing against 2025 draft content, verify
+each mapping against the 2025 per-item pages first [?].
 
 ## How to use
 
