@@ -4,17 +4,17 @@ milestone: v1.0
 milestone_name: milestone
 current_phase: 03
 current_phase_name: Remaining Standards Verification & Refresh
-status: executing
+status: verifying
 stopped_at: Completed 03-01-PLAN.md
-last_updated: "2026-07-22T10:14:33.115Z"
+last_updated: "2026-07-22T10:19:03.766Z"
 last_activity: 2026-07-22
 last_activity_desc: Completed 03-01-PLAN.md
 progress:
   total_phases: 5
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 8
-  completed_plans: 7
-  percent: 40
+  completed_plans: 8
+  percent: 60
 ---
 
 # Project State
@@ -30,7 +30,7 @@ See: .planning/PROJECT.md (updated 2026-07-19)
 
 Phase: 03 (Remaining Standards Verification & Refresh) — EXECUTING
 Plan: 3 of 3
-Status: Ready to execute
+Status: Phase complete — ready for verification
 Last activity: 2026-07-22 — Completed 03-01-PLAN.md
 
 Progress: [░░░░░░░░░░] 0%
@@ -63,6 +63,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02 P02 | 14min | 3 tasks | 6 files |
 | Phase 03 P01 | 6min | 2 tasks | 4 files |
 | Phase 03 P02 | 6 | 2 tasks | 2 files |
+| Phase 03 P03 | 8min | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -89,6 +90,8 @@ Recent decisions affecting current work:
 - [Phase 03]: Agentic Apps 2026 note quotes the primary 2025-12-09 OWASP announcement verbatim and confirms Final status, resolving the STATE.md ASI-name paraphrase gap (per D-04)
 - [Phase 03]: Kubernetes 2025 edition kept as footnote only (D-05/D-06); no formal 2025 release found, so halt-and-flag did not fire
 - [Phase 03]: owasp-urls.json: all remaining CONT-03 codes (ASVS/MASVS/API1-10/LLM01-10/ASI01-10) upgraded to verified provenance with retrieval_date 2026-07-22; K01-10 dated only, no 2025 K0x added
+- [Phase 03]: QRG framed as archived historical origin (not removed/replaced); 14-row Living-Source Crosswalk added to scp-checklist.md + scp_domain_crosswalk mirrored into SCP's owasp-urls.json, satisfying CONT-05 without touching the 100+-item checklist body (D-01, D-02)
+- [Phase 03]: File Management and Memory Management crosswalk anchors explicitly flagged weak/ASSUMED (cited-weak / assumed confidence) rather than silently upgraded to verified, per 03-RESEARCH.md Assumptions A2/A3
 
 ### Pending Todos
 
@@ -115,6 +118,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-22T10:14:07.260Z
+Last session: 2026-07-22T10:18:55.817Z
 Stopped at: Completed 03-01-PLAN.md
 Resume file: .planning/phases/03-remaining-standards-verification-refresh/03-CONTEXT.md
