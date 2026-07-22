@@ -4,17 +4,17 @@ milestone: v1.0
 milestone_name: milestone
 current_phase: 03
 current_phase_name: Remaining Standards Verification & Refresh
-status: executing
-stopped_at: Completed 03-04-PLAN.md (gap closure); Phase 03 complete
+status: verifying
+stopped_at: Phase 03 automated-verified 3/3; awaiting 1 human UAT item (SCP crosswalk anchors)
 last_updated: "2026-07-22T14:29:22.944Z"
 last_activity: 2026-07-22
-last_activity_desc: Completed 03-04-PLAN.md gap closure (CONT-03/ASVS); Phase 03 complete
+last_activity_desc: Phase 03 gap closure done + re-verified 3/3 automated; awaiting human UAT
 progress:
   total_phases: 5
-  completed_phases: 3
+  completed_phases: 2
   total_plans: 9
   completed_plans: 9
-  percent: 60
+  percent: 40
 ---
 
 # Project State
@@ -28,12 +28,12 @@ See: .planning/PROJECT.md (updated 2026-07-19)
 
 ## Current Position
 
-Phase: 03 (Remaining Standards Verification & Refresh) — COMPLETE (4/4 plans)
-Plan: 4 of 4 (gap closure 03-04 complete)
-Status: Phase 03 complete; ready to advance to Phase 4
-Last activity: 2026-07-22 — Completed 03-04-PLAN.md gap closure (CONT-03/ASVS)
+Phase: 03 (Remaining Standards Verification & Refresh) — AWAITING UAT (4/4 plans executed; automated 3/3)
+Plan: 4 of 4 executed (gap closure 03-04 done)
+Status: Automated verification 3/3 PASS; awaiting 1 human UAT item — run /gsd-verify-work 3
+Last activity: 2026-07-22 — Re-verified Phase 03 (3/3 automated); awaiting human UAT
 
-Progress: [██████░░░░] 60%
+Progress: [████░░░░░░] 40%
 
 ## Performance Metrics
 
