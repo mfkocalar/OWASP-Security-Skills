@@ -2,44 +2,44 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 03
-current_phase_name: Remaining Standards Verification & Refresh
-status: verifying
-stopped_at: Phase 03 automated-verified 3/3; awaiting 1 human UAT item (SCP crosswalk anchors)
-last_updated: "2026-07-22T14:29:22.944Z"
-last_activity: 2026-07-22
-last_activity_desc: Phase 03 gap closure done + re-verified 3/3 automated; awaiting human UAT
+current_phase: 4
+current_phase_name: SKILL.md Conversion & Legacy Retirement
+status: ready
+stopped_at: Phase 3 complete (verified + UAT passed + security-reviewed); ready to plan Phase 4
+last_updated: "2026-07-23T11:56:16.701Z"
+last_activity: 2026-07-23
+last_activity_desc: Phase 3 complete, transitioned to Phase 4
 progress:
   total_phases: 5
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 9
   completed_plans: 9
-  percent: 40
+  percent: 60
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-07-19)
+See: .planning/PROJECT.md (updated 2026-07-23)
 
 **Core value:** A security engineer or developer can install the collection into Claude Code and get accurate, current, OWASP-grounded security review — reference content matching the latest published OWASP editions, packaging matching the official skill spec.
-**Current focus:** Phase 03 — Remaining Standards Verification & Refresh
+**Current focus:** Phase 4 — SKILL.md Conversion & Legacy Retirement
 
 ## Current Position
 
-Phase: 03 (Remaining Standards Verification & Refresh) — AWAITING UAT (4/4 plans executed; automated 3/3)
-Plan: 4 of 4 executed (gap closure 03-04 done)
-Status: Automated verification 3/3 PASS; awaiting 1 human UAT item — run /gsd-verify-work 3
-Last activity: 2026-07-22 — Re-verified Phase 03 (3/3 automated); awaiting human UAT
+Phase: 4 — SKILL.md Conversion & Legacy Retirement
+Plan: Not started
+Status: Ready to plan Phase 4 (Phase 3 complete — verified 3/3, UAT passed, security-reviewed 0 open threats)
+Last activity: 2026-07-23 — Phase 3 complete, transitioned to Phase 4
 
-Progress: [████░░░░░░] 40%
+Progress: [██████░░░░] 60%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 5
+- Total plans completed: 9
 - Average duration: - min
 - Total execution time: 0 hours
 
@@ -49,6 +49,7 @@ Progress: [████░░░░░░] 40%
 |-------|-------|-------|----------|
 | 01 | 3 | - | - |
 | 02 | 2 | - | - |
+| 3 | 4 | - | - |
 
 **Recent Trend:**
 
@@ -102,7 +103,7 @@ None yet.
 ### Blockers/Concerns
 
 - RESOLVED [03-01]: Agentic Applications Top 10 (2026) ASI01–ASI10 category names confirmed verbatim against the primary 2025-12-09 OWASP announcement (zero discrepancy); llm-agentic.md provenance note upgraded accordingly.
-- Phase 3 will need an explicit, documented SCP scoping call (frozen historical checklist vs. re-sourced from Developer Guide) before content work begins — flagged in research, not yet decided.
+- RESOLVED [Phase 3]: SCP scoping decided as D-01 light re-anchor (keep the 100+-item checklist body frozen; add a living-source crosswalk) — shipped in 03-03 and verified.
 - Phase 5 should re-check current Claude Code version status for documented packaging regressions (symlink-to-cache, Windows path collapse, marketplace "0 skills" bug) before assuming they still apply.
 - [Phase 01]: DEPLOYMENT.md and TESTING.md still reference the now-removed root `skill.json` and root `examples/` (DEPLOYMENT.md: 4 mentions; TESTING.md: 7+ mentions including a "Test 7.2: skill.json Completeness" section) — documentation-only staleness, deferred to Phase 5 doc-polish per 01-RESEARCH.md Open Question #1.
 
