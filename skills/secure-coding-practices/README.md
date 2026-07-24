@@ -1,6 +1,6 @@
 # Secure Coding Practices Skill
 
-Audit code against the **OWASP Secure Coding Practices Quick Reference Guide** checklist.
+Audit code against a **14-domain secure coding checklist** derived from OWASP's living sources — the Developer Guide, Cheat Sheet Series, and Proactive Controls — with the original OWASP Secure Coding Practices Quick Reference Guide as the archived historical origin.
 
 ## Overview
 
@@ -224,7 +224,8 @@ A: The principles are universal. `secure-patterns.md` provides Python, JavaScrip
 
 ## References
 
-- **OWASP Secure Coding Practices Quick Reference Guide:** https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/
+- **OWASP Developer Guide, Cheat Sheet Series, and Proactive Controls (living sources):** see the Living-Source Crosswalk in `references/scp-checklist.md`
+- **OWASP Secure Coding Practices Quick Reference Guide (archived historical origin):** https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/
 - **CWE Top 25:** https://cwe.mitre.org/top25/
 - **OWASP Top 10:** https://owasp.org/www-project-top-ten/
 - **NIST Cryptographic Standards:** https://csrc.nist.gov/
