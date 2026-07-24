@@ -13,10 +13,11 @@
   <div id="vulnerable-comment"></div>
   <script>
     (() => {
-      // Reflected XSS example
-      // For detailed guidance, see: owasp-comprehensive-security-skills.md#section-1-owasp-top-10-2021
+      // OWASP Top 10 - A05: Injection (XSS)
+      // For detailed guidance, see: references/top10.md
       //
-      // This example demonstrates a reflected XSS vulnerability (A03: Injection - XSS was A07 in the 2017 edition).
+      // This example demonstrates a reflected XSS vulnerability. Cross-Site
+      // Scripting falls under A05: Injection in the OWASP Top 10 2025 edition.
       // User input from the 'msg' URL parameter is directly inserted
       // into the DOM using innerHTML without sanitization, allowing
       // attackers to execute arbitrary JavaScript.
