@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 4
+current_phase: 04
 current_phase_name: SKILL.md Conversion & Legacy Retirement
-status: ready
-stopped_at: Phase 4 planned
-last_updated: "2026-07-24T09:07:41.000Z"
+status: executing
+stopped_at: Phase 04 Plan 01 complete
+last_updated: "2026-07-24T13:56:58.671Z"
 last_activity: 2026-07-24
-last_activity_desc: Phase 4 planned — 5 plans in 4 waves
+last_activity_desc: Phase 04 Plan 01 (SKILL.md lint script) complete
 progress:
   total_phases: 5
   completed_phases: 3
-  total_plans: 9
-  completed_plans: 9
-  percent: 60
+  total_plans: 14
+  completed_plans: 10
+  percent: 71
 ---
 
 # Project State
@@ -24,22 +24,22 @@ progress:
 See: .planning/PROJECT.md (updated 2026-07-23)
 
 **Core value:** A security engineer or developer can install the collection into Claude Code and get accurate, current, OWASP-grounded security review — reference content matching the latest published OWASP editions, packaging matching the official skill spec.
-**Current focus:** Phase 4 — SKILL.md Conversion & Legacy Retirement
+**Current focus:** Phase 04 — SKILL.md Conversion & Legacy Retirement
 
 ## Current Position
 
-Phase: 4 — SKILL.md Conversion & Legacy Retirement
-Plan: 5 plans created (Waves 1–4)
-Status: Ready to execute Phase 4 — 5 plans in 4 waves (planned 2026-07-24; research done, plan verification passed)
-Last activity: 2026-07-24 — Phase 4 planned (research + 5 plans, verification passed)
+Phase: 04 (SKILL.md Conversion & Legacy Retirement) — EXECUTING
+Plan: 1 of 5 complete (2 of 5 next up)
+Status: Executing Phase 04 — Plan 01 (SKILL.md lint script) complete
+Last activity: 2026-07-24 — Phase 04 Plan 01 complete
 
-Progress: [██████░░░░] 60%
+Progress: [███████░░░] 71%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 9
+- Total plans completed: 10
 - Average duration: - min
 - Total execution time: 0 hours
 
@@ -66,6 +66,7 @@ Progress: [██████░░░░] 60%
 | Phase 03 P02 | 6 | 2 tasks | 2 files |
 | Phase 03 P03 | 8min | 3 tasks | 3 files |
 | Phase 03 P04 | 2min | 2 tasks | 1 files |
+| Phase 04 P01 | 6min | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -95,6 +96,8 @@ Recent decisions affecting current work:
 - [Phase 03]: QRG framed as archived historical origin (not removed/replaced); 14-row Living-Source Crosswalk added to scp-checklist.md + scp_domain_crosswalk mirrored into SCP's owasp-urls.json, satisfying CONT-05 without touching the 100+-item checklist body (D-01, D-02)
 - [Phase 03]: File Management and Memory Management crosswalk anchors explicitly flagged weak/ASSUMED (cited-weak / assumed confidence) rather than silently upgraded to verified, per 03-RESEARCH.md Assumptions A2/A3
 - [Phase 03 gap 03-04]: Reframed asvs.md edition note + reporting exemplar to disclose 4.0.3 body numbering vs. verified 5.0.0 current edition (locked source-free reframe, not a re-anchor to the 5.0.0 V-series) — Closes CONT-03/CR-01 verifier gap without inventing unverified 5.0.0 requirement IDs
+- [Phase 04]: Placed lint script at repo-root scripts/ (not per-skill scripts/) so it lints both skills from one place and is never shipped as either skill's installed payload
+- [Phase 04]: Every SKILL.md lint check implemented as a soft LintResult append rather than a hard assert, so one failing check does not abort the run against the other file
 
 ### Pending Todos
 
@@ -121,6 +124,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-23T12:39:21.488Z
-Stopped at: Phase 4 planned (5 plans, ready to execute)
-Resume file: .planning/phases/04-skill-md-conversion-legacy-retirement/04-01-PLAN.md
+Last session: 2026-07-24T13:56:19.511Z
+Stopped at: Phase 04 Plan 01 complete (4 plans remaining: 02, 03, 04, 05)
+Resume file: .planning/phases/04-skill-md-conversion-legacy-retirement/04-02-PLAN.md

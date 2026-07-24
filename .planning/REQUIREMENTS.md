@@ -18,11 +18,11 @@ Requirements for this modernization milestone. Each maps to roadmap phases.
 
 ### Format — Agent Skills Spec Conversion
 
-- [ ] **FMT-01**: Each skill has a spec-compliant `SKILL.md` — frontmatter `name` matches the parent folder and is ≤64 chars; `description` is ≤1024 chars and states what the skill does + when to use it
-- [ ] **FMT-02**: `SKILL.md` bodies stay within the progressive-disclosure budget (~500 lines); deep content lives in `references/`, loaded on demand
+- [x] **FMT-01**: Each skill has a spec-compliant `SKILL.md` — frontmatter `name` matches the parent folder and is ≤64 chars; `description` is ≤1024 chars and states what the skill does + when to use it
+- [x] **FMT-02**: `SKILL.md` bodies stay within the progressive-disclosure budget (~500 lines); deep content lives in `references/`, loaded on demand
 - [ ] **FMT-03**: The routing/activation behavior of the legacy `owasp-css.instructions.md` is preserved through per-skill `description` (and `when_to_use`/`paths` where supported)
 - [ ] **FMT-04**: Legacy files are retired — `owasp-css.instructions.md`, custom `skill.json`, and the ~900-line `owasp-comprehensive-security-skills.md` no longer sit in the loaded path
-- [ ] **FMT-05**: Skill frontmatter passes lint — byte-0 frontmatter start, no angle brackets, only allowed bundled directories
+- [x] **FMT-05**: Skill frontmatter passes lint — byte-0 frontmatter start, no angle brackets, only allowed bundled directories
 
 ### Packaging — Plugin & Marketplace
 
@@ -86,11 +86,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-03 | Phase 3 | Complete |
 | CONT-04 | Phase 3 | Complete |
 | CONT-05 | Phase 3 | Complete |
-| FMT-01 | Phase 4 | Pending |
-| FMT-02 | Phase 4 | Pending |
+| FMT-01 | Phase 4 | Complete |
+| FMT-02 | Phase 4 | Complete |
 | FMT-03 | Phase 4 | Pending |
 | FMT-04 | Phase 4 | Pending |
-| FMT-05 | Phase 4 | Pending |
+| FMT-05 | Phase 4 | Complete |
 | CONT-06 | Phase 4 | Pending |
 | PKG-04 | Phase 5 | Pending |
 | PKG-05 | Phase 5 | Pending |

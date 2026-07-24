@@ -96,11 +96,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `owasp-css.instructions.md`, the custom `skill.json`, and the ~900-line `owasp-comprehensive-security-skills.md` no longer sit in the loaded path, and the routing behavior they used to provide is preserved through each skill's `description` (and `when_to_use`/`paths` where supported)
   4. Paired vulnerable/secure examples are re-validated against the updated standard requirement text (especially Top 10 2025) and mapped to the correct new category IDs
 
-**Plans**: 5 plans
+**Plans**: 1/5 plans executed
 
 **Wave 1**
 
-- [ ] 04-01-PLAN.md — FMT-05 stdlib-only lint script (`scripts/lint_skill_md.py`) + green FMT-01/02/05 baseline
+- [x] 04-01-PLAN.md — FMT-05 stdlib-only lint script (`scripts/lint_skill_md.py`) + green FMT-01/02/05 baseline
 
 **Wave 2** *(blocked on Wave 1 — reuse the lint gate)*
 
@@ -140,5 +140,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Plugin/Marketplace Foundation | 3/3 | Complete    | 2026-07-20 |
 | 2. OWASP Top 10 Version Refresh | 2/2 | Complete    | 2026-07-21 |
 | 3. Remaining Standards Verification & Refresh | 4/4 | Complete    | 2026-07-23 |
-| 4. SKILL.md Conversion & Legacy Retirement | 0/5 | Not started | - |
+| 4. SKILL.md Conversion & Legacy Retirement | 1/5 | In Progress|  |
 | 5. Packaging Validation & Credibility Polish | 0/TBD | Not started | - |
