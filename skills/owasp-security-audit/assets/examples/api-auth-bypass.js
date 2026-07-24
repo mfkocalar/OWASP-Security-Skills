@@ -1,5 +1,5 @@
 // API Security Example: OAuth/JWT Token Vulnerability
-// For detailed guidance, see: owasp-comprehensive-security-skills.md#section-4-owasp-api-security-top-10
+// For detailed guidance, see: references/api-top10.md
 //
 // This example demonstrates API authentication vulnerabilities including:
 // - Broken JWT validation (no signature verification)
