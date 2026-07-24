@@ -96,7 +96,24 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `owasp-css.instructions.md`, the custom `skill.json`, and the ~900-line `owasp-comprehensive-security-skills.md` no longer sit in the loaded path, and the routing behavior they used to provide is preserved through each skill's `description` (and `when_to_use`/`paths` where supported)
   4. Paired vulnerable/secure examples are re-validated against the updated standard requirement text (especially Top 10 2025) and mapped to the correct new category IDs
 
-**Plans**: TBD
+**Plans**: 5 plans
+
+**Wave 1**
+
+- [ ] 04-01-PLAN.md — FMT-05 stdlib-only lint script (`scripts/lint_skill_md.py`) + green FMT-01/02/05 baseline
+
+**Wave 2** *(blocked on Wave 1 — reuse the lint gate)*
+
+- [ ] 04-02-PLAN.md — Split `llm-agentic.md` → `llm.md` + `agentic.md`, repoint SKILL.md routing, D-06 ASVS description fix (D-05, D-06)
+- [ ] 04-03-PLAN.md — SCP description + two SCP human-facing docs reframed to living-source (D-06, D-03)
+
+**Wave 3** *(blocked on 04-02 — needs llm.md/agentic.md for the prompt-injection repoint)*
+
+- [ ] 04-04-PLAN.md — CONT-06 example relabel by topic + header repoint + prompt-injection AG-code remap (D-04)
+
+**Wave 4** *(blocked on 04-04 — example headers repointed before the delete)*
+
+- [ ] 04-05-PLAN.md — Salvage-check + delete 3 legacy files + minimal install.sh sentinel patch (D-01, D-02, FMT-04)
 
 ### Phase 5: Packaging Validation & Credibility Polish
 
@@ -123,5 +140,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Plugin/Marketplace Foundation | 3/3 | Complete    | 2026-07-20 |
 | 2. OWASP Top 10 Version Refresh | 2/2 | Complete    | 2026-07-21 |
 | 3. Remaining Standards Verification & Refresh | 4/4 | Complete    | 2026-07-23 |
-| 4. SKILL.md Conversion & Legacy Retirement | 0/TBD | Not started | - |
+| 4. SKILL.md Conversion & Legacy Retirement | 0/5 | Not started | - |
 | 5. Packaging Validation & Credibility Polish | 0/TBD | Not started | - |
