@@ -48,7 +48,7 @@ install_skill() {
     mkdir -p "$(dirname "$install_dir")"
     
     # Verify current directory is OWASP-Security-Skills repo
-    if [ ! -f "owasp-comprehensive-security-skills.md" ]; then
+    if [ ! -f ".claude-plugin/plugin.json" ]; then
         echo -e "${RED}✗ Error: Please run this script from the OWASP-Security-Skills directory${NC}"
         return 1
     fi
@@ -81,8 +81,6 @@ verify_installation() {
     echo -e "\n${YELLOW}Verifying installation...${NC}"
     
     local required_files=(
-        "owasp-comprehensive-security-skills.md"
-        "owasp-css.instructions.md"
         "README.md"
     )
     
