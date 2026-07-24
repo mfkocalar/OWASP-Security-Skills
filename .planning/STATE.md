@@ -5,16 +5,16 @@ milestone_name: milestone
 current_phase: 04
 current_phase_name: SKILL.md Conversion & Legacy Retirement
 status: executing
-stopped_at: Completed 04-02-PLAN.md
-last_updated: "2026-07-24T14:07:03.652Z"
+stopped_at: Completed 04-03-PLAN.md
+last_updated: "2026-07-24T14:12:58.922Z"
 last_activity: 2026-07-24
-last_activity_desc: Phase 04 Plan 02 (LLM/Agentic reference split + ASVS description fix) complete
+last_activity_desc: Phase 04 Plan 03 (SCP living-source reframe) complete
 progress:
   total_phases: 5
   completed_phases: 3
   total_plans: 14
-  completed_plans: 11
-  percent: 79
+  completed_plans: 12
+  percent: 86
 ---
 
 # Project State
@@ -29,17 +29,17 @@ See: .planning/PROJECT.md (updated 2026-07-23)
 ## Current Position
 
 Phase: 04 (SKILL.md Conversion & Legacy Retirement) — EXECUTING
-Plan: 2 of 5 complete (3 of 5 next up)
-Status: Executing Phase 04 — Plan 02 (LLM/Agentic reference split + ASVS description fix) complete
-Last activity: 2026-07-24 — Phase 04 Plan 02 complete
+Plan: 3 of 5 complete (4 of 5 next up)
+Status: Executing Phase 04 — Plan 03 (SCP living-source reframe) complete
+Last activity: 2026-07-24 — Phase 04 Plan 03 complete
 
-Progress: [████████░░] 79%
+Progress: [█████████░] 86%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 11
+- Total plans completed: 12
 - Average duration: - min
 - Total execution time: 0 hours
 
@@ -68,6 +68,7 @@ Progress: [████████░░] 79%
 | Phase 03 P04 | 2min | 2 tasks | 1 files |
 | Phase 04 P01 | 6min | 2 tasks | 1 files |
 | Phase 04 P02 | 12min | 3 tasks | 4 files |
+| Phase 04 P03 | 8min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -101,6 +102,8 @@ Recent decisions affecting current work:
 - [Phase 04]: Every SKILL.md lint check implemented as a soft LintResult append rather than a hard assert, so one failing check does not abort the run against the other file
 - [Phase 04]: LLM/Agentic reference split into llm.md + agentic.md; SKILL.md routing table split into two specific rows rather than one combined row
 - [Phase 04]: D-06 ASVS description fix worded as 'ASVS (4.0.3-numbered verification requirements; 5.0.0 is the current edition)' to name both facts without inventing unverified 5.0.0 content; extended same fix to the ASVS reference-file-index bullet beyond what the plan strictly required
+- [Phase 04]: Reworded SKILL.md body intro paragraph in addition to the frontmatter description, avoiding a stale QRG-as-current claim contradicting the reworded description in the same file (04-03)
+- [Phase 04]: Added explicit pointers from both SCP human docs' reference sections to the scp-checklist.md Living-Source Crosswalk, not just relabeling the QRG line (04-03)
 
 ### Pending Todos
 
@@ -127,6 +130,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-24T14:07:03.647Z
-Stopped at: Completed 04-02-PLAN.md
-Resume file: .planning/phases/04-skill-md-conversion-legacy-retirement/04-03-PLAN.md
+Last session: 2026-07-24T14:12:52.792Z
+Stopped at: Completed 04-03-PLAN.md
+Resume file: .planning/phases/04-skill-md-conversion-legacy-retirement/04-04-PLAN.md
