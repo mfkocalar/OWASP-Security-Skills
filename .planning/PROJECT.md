@@ -25,13 +25,12 @@ A security engineer or developer can install the collection into Claude Code and
 - ✓ Repo packaged as a Claude Code plugin with `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json`, skills at plugin root, skill-directory convention documented (`docs/SKILL-STRUCTURE.md`) — Validated in Phase 1: Plugin/Marketplace Foundation (PKG-01, PKG-02, PKG-03)
 - ✓ OWASP Top 10 reference refreshed 2021 → 2025 (Final) using OWASP's official topic-based ID mapping — new A03 Software Supply Chain Failures, new A10 Mishandling of Exceptional Conditions, SSRF folded into A01 (CWE-918), A02 reordered — and made consistent across every cited file in the loaded skill path — Validated in Phase 2: OWASP Top 10 Version Refresh (CONT-01, CONT-02)
 - ✓ Remaining OWASP standards citation-hardened with verified edition + official source URL + retrieval date (ASVS 5.0.0, MASVS 2.1.0, API Security 2023, LLM 2025, Agentic Apps 2026); Kubernetes cites 2022 stable with the 2025 edition explicitly footnoted as in-progress; `secure-coding-practices` re-anchored to living OWASP sources (Cheat Sheet Series / Proactive Controls 2024 / Developer Guide) with the archived SCP Quick Reference Guide noted as historical origin. ASVS reference reframed to disclose its 4.0.3 body numbering rather than falsely claim 5.0.0 taxonomy — Validated in Phase 3: Remaining Standards Verification & Refresh (CONT-03, CONT-04, CONT-05)
+- ✓ Both skills converted to spec-compliant Anthropic Agent Skills — each `SKILL.md` has a folder-matching `name` (≤64) + `description` (≤1024) and a body within the ~500-line progressive-disclosure budget with deep content in `references/` (LLM/Agentic split into `llm.md` + `agentic.md`); the legacy `owasp-css.instructions.md`, custom `skill.json`, `owasp-comprehensive-security-skills.md`, and the in-skill `owasp-security-audit.md` duplicate retired from the loaded path with routing preserved via per-skill descriptions; paired examples re-validated and relabeled to the 2025/2026 category IDs; a stdlib-only `scripts/lint_skill_md.py` enforces the frontmatter spec — Validated in Phase 4: SKILL.md Conversion & Legacy Retirement (FMT-01, FMT-02, FMT-03, FMT-04, FMT-05, CONT-06)
 
 ### Active
 
 <!-- This milestone. All are hypotheses until shipped and validated. -->
 
-- [ ] Both skills restructured into the official Anthropic Agent Skills format (`SKILL.md` frontmatter: folder-matching `name` ≤64 chars, `description` ≤1024 chars; progressive-disclosure `references/`/`scripts/`/`assets/`)
-- [ ] Legacy Copilot-style `owasp-css.instructions.md`, custom `skill.json`, and the ~900-line `owasp-comprehensive-security-skills.md` retired/replaced under the spec; routing preserved via per-skill descriptions
 - [ ] Public-release polish: LICENSE (currently missing), strong README, clear docs, working examples, low-friction/cross-platform install, and discoverability aimed at broad adoption
 - [ ] Version accuracy verified — no OWASP edition, control ID, or standard change relies on unverified training-data recall
 
@@ -63,7 +62,7 @@ A security engineer or developer can install the collection into Claude Code and
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Conform to the official Anthropic Agent Skills spec | Standard format installs cleanly in Claude Code and is marketplace-distributable | — Pending |
+| Conform to the official Anthropic Agent Skills spec | Standard format installs cleanly in Claude Code and is marketplace-distributable | ✓ Done — Phase 4 (both `SKILL.md` pass lint 24/24; legacy routing/manifest files retired from the loaded path; examples remapped to 2025/2026 IDs) |
 | Verify all OWASP versions against official sources (no training-data recall) | Public credibility depends on edition/ID accuracy | In progress — Phases 2–3 verified Top 10 + all remaining standards against official URLs with retrieval dates; final QUAL-01 sweep in Phase 5 |
 | Scope = the 2 in-repo OWASP skills only (15 domain skills are global, out of scope) | Corrected after verifying actual repo contents; keeps milestone focused and shippable | — Pending |
 | Re-derive `secure-coding-practices` against the living OWASP Developer Guide | The SCP Quick Reference Guide is officially archived by OWASP | ✓ Done — Phase 3 (D-01 light re-anchor: 14-row living-source crosswalk added, 100+-item checklist body frozen) |
@@ -90,4 +89,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-07-23 after Phase 3 (Remaining Standards Verification & Refresh) completion*
+*Last updated: 2026-07-24 after Phase 4 (SKILL.md Conversion & Legacy Retirement) completion*
