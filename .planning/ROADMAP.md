@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Plugin/Marketplace Foundation** - Stand up `.claude-plugin/plugin.json` + `marketplace.json` and lock the target skill-directory convention that every later phase builds on (completed 2026-07-20)
 - [x] **Phase 2: OWASP Top 10 Version Refresh** - Rewrite the Top 10 reference from 2021 to 2025 (Final) with correct category IDs, consistent everywhere it's cited (completed 2026-07-21)
 - [x] **Phase 3: Remaining Standards Verification & Refresh** - Citation-harden ASVS, MASVS, API Security, LLM, Agentic Apps, and Kubernetes; re-derive secure-coding-practices against the living OWASP Developer Guide (gap closed + re-verified 3/3 automated 2026-07-22; awaiting human UAT) (completed 2026-07-23)
-- [x] **Phase 4: SKILL.md Conversion & Legacy Retirement** - Convert both skills to spec-compliant frontmatter, retire legacy routing/manifest files, remap examples to new category IDs (completed 2026-07-24)
+- [ ] **Phase 4: SKILL.md Conversion & Legacy Retirement** - Convert both skills to spec-compliant frontmatter, retire legacy routing/manifest files, remap examples to new category IDs
 - [ ] **Phase 5: Packaging Validation & Credibility Polish** - Verify clean-environment install end-to-end and ship the public-release trust signals (LICENSE, coverage matrix, README, CONTRIBUTING, discoverability)
 
 ## Phase Details
