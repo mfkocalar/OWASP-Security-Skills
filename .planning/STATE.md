@@ -5,16 +5,16 @@ milestone_name: milestone
 current_phase: 04
 current_phase_name: SKILL.md Conversion & Legacy Retirement
 status: executing
-stopped_at: Completed 04-03-PLAN.md
-last_updated: "2026-07-24T14:12:58.922Z"
+stopped_at: Completed 04-04-PLAN.md
+last_updated: "2026-07-24T14:19:16.284Z"
 last_activity: 2026-07-24
-last_activity_desc: Phase 04 Plan 03 (SCP living-source reframe) complete
+last_activity_desc: Phase 04 Plan 04 (example relabel to OWASP Top 10 2025) complete
 progress:
   total_phases: 5
   completed_phases: 3
   total_plans: 14
-  completed_plans: 12
-  percent: 86
+  completed_plans: 13
+  percent: 93
 ---
 
 # Project State
@@ -29,11 +29,11 @@ See: .planning/PROJECT.md (updated 2026-07-23)
 ## Current Position
 
 Phase: 04 (SKILL.md Conversion & Legacy Retirement) — EXECUTING
-Plan: 3 of 5 complete (4 of 5 next up)
-Status: Executing Phase 04 — Plan 03 (SCP living-source reframe) complete
-Last activity: 2026-07-24 — Phase 04 Plan 03 complete
+Plan: 4 of 5 complete (5 of 5 next up)
+Status: Executing Phase 04 — Plan 04 (example relabel to OWASP Top 10 2025) complete
+Last activity: 2026-07-24 — Phase 04 Plan 04 complete
 
-Progress: [█████████░] 86%
+Progress: [█████████░] 93%
 
 ## Performance Metrics
 
@@ -69,6 +69,7 @@ Progress: [█████████░] 86%
 | Phase 04 P01 | 6min | 2 tasks | 1 files |
 | Phase 04 P02 | 12min | 3 tasks | 4 files |
 | Phase 04 P03 | 8min | 2 tasks | 3 files |
+| Phase 04 P04 | 20min | 3 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -104,6 +105,7 @@ Recent decisions affecting current work:
 - [Phase 04]: D-06 ASVS description fix worded as 'ASVS (4.0.3-numbered verification requirements; 5.0.0 is the current edition)' to name both facts without inventing unverified 5.0.0 content; extended same fix to the ASVS reference-file-index bullet beyond what the plan strictly required
 - [Phase 04]: Reworded SKILL.md body intro paragraph in addition to the frontmatter description, avoiding a stale QRG-as-current claim contradicting the reworded description in the same file (04-03)
 - [Phase 04]: Added explicit pointers from both SCP human docs' reference sections to the scp-checklist.md Living-Source Crosswalk, not just relabeling the QRG line (04-03)
+- [Phase 04]: Example files relabeled by TOPIC against top10.md/agentic.md, not literal number substitution (security-misconfiguration.py old-A05->A02, cryptographic-failures.js old-A02->A04, injection.js gained missing A05 label); prompt-injection.txt's four invented AG codes individually remapped to real LLM01/05/06/10 items per agentic.md's mapping table, not a blanket substitution (04-04)
 
 ### Pending Todos
 
@@ -130,6 +132,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-24T14:12:52.792Z
-Stopped at: Completed 04-03-PLAN.md
-Resume file: .planning/phases/04-skill-md-conversion-legacy-retirement/04-04-PLAN.md
+Last session: 2026-07-24T14:19:10.708Z
+Stopped at: Completed 04-04-PLAN.md
+Resume file: None

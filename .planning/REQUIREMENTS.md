@@ -14,7 +14,7 @@ Requirements for this modernization milestone. Each maps to roadmap phases.
 - [x] **CONT-03**: ASVS 5.0.0, MASVS 2.1.0, API Security Top 10 (2023), LLM Top 10 (2025), and Agentic Apps (2026) references are citation-hardened with verified edition, official source URL, and retrieval date
 - [x] **CONT-04**: Kubernetes reference cites the 2022 stable edition; the 2025 draft is footnoted as in-progress (not presented as final)
 - [x] **CONT-05**: `secure-coding-practices` is re-derived against the living OWASP Developer Guide / Cheat Sheet Series / Proactive Controls (the archived SCP Quick Reference Guide origin is noted)
-- [ ] **CONT-06**: Paired vulnerable/secure examples are re-validated against the updated standard requirement text (especially Top 10 2025) and mapped to the correct new category IDs
+- [x] **CONT-06**: Paired vulnerable/secure examples are re-validated against the updated standard requirement text (especially Top 10 2025) and mapped to the correct new category IDs
 
 ### Format — Agent Skills Spec Conversion
 
@@ -91,7 +91,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FMT-03 | Phase 4 | Complete |
 | FMT-04 | Phase 4 | Pending |
 | FMT-05 | Phase 4 | Complete |
-| CONT-06 | Phase 4 | Pending |
+| CONT-06 | Phase 4 | Complete |
 | PKG-04 | Phase 5 | Pending |
 | PKG-05 | Phase 5 | Pending |
 | QUAL-01 | Phase 5 | Pending |
