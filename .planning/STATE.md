@@ -5,16 +5,16 @@ milestone_name: milestone
 current_phase: 04
 current_phase_name: SKILL.md Conversion & Legacy Retirement
 status: executing
-stopped_at: Completed 04-04-PLAN.md
-last_updated: "2026-07-24T14:19:16.284Z"
+stopped_at: Completed 04-05-PLAN.md
+last_updated: "2026-07-24T14:25:23.691Z"
 last_activity: 2026-07-24
-last_activity_desc: Phase 04 Plan 04 (example relabel to OWASP Top 10 2025) complete
+last_activity_desc: Phase 04 Plan 05 (legacy file retirement + install.sh patch) complete
 progress:
   total_phases: 5
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 14
-  completed_plans: 13
-  percent: 93
+  completed_plans: 14
+  percent: 80
 ---
 
 # Project State
@@ -28,12 +28,12 @@ See: .planning/PROJECT.md (updated 2026-07-23)
 
 ## Current Position
 
-Phase: 04 (SKILL.md Conversion & Legacy Retirement) — EXECUTING
-Plan: 4 of 5 complete (5 of 5 next up)
-Status: Executing Phase 04 — Plan 04 (example relabel to OWASP Top 10 2025) complete
-Last activity: 2026-07-24 — Phase 04 Plan 04 complete
+Phase: 04 (SKILL.md Conversion & Legacy Retirement) — all 5 plans executed (phase-level verification/completion owned by orchestrator)
+Plan: 5 of 5 complete
+Status: All Phase 04 plans executed; awaiting orchestrator verification before phase close
+Last activity: 2026-07-24 — Phase 04 Plan 05 (legacy file retirement + install.sh patch) complete
 
-Progress: [█████████░] 93%
+Progress: [████████░░] 80%
 
 ## Performance Metrics
 
@@ -70,6 +70,7 @@ Progress: [█████████░] 93%
 | Phase 04 P02 | 12min | 3 tasks | 4 files |
 | Phase 04 P03 | 8min | 2 tasks | 3 files |
 | Phase 04 P04 | 20min | 3 tasks | 9 files |
+| Phase 04 P05 | 5min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -106,6 +107,7 @@ Recent decisions affecting current work:
 - [Phase 04]: Reworded SKILL.md body intro paragraph in addition to the frontmatter description, avoiding a stale QRG-as-current claim contradicting the reworded description in the same file (04-03)
 - [Phase 04]: Added explicit pointers from both SCP human docs' reference sections to the scp-checklist.md Living-Source Crosswalk, not just relabeling the QRG line (04-03)
 - [Phase 04]: Example files relabeled by TOPIC against top10.md/agentic.md, not literal number substitution (security-misconfiguration.py old-A05->A02, cryptographic-failures.js old-A02->A04, injection.js gained missing A05 label); prompt-injection.txt's four invented AG codes individually remapped to real LLM01/05/06/10 items per agentic.md's mapping table, not a blanket substitution (04-04)
+- [Phase 04]: Deleted owasp-css.instructions.md, owasp-comprehensive-security-skills.md, and the in-skill owasp-security-audit.md duplicate in the same commit as a minimal install.sh sentinel/required_files patch (repointed to .claude-plugin/plugin.json) — FMT-04: legacy routing/manifest files fully superseded by SKILL.md descriptions and the per-skill references/ tree; installer must stay functional at every commit boundary
 
 ### Pending Todos
 
@@ -132,6 +134,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-24T14:19:10.708Z
-Stopped at: Completed 04-04-PLAN.md
+Last session: 2026-07-24T14:25:23.686Z
+Stopped at: Completed 04-05-PLAN.md
 Resume file: None

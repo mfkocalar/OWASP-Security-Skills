@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Plugin/Marketplace Foundation** - Stand up `.claude-plugin/plugin.json` + `marketplace.json` and lock the target skill-directory convention that every later phase builds on (completed 2026-07-20)
 - [x] **Phase 2: OWASP Top 10 Version Refresh** - Rewrite the Top 10 reference from 2021 to 2025 (Final) with correct category IDs, consistent everywhere it's cited (completed 2026-07-21)
 - [x] **Phase 3: Remaining Standards Verification & Refresh** - Citation-harden ASVS, MASVS, API Security, LLM, Agentic Apps, and Kubernetes; re-derive secure-coding-practices against the living OWASP Developer Guide (gap closed + re-verified 3/3 automated 2026-07-22; awaiting human UAT) (completed 2026-07-23)
-- [ ] **Phase 4: SKILL.md Conversion & Legacy Retirement** - Convert both skills to spec-compliant frontmatter, retire legacy routing/manifest files, remap examples to new category IDs
+- [x] **Phase 4: SKILL.md Conversion & Legacy Retirement** - Convert both skills to spec-compliant frontmatter, retire legacy routing/manifest files, remap examples to new category IDs (completed 2026-07-24)
 - [ ] **Phase 5: Packaging Validation & Credibility Polish** - Verify clean-environment install end-to-end and ship the public-release trust signals (LICENSE, coverage matrix, README, CONTRIBUTING, discoverability)
 
 ## Phase Details
@@ -96,7 +96,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `owasp-css.instructions.md`, the custom `skill.json`, and the ~900-line `owasp-comprehensive-security-skills.md` no longer sit in the loaded path, and the routing behavior they used to provide is preserved through each skill's `description` (and `when_to_use`/`paths` where supported)
   4. Paired vulnerable/secure examples are re-validated against the updated standard requirement text (especially Top 10 2025) and mapped to the correct new category IDs
 
-**Plans**: 4/5 plans executed
+**Plans**: 5/5 plans complete
 
 **Wave 1**
 
@@ -113,7 +113,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 **Wave 4** *(blocked on 04-04 — example headers repointed before the delete)*
 
-- [ ] 04-05-PLAN.md — Salvage-check + delete 3 legacy files + minimal install.sh sentinel patch (D-01, D-02, FMT-04)
+- [x] 04-05-PLAN.md — Salvage-check + delete 3 legacy files + minimal install.sh sentinel patch (D-01, D-02, FMT-04)
 
 ### Phase 5: Packaging Validation & Credibility Polish
 
@@ -140,5 +140,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Plugin/Marketplace Foundation | 3/3 | Complete    | 2026-07-20 |
 | 2. OWASP Top 10 Version Refresh | 2/2 | Complete    | 2026-07-21 |
 | 3. Remaining Standards Verification & Refresh | 4/4 | Complete    | 2026-07-23 |
-| 4. SKILL.md Conversion & Legacy Retirement | 4/5 | In Progress|  |
+| 4. SKILL.md Conversion & Legacy Retirement | 5/5 | Complete   | 2026-07-24 |
 | 5. Packaging Validation & Credibility Polish | 0/TBD | Not started | - |
