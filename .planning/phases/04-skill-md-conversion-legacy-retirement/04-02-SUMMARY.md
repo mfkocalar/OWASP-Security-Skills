@@ -157,3 +157,13 @@ None - no external service configuration required.
 ---
 *Phase: 04-skill-md-conversion-legacy-retirement*
 *Completed: 2026-07-24*
+
+## Self-Check: PASSED
+
+- FOUND: skills/owasp-security-audit/references/llm.md
+- FOUND: skills/owasp-security-audit/references/agentic.md
+- FOUND: skills/owasp-security-audit/references/llm-agentic.md correctly deleted
+- FOUND: 983f030 (Task 1 commit)
+- FOUND: 0ccfbeb (Task 2 commit)
+- FOUND: 7457b20 (Task 3 commit)
+- FOUND: 724569e (Summary commit)
