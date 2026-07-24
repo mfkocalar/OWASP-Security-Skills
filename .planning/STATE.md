@@ -5,10 +5,10 @@ milestone_name: milestone
 current_phase: 4
 current_phase_name: SKILL.md Conversion & Legacy Retirement
 status: ready
-stopped_at: Phase 4 context gathered
-last_updated: "2026-07-23T12:39:21.495Z"
-last_activity: 2026-07-23
-last_activity_desc: Phase 3 complete, transitioned to Phase 4
+stopped_at: Phase 4 planned
+last_updated: "2026-07-24T09:07:41.000Z"
+last_activity: 2026-07-24
+last_activity_desc: Phase 4 planned — 5 plans in 4 waves
 progress:
   total_phases: 5
   completed_phases: 3
@@ -29,9 +29,9 @@ See: .planning/PROJECT.md (updated 2026-07-23)
 ## Current Position
 
 Phase: 4 — SKILL.md Conversion & Legacy Retirement
-Plan: Not started
-Status: Ready to plan Phase 4 (Phase 3 complete — verified 3/3, UAT passed, security-reviewed 0 open threats)
-Last activity: 2026-07-23 — Phase 3 complete, transitioned to Phase 4
+Plan: 5 plans created (Waves 1–4)
+Status: Ready to execute Phase 4 — 5 plans in 4 waves (planned 2026-07-24; research done, plan verification passed)
+Last activity: 2026-07-24 — Phase 4 planned (research + 5 plans, verification passed)
 
 Progress: [██████░░░░] 60%
 
@@ -122,5 +122,5 @@ Items acknowledged and carried forward from previous milestone close:
 ## Session Continuity
 
 Last session: 2026-07-23T12:39:21.488Z
-Stopped at: Phase 4 context gathered
-Resume file: .planning/phases/04-skill-md-conversion-legacy-retirement/04-CONTEXT.md
+Stopped at: Phase 4 planned (5 plans, ready to execute)
+Resume file: .planning/phases/04-skill-md-conversion-legacy-retirement/04-01-PLAN.md
