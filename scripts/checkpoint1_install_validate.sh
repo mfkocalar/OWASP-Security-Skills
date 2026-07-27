@@ -97,8 +97,11 @@ OVERRIDE_APPLIED=1
 echo "[PASS] source overridden to relative path '.' (on-disk only, not committed)" | tee -a "$TRANSCRIPT"
 
 # --- Step 3: register the local marketplace (local scope only) ------------
-step "Step 3: claude plugin marketplace add . --scope local"
-if claude plugin marketplace add . --scope local 2>&1 | tee -a "$TRANSCRIPT"; then
+# Note: `claude plugin marketplace add` requires an explicit path form
+# (owner/repo, https://..., or ./path) -- a bare "." is rejected, so this
+# uses "./" (verified live against the CLI's own error message).
+step "Step 3: claude plugin marketplace add ./ --scope local"
+if claude plugin marketplace add ./ --scope local 2>&1 | tee -a "$TRANSCRIPT"; then
   echo "[PASS] marketplace add" | tee -a "$TRANSCRIPT"
 else
   echo "[FAIL] marketplace add" | tee -a "$TRANSCRIPT"
