@@ -42,7 +42,7 @@ Requirements for this modernization milestone. Each maps to roadmap phases.
 
 - [x] **ADPT-01**: A LICENSE file is added (currently missing)
 - [x] **ADPT-02**: README is refreshed — what/why, install steps, usage, the coverage matrix, and status badges
-- [ ] **ADPT-03**: CONTRIBUTING and a maintenance/versioning/update story are documented
+- [x] **ADPT-03**: CONTRIBUTING and a maintenance/versioning/update story are documented
 - [x] **ADPT-04**: Discoverability metadata is set — repo topics/tags and marketplace category/keywords
 
 ## v2 Requirements
@@ -99,7 +99,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | QUAL-03 | Phase 5 | Complete |
 | ADPT-01 | Phase 5 | Complete |
 | ADPT-02 | Phase 5 | Complete |
-| ADPT-03 | Phase 5 | Pending |
+| ADPT-03 | Phase 5 | Complete |
 | ADPT-04 | Phase 5 | Complete |
 
 **Coverage:**
