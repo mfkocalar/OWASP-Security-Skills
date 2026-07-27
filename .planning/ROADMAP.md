@@ -128,12 +128,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. A LICENSE file exists at repo root; CONTRIBUTING plus a maintenance/versioning/update story is documented; repo topics/tags and marketplace category/keywords are set for discoverability
   5. Example credentials/secrets follow a clear placeholder convention — nothing that looks like a real, valid secret
 
-**Plans**: 1/5 plans executed
+**Plans**: 2/5 plans executed
 
 **Wave 1** *(independent — no file overlap)*
 
 - [x] 05-01-PLAN.md — Release identity & version single-source: LICENSE (MIT), plugin.json 1.0.0 + keywords, marketplace.json category/keywords/tags, scripts/check_version_drift.py (ADPT-01, PKG-05, ADPT-04)
-- [ ] 05-02-PLAN.md — Example secret placeholder normalization across 5 example files, API keys + passwords (QUAL-03)
+- [x] 05-02-PLAN.md — Example secret placeholder normalization across 5 example files, API keys + passwords (QUAL-03)
 
 **Wave 2** *(blocked on 05-01 — needs LICENSE + 1.0.0 version)*
 
@@ -158,4 +158,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. OWASP Top 10 Version Refresh | 2/2 | Complete    | 2026-07-21 |
 | 3. Remaining Standards Verification & Refresh | 4/4 | Complete    | 2026-07-23 |
 | 4. SKILL.md Conversion & Legacy Retirement | 5/5 | Complete    | 2026-07-24 |
-| 5. Packaging Validation & Credibility Polish | 1/5 | In Progress|  |
+| 5. Packaging Validation & Credibility Polish | 2/5 | In Progress|  |

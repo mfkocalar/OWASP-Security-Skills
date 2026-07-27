@@ -36,7 +36,7 @@ Requirements for this modernization milestone. Each maps to roadmap phases.
 
 - [ ] **QUAL-01**: Every OWASP version/edition/category ID cites an official OWASP source URL with a retrieval date
 - [ ] **QUAL-02**: A coverage matrix documents exactly which editions are covered and which are intentionally not (honest, no overclaiming of detection capability)
-- [ ] **QUAL-03**: Example credentials/secrets use a clear placeholder convention (nothing that looks like a real, valid secret)
+- [x] **QUAL-03**: Example credentials/secrets use a clear placeholder convention (nothing that looks like a real, valid secret)
 
 ### Adoption — Public-Release Polish
 
@@ -96,7 +96,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PKG-05 | Phase 5 | Complete |
 | QUAL-01 | Phase 5 | Pending |
 | QUAL-02 | Phase 5 | Pending |
-| QUAL-03 | Phase 5 | Pending |
+| QUAL-03 | Phase 5 | Complete |
 | ADPT-01 | Phase 5 | Complete |
 | ADPT-02 | Phase 5 | Pending |
 | ADPT-03 | Phase 5 | Pending |
