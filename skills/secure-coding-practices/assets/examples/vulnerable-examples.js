@@ -77,10 +77,10 @@ function getUserVulnerable(username) {
 // ============================================
 
 // CRITICAL: API key in code
-const API_KEY = "sk-1234567890abcdefghijklmnop";
+const API_KEY = "sk-EXAMPLE-not-a-real-key";
 
 // CRITICAL: Database password in code
-const DB_PASSWORD = "MyDatabasePassword123";
+const DB_PASSWORD = "PLACEHOLDER_PASSWORD";
 
 // CRITICAL: JWT secret in code
 const JWT_SECRET = "super-secret-key-do-not-share";
@@ -356,7 +356,7 @@ app.post('/deserialize', (req, res) => {
 // VULNERABLE: Not changing default admin credentials
 const adminCredentials = {
     username: 'admin',
-    password: 'admin123'  // Default password!
+    password: 'PLACEHOLDER_PASSWORD'  // Default password!
 };
 
 // Attacker can login with well-known defaults
