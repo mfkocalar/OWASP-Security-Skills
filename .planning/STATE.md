@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 5
+current_phase: 05
 current_phase_name: Packaging Validation & Credibility Polish
 status: executing
-stopped_at: Phase 5 planned — 5 plans, ready to execute
-last_updated: "2026-07-27T11:23:08.111Z"
+stopped_at: Completed 05-01-PLAN.md
+last_updated: "2026-07-27T13:29:52.056Z"
 last_activity: 2026-07-27
-last_activity_desc: Phase 5 planned — 5 plans across 4 waves, ready to execute
+last_activity_desc: Phase 05 execution started
 progress:
   total_phases: 5
   completed_phases: 4
-  total_plans: 14
-  completed_plans: 14
-  percent: 80
+  total_plans: 19
+  completed_plans: 15
+  percent: 79
 ---
 
 # Project State
@@ -24,14 +24,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-07-23)
 
 **Core value:** A security engineer or developer can install the collection into Claude Code and get accurate, current, OWASP-grounded security review — reference content matching the latest published OWASP editions, packaging matching the official skill spec.
-**Current focus:** Phase 5 — Packaging Validation & Credibility Polish
+**Current focus:** Phase 05 — Packaging Validation & Credibility Polish
 
 ## Current Position
 
-Phase: 5 — Packaging Validation & Credibility Polish
-Plan: 5 plans (05-01..05-05) across 4 waves — not yet executed
+Phase: 05 (Packaging Validation & Credibility Polish) — EXECUTING
+Plan: 2 of 5
 Status: Ready to execute
-Last activity: 2026-07-27 — Phase 5 planned (5 plans across 4 waves), ready to execute
+Last activity: 2026-07-27 — Phase 05 execution started
 
 Progress: [████████░░] 80%
 
@@ -72,6 +72,7 @@ Progress: [████████░░] 80%
 | Phase 04 P03 | 8min | 2 tasks | 3 files |
 | Phase 04 P04 | 20min | 3 tasks | 9 files |
 | Phase 04 P05 | 5min | 2 tasks | 4 files |
+| Phase 05 P01 | 15min | 3 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -109,6 +110,7 @@ Recent decisions affecting current work:
 - [Phase 04]: Added explicit pointers from both SCP human docs' reference sections to the scp-checklist.md Living-Source Crosswalk, not just relabeling the QRG line (04-03)
 - [Phase 04]: Example files relabeled by TOPIC against top10.md/agentic.md, not literal number substitution (security-misconfiguration.py old-A05->A02, cryptographic-failures.js old-A02->A04, injection.js gained missing A05 label); prompt-injection.txt's four invented AG codes individually remapped to real LLM01/05/06/10 items per agentic.md's mapping table, not a blanket substitution (04-04)
 - [Phase 04]: Deleted owasp-css.instructions.md, owasp-comprehensive-security-skills.md, and the in-skill owasp-security-audit.md duplicate in the same commit as a minimal install.sh sentinel/required_files patch (repointed to .claude-plugin/plugin.json) — FMT-04: legacy routing/manifest files fully superseded by SKILL.md descriptions and the per-skill references/ tree; installer must stay functional at every commit boundary
+- [Phase 05]: plugin.json bumped 0.1.0 -> 1.0.0 as the single canonical version source; marketplace.json's plugin entry gained category/keywords/tags discoverability metadata with source/no-version-key unchanged; scripts/check_version_drift.py added to enforce no future version-string drift while ignoring OWASP edition numbers (MASVS 2.1.0, ASVS 5.0.0)
 
 ### Pending Todos
 
@@ -135,6 +137,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-27T11:23:08.111Z
-Stopped at: Phase 5 planned — ready to execute (run /gsd-execute-phase 5)
-Resume file: .planning/phases/05-packaging-validation-credibility-polish/05-01-PLAN.md
+Last session: 2026-07-27T13:29:52.051Z
+Stopped at: Completed 05-01-PLAN.md
+Resume file: None

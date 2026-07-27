@@ -30,7 +30,7 @@ Requirements for this modernization milestone. Each maps to roadmap phases.
 - [x] **PKG-02**: `.claude-plugin/marketplace.json` exists and lists the plugin(s) for distribution
 - [x] **PKG-03**: `skills/` stays at plugin root (never inside `.claude-plugin/`); each skill's examples are canonical per-skill so they survive copy-on-install (no fragile cross-dir/symlink references)
 - [ ] **PKG-04**: Install is verified end-to-end on a clean environment (`claude plugin validate`, marketplace add, install, activation smoke test)
-- [ ] **PKG-05**: A single canonical version source drives all version strings (no drift across manifest, README, and skills)
+- [x] **PKG-05**: A single canonical version source drives all version strings (no drift across manifest, README, and skills)
 
 ### Quality — Accuracy & Verification
 
@@ -40,10 +40,10 @@ Requirements for this modernization milestone. Each maps to roadmap phases.
 
 ### Adoption — Public-Release Polish
 
-- [ ] **ADPT-01**: A LICENSE file is added (currently missing)
+- [x] **ADPT-01**: A LICENSE file is added (currently missing)
 - [ ] **ADPT-02**: README is refreshed — what/why, install steps, usage, the coverage matrix, and status badges
 - [ ] **ADPT-03**: CONTRIBUTING and a maintenance/versioning/update story are documented
-- [ ] **ADPT-04**: Discoverability metadata is set — repo topics/tags and marketplace category/keywords
+- [x] **ADPT-04**: Discoverability metadata is set — repo topics/tags and marketplace category/keywords
 
 ## v2 Requirements
 
@@ -93,14 +93,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FMT-05 | Phase 4 | Complete |
 | CONT-06 | Phase 4 | Complete |
 | PKG-04 | Phase 5 | Pending |
-| PKG-05 | Phase 5 | Pending |
+| PKG-05 | Phase 5 | Complete |
 | QUAL-01 | Phase 5 | Pending |
 | QUAL-02 | Phase 5 | Pending |
 | QUAL-03 | Phase 5 | Pending |
-| ADPT-01 | Phase 5 | Pending |
+| ADPT-01 | Phase 5 | Complete |
 | ADPT-02 | Phase 5 | Pending |
 | ADPT-03 | Phase 5 | Pending |
-| ADPT-04 | Phase 5 | Pending |
+| ADPT-04 | Phase 5 | Complete |
 
 **Coverage:**
 
