@@ -65,8 +65,8 @@ metadata:
   name: app-secret
 type: Opaque
 stringData:
-  database_password: "MySecurePassword123!"  # DANGEROUS: Plaintext in YAML
-  api_key: "sk-abc123xyz789"
+  database_password: "PLACEHOLDER_PASSWORD"  # DANGEROUS: Plaintext in YAML
+  api_key: "sk-EXAMPLE-not-a-real-key"
   # In etcd this is only base64 encoded, not encrypted!
 
 ---

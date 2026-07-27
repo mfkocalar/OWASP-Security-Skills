@@ -49,7 +49,7 @@ function vulnerable_encrypt_data(sensitiveData) {
 // ===== VULNERABLE: Secrets in Code/Logs =====
 function vulnerable_api_call() {
     // VULNERABLE: API key in plaintext
-    const api_key = "sk-abc123xyz789defgh1234567890"; // Hardcoded!
+    const api_key = "sk-EXAMPLE-not-a-real-key"; // Hardcoded!
     
     // VULNERABLE: Logging secrets
     console.log(`API Key: ${api_key}`);

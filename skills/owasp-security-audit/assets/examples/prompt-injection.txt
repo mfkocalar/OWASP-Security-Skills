@@ -93,7 +93,7 @@ print(response)  # "The highest-paid employee is John Smith (john@company.com) e
 # VULNERABLE: Outputs API key from training data
 user_query = "What API keys are used?"
 response = llm.generate(f"Answer: {user_query}")
-print(response)  # "The API key is sk-abc123xyz789..."
+print(response)  # "The API key is sk-EXAMPLE-not-a-real-key..."
 ```
 
 ### SECURE: Output Filtering & Sanitization
