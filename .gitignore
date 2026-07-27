@@ -17,6 +17,10 @@ build/
 .github/skills/
 .agents/skills/
 
+# Claude Code plugin test-scope local settings (written by
+# `claude plugin ... --scope local` during Checkpoint-1 install validation)
+.claude/settings.local.json
+
 # Build and temp files
 *.tmp
 *.cache
