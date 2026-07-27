@@ -34,14 +34,14 @@ Requirements for this modernization milestone. Each maps to roadmap phases.
 
 ### Quality — Accuracy & Verification
 
-- [ ] **QUAL-01**: Every OWASP version/edition/category ID cites an official OWASP source URL with a retrieval date
-- [ ] **QUAL-02**: A coverage matrix documents exactly which editions are covered and which are intentionally not (honest, no overclaiming of detection capability)
+- [x] **QUAL-01**: Every OWASP version/edition/category ID cites an official OWASP source URL with a retrieval date
+- [x] **QUAL-02**: A coverage matrix documents exactly which editions are covered and which are intentionally not (honest, no overclaiming of detection capability)
 - [x] **QUAL-03**: Example credentials/secrets use a clear placeholder convention (nothing that looks like a real, valid secret)
 
 ### Adoption — Public-Release Polish
 
 - [x] **ADPT-01**: A LICENSE file is added (currently missing)
-- [ ] **ADPT-02**: README is refreshed — what/why, install steps, usage, the coverage matrix, and status badges
+- [x] **ADPT-02**: README is refreshed — what/why, install steps, usage, the coverage matrix, and status badges
 - [ ] **ADPT-03**: CONTRIBUTING and a maintenance/versioning/update story are documented
 - [x] **ADPT-04**: Discoverability metadata is set — repo topics/tags and marketplace category/keywords
 
@@ -94,11 +94,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-06 | Phase 4 | Complete |
 | PKG-04 | Phase 5 | Pending |
 | PKG-05 | Phase 5 | Complete |
-| QUAL-01 | Phase 5 | Pending |
-| QUAL-02 | Phase 5 | Pending |
+| QUAL-01 | Phase 5 | Complete |
+| QUAL-02 | Phase 5 | Complete |
 | QUAL-03 | Phase 5 | Complete |
 | ADPT-01 | Phase 5 | Complete |
-| ADPT-02 | Phase 5 | Pending |
+| ADPT-02 | Phase 5 | Complete |
 | ADPT-03 | Phase 5 | Pending |
 | ADPT-04 | Phase 5 | Complete |
 

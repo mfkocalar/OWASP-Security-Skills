@@ -5,15 +5,15 @@ milestone_name: milestone
 current_phase: 05
 current_phase_name: Packaging Validation & Credibility Polish
 status: executing
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-07-27T13:34:09.483Z"
+stopped_at: Completed 05-03-PLAN.md
+last_updated: "2026-07-27T13:41:37.724Z"
 last_activity: 2026-07-27
 last_activity_desc: Phase 05 execution started
 progress:
   total_phases: 5
   completed_phases: 4
   total_plans: 19
-  completed_plans: 16
+  completed_plans: 17
   percent: 80
 ---
 
@@ -29,7 +29,7 @@ See: .planning/PROJECT.md (updated 2026-07-23)
 ## Current Position
 
 Phase: 05 (Packaging Validation & Credibility Polish) — EXECUTING
-Plan: 3 of 5
+Plan: 4 of 5
 Status: Ready to execute
 Last activity: 2026-07-27 — Phase 05 execution started
 
@@ -74,6 +74,7 @@ Progress: [████████░░] 80%
 | Phase 04 P05 | 5min | 2 tasks | 4 files |
 | Phase 05 P01 | 15min | 3 tasks | 4 files |
 | Phase 05 P02 | 6min | 2 tasks | 5 files |
+| Phase 05 P03 | 25min | 3 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -113,6 +114,7 @@ Recent decisions affecting current work:
 - [Phase 04]: Deleted owasp-css.instructions.md, owasp-comprehensive-security-skills.md, and the in-skill owasp-security-audit.md duplicate in the same commit as a minimal install.sh sentinel/required_files patch (repointed to .claude-plugin/plugin.json) — FMT-04: legacy routing/manifest files fully superseded by SKILL.md descriptions and the per-skill references/ tree; installer must stay functional at every commit boundary
 - [Phase 05]: plugin.json bumped 0.1.0 -> 1.0.0 as the single canonical version source; marketplace.json's plugin entry gained category/keywords/tags discoverability metadata with source/no-version-key unchanged; scripts/check_version_drift.py added to enforce no future version-string drift while ignoring OWASP edition numbers (MASVS 2.1.0, ASVS 5.0.0)
 - [Phase 05]: Extended secret normalization to password-like literals (Pitfall #5 scope), including admin123 in SCP-skill's adminCredentials example; JWT_SECRET left untouched as already self-labeling and outside the offender table
+- [Phase 05]: [Phase 05-03]: README refreshed with static badges, honest 7-standard/2-skill coverage matrix (citations verbatim from owasp-urls.json), and a 'What this is NOT' disclosure naming the A03/A04/A06/A08/A10 example-coverage gaps; docs/SKILL-STRUCTURE.md worked-example tree corrected to llm.md+agentic.md, closing Phase 4's split-file drift — Public trust surface must match the actual on-disk layout and cited OWASP editions before shipping v1.0.0
 
 ### Pending Todos
 
@@ -139,6 +141,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-27T13:33:36.670Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-07-27T13:41:26.876Z
+Stopped at: Completed 05-03-PLAN.md
 Resume file: None

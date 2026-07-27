@@ -128,7 +128,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. A LICENSE file exists at repo root; CONTRIBUTING plus a maintenance/versioning/update story is documented; repo topics/tags and marketplace category/keywords are set for discoverability
   5. Example credentials/secrets follow a clear placeholder convention — nothing that looks like a real, valid secret
 
-**Plans**: 2/5 plans executed
+**Plans**: 3/5 plans executed
 
 **Wave 1** *(independent — no file overlap)*
 
@@ -137,7 +137,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 **Wave 2** *(blocked on 05-01 — needs LICENSE + 1.0.0 version)*
 
-- [ ] 05-03-PLAN.md — README refresh: static badges, two-column coverage matrix + "What this is NOT", citation consistency sweep incl. docs/SKILL-STRUCTURE.md drift fix (ADPT-02, QUAL-01, QUAL-02)
+- [x] 05-03-PLAN.md — README refresh: static badges, two-column coverage matrix + "What this is NOT", citation consistency sweep incl. docs/SKILL-STRUCTURE.md drift fix (ADPT-02, QUAL-01, QUAL-02)
 
 **Wave 3** *(blocked on 05-03 — README must salvage & de-link legacy docs first)*
 
@@ -158,4 +158,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. OWASP Top 10 Version Refresh | 2/2 | Complete    | 2026-07-21 |
 | 3. Remaining Standards Verification & Refresh | 4/4 | Complete    | 2026-07-23 |
 | 4. SKILL.md Conversion & Legacy Retirement | 5/5 | Complete    | 2026-07-24 |
-| 5. Packaging Validation & Credibility Polish | 2/5 | In Progress|  |
+| 5. Packaging Validation & Credibility Polish | 3/5 | In Progress|  |
