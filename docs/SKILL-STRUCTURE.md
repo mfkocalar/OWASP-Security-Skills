@@ -85,14 +85,14 @@ These are the verified, on-disk trees of both skills in this repo — the litera
 ```
 skills/owasp-security-audit/
 ├── SKILL.md                        # frontmatter: name + description (activation trigger)
-├── owasp-security-audit.md         # supplementary narrative doc
 ├── references/
 │   ├── top10.md
 │   ├── asvs.md
 │   ├── masvs.md
 │   ├── api-top10.md
 │   ├── kubernetes-top10.md
-│   ├── llm-agentic.md
+│   ├── llm.md
+│   ├── agentic.md
 │   ├── vulnerable-patterns.md
 │   └── owasp-urls.json
 ├── scripts/
