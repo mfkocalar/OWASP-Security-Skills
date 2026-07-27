@@ -29,7 +29,7 @@ Requirements for this modernization milestone. Each maps to roadmap phases.
 - [x] **PKG-01**: `.claude-plugin/plugin.json` exists at repo root with required plugin identity fields
 - [x] **PKG-02**: `.claude-plugin/marketplace.json` exists and lists the plugin(s) for distribution
 - [x] **PKG-03**: `skills/` stays at plugin root (never inside `.claude-plugin/`); each skill's examples are canonical per-skill so they survive copy-on-install (no fragile cross-dir/symlink references)
-- [ ] **PKG-04**: Install is verified end-to-end on a clean environment (`claude plugin validate`, marketplace add, install, activation smoke test)
+- [x] **PKG-04**: Install is verified end-to-end on a clean environment (`claude plugin validate`, marketplace add, install, activation smoke test)
 - [x] **PKG-05**: A single canonical version source drives all version strings (no drift across manifest, README, and skills)
 
 ### Quality — Accuracy & Verification
@@ -92,7 +92,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FMT-04 | Phase 4 | Complete |
 | FMT-05 | Phase 4 | Complete |
 | CONT-06 | Phase 4 | Complete |
-| PKG-04 | Phase 5 | Pending |
+| PKG-04 | Phase 5 | Complete |
 | PKG-05 | Phase 5 | Complete |
 | QUAL-01 | Phase 5 | Complete |
 | QUAL-02 | Phase 5 | Complete |

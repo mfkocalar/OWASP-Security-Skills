@@ -4,17 +4,17 @@ milestone: v1.0
 milestone_name: milestone
 current_phase: 05
 current_phase_name: Packaging Validation & Credibility Polish
-status: executing
+status: verifying
 stopped_at: Completed 05-03-PLAN.md
-last_updated: "2026-07-27T13:47:47.146Z"
+last_updated: "2026-07-27T14:13:22.103Z"
 last_activity: 2026-07-27
 last_activity_desc: Phase 05 execution started
 progress:
   total_phases: 5
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 19
-  completed_plans: 18
-  percent: 80
+  completed_plans: 19
+  percent: 100
 ---
 
 # Project State
@@ -28,12 +28,12 @@ See: .planning/PROJECT.md (updated 2026-07-23)
 
 ## Current Position
 
-Phase: 05 (Packaging Validation & Credibility Polish) — EXECUTING
+Phase: 05 (Packaging Validation & Credibility Polish) — COMPLETE
 Plan: 5 of 5
-Status: Ready to execute
+Status: Phase complete — ready for verification
 Last activity: 2026-07-27 — Phase 05 execution started
 
-Progress: [████████░░] 80%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -76,6 +76,7 @@ Progress: [████████░░] 80%
 | Phase 05 P02 | 6min | 2 tasks | 5 files |
 | Phase 05 P03 | 25min | 3 tasks | 2 files |
 | Phase 05 P04 | 1min | 2 tasks | 3 files |
+| Phase 05 P05 | 3min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -117,6 +118,7 @@ Recent decisions affecting current work:
 - [Phase 05]: Extended secret normalization to password-like literals (Pitfall #5 scope), including admin123 in SCP-skill's adminCredentials example; JWT_SECRET left untouched as already self-labeling and outside the offender table
 - [Phase 05]: [Phase 05-03]: README refreshed with static badges, honest 7-standard/2-skill coverage matrix (citations verbatim from owasp-urls.json), and a 'What this is NOT' disclosure naming the A03/A04/A06/A08/A10 example-coverage gaps; docs/SKILL-STRUCTURE.md worked-example tree corrected to llm.md+agentic.md, closing Phase 4's split-file drift — Public trust surface must match the actual on-disk layout and cited OWASP editions before shipping v1.0.0
 - [Phase 05-04]: CONTRIBUTING refreshed with Maintenance & versioning + Release & discoverability sections (plugin.json single-source version rule, release checklist, gh repo edit --add-topic command list for manual maintainer use, D-10 placeholder convention); DEPLOYMENT.md and TESTING.md retired after confirming all accurate content was salvaged into README (05-03) and CONTRIBUTING (this plan)
+- [Phase 05]: [Phase 05-05]: Checkpoint 2 (true github-source install) deliberately deferred to the ship step after Phase 5 is pushed; the v2.1.201 0-skills regression did not reproduce
 
 ### Pending Todos
 
@@ -143,6 +145,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-07-27T13:46:57.900Z
+Last session: 2026-07-27T14:12:45.084Z
 Stopped at: Completed 05-03-PLAN.md
 Resume file: None
