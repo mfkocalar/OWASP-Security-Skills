@@ -128,7 +128,24 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. A LICENSE file exists at repo root; CONTRIBUTING plus a maintenance/versioning/update story is documented; repo topics/tags and marketplace category/keywords are set for discoverability
   5. Example credentials/secrets follow a clear placeholder convention — nothing that looks like a real, valid secret
 
-**Plans**: TBD
+**Plans**: 5 plans
+
+**Wave 1** *(independent — no file overlap)*
+
+- [ ] 05-01-PLAN.md — Release identity & version single-source: LICENSE (MIT), plugin.json 1.0.0 + keywords, marketplace.json category/keywords/tags, scripts/check_version_drift.py (ADPT-01, PKG-05, ADPT-04)
+- [ ] 05-02-PLAN.md — Example secret placeholder normalization across 5 example files, API keys + passwords (QUAL-03)
+
+**Wave 2** *(blocked on 05-01 — needs LICENSE + 1.0.0 version)*
+
+- [ ] 05-03-PLAN.md — README refresh: static badges, two-column coverage matrix + "What this is NOT", citation consistency sweep incl. docs/SKILL-STRUCTURE.md drift fix (ADPT-02, QUAL-01, QUAL-02)
+
+**Wave 3** *(blocked on 05-03 — README must salvage & de-link legacy docs first)*
+
+- [ ] 05-04-PLAN.md — CONTRIBUTING refresh + maintenance/versioning story + placeholder-convention doc + gh-topics command list, then retire DEPLOYMENT.md/TESTING.md (ADPT-03)
+
+**Wave 4** *(blocked on all — validates final committed content)*
+
+- [ ] 05-05-PLAN.md — Checkpoint-1 install-validation gate: capture wrapper, reversible local-source override + REVERT, scripted skills-discovery smoke test, human-verify (PKG-04)
 
 ## Progress
 
@@ -141,4 +158,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. OWASP Top 10 Version Refresh | 2/2 | Complete    | 2026-07-21 |
 | 3. Remaining Standards Verification & Refresh | 4/4 | Complete    | 2026-07-23 |
 | 4. SKILL.md Conversion & Legacy Retirement | 5/5 | Complete    | 2026-07-24 |
-| 5. Packaging Validation & Credibility Polish | 0/TBD | Not started | - |
+| 5. Packaging Validation & Credibility Polish | 0/5 | Not started | - |
