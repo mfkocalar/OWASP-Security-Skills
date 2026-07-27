@@ -2,11 +2,11 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "owasp-security-skills",
   "displayName": "OWASP Security Skills",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "OWASP-aligned security audit and secure-coding-practices skills for Claude Code.",
   "author": { "name": "Security Education Community" },
   "homepage": "https://github.com/mfkocalar/OWASP-Security-Skills",
   "repository": "https://github.com/mfkocalar/OWASP-Security-Skills",
   "license": "MIT",
-  "keywords": ["security", "owasp", "top-10", "asvs", "masvs", "secure-coding"]
+  "keywords": ["security", "owasp", "top-10", "asvs", "masvs", "secure-coding", "kubernetes", "llm", "agentic", "api-security"]
 }
