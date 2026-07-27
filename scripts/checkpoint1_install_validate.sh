@@ -21,10 +21,19 @@
 #
 # Design rules (mirrors scripts/lint_skill_md.py's stdlib-only constraint):
 # - No dependencies beyond the `claude` CLI and stdlib python3 (used only for
-#   the tiny JSON source-field read/write/revert).
+#   the tiny JSON source-field edit) plus a byte-exact backup file for the
+#   revert (never a JSON re-serialize-on-revert -- see Rule-1 note below).
 # - Every step prints a clear [PASS]/[FAIL] line to the transcript.
 # - `set -euo pipefail` plus the EXIT trap: a hard failure anywhere still
 #   guarantees the marketplace.json revert runs before the script exits.
+#
+# Rule-1 fix note: an earlier revision reverted by deleting the
+# `_original_source` key and re-running `json.dumps(...)`. That changes
+# array/object whitespace formatting relative to the committed file even
+# though the *values* are identical, which made `git diff --quiet` report a
+# (cosmetic) diff and fail the gate. The revert now restores a byte-exact
+# backup copy instead, so the file is guaranteed identical to its pre-run
+# state, not just semantically equivalent.
 
 set -euo pipefail
 
@@ -40,21 +49,15 @@ mkdir -p "$(dirname "$TRANSCRIPT")"
 
 # --- revert-on-exit safety net (D-01's central safety property) -----------
 OVERRIDE_APPLIED=0
+BACKUP_FILE="$(mktemp)"
 
 revert_override() {
   if [ "$OVERRIDE_APPLIED" -eq 1 ]; then
-    echo "[INFO] Reverting temporary marketplace.json source override..." | tee -a "$TRANSCRIPT"
-    python3 -c "
-import json, pathlib
-p = pathlib.Path('$MARKETPLACE_JSON')
-d = json.loads(p.read_text())
-entry = d['plugins'][0]
-if '_original_source' in entry:
-    entry['source'] = entry.pop('_original_source')
-    p.write_text(json.dumps(d, indent=2) + '\n')
-"
+    echo "[INFO] Reverting temporary marketplace.json source override (byte-exact restore)..." | tee -a "$TRANSCRIPT"
+    cp "$BACKUP_FILE" "$MARKETPLACE_JSON"
     OVERRIDE_APPLIED=0
   fi
+  rm -f "$BACKUP_FILE"
 }
 
 trap 'revert_override' EXIT
@@ -84,12 +87,12 @@ fi
 
 # --- Step 2: temporary local-source override (uncommitted, reverted below) -
 step "Step 2: temporarily overriding marketplace.json plugin source -> relative path"
+cp "$MARKETPLACE_JSON" "$BACKUP_FILE"
 python3 -c "
 import json, pathlib
 p = pathlib.Path('$MARKETPLACE_JSON')
 d = json.loads(p.read_text())
 entry = d['plugins'][0]
-entry['_original_source'] = entry['source']
 entry['source'] = '.'
 p.write_text(json.dumps(d, indent=2) + '\n')
 "
@@ -121,8 +124,20 @@ fi
 step "Step 5a: claude plugin details ${PLUGIN_NAME}@${MARKETPLACE_NAME}"
 claude plugin details "${PLUGIN_NAME}@${MARKETPLACE_NAME}" 2>&1 | tee -a "$TRANSCRIPT"
 
-step "Step 5b: claude plugin list --json"
-claude plugin list --json 2>&1 | tee -a "$TRANSCRIPT"
+step "Step 5b: claude plugin list --json (filtered to this plugin's entry)"
+# Filtered to this plugin's own entry only: the raw command lists every
+# plugin installed on this machine (including unrelated third-party
+# plugins) plus full local filesystem paths under the operator's home
+# directory. Since this transcript is committed as public phase evidence,
+# only the entry relevant to this gate is captured -- avoids leaking
+# unrelated local-machine installation details into repo history.
+claude plugin list --json | python3 -c "
+import json, sys
+data = json.load(sys.stdin)
+target = '${PLUGIN_NAME}@${MARKETPLACE_NAME}'
+matches = [entry for entry in data if entry.get('id') == target]
+print(json.dumps(matches, indent=2))
+" | tee -a "$TRANSCRIPT"
 
 # --- Step 6: revert + assert clean (explicit call; the trap is the ---------
 #             guaranteed backstop if any step above failed and exited early)
