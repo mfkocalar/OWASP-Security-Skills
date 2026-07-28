@@ -147,6 +147,10 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] 05-05-PLAN.md — Checkpoint-1 install-validation gate: capture wrapper, reversible local-source override + REVERT, scripted skills-discovery smoke test, human-verify (PKG-04)
 
+**Gap Closure** *(post-verification — 1 gap found, QUAL-01)*
+
+- [ ] 05-06-PLAN.md — Re-sync docs/SKILL-STRUCTURE.md's two "verbatim" SKILL.md excerpts to the live descriptions (superseded Top 10 2021 / unqualified ASVS 5.0 / pre-rewrite SCP wording removed) + in-doc authoritative-source pointer (QUAL-01)
+
 ## Progress
 
 **Execution Order:**
