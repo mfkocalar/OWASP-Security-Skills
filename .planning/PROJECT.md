@@ -26,13 +26,16 @@ A security engineer or developer can install the collection into Claude Code and
 - ✓ OWASP Top 10 reference refreshed 2021 → 2025 (Final) using OWASP's official topic-based ID mapping — new A03 Software Supply Chain Failures, new A10 Mishandling of Exceptional Conditions, SSRF folded into A01 (CWE-918), A02 reordered — and made consistent across every cited file in the loaded skill path — Validated in Phase 2: OWASP Top 10 Version Refresh (CONT-01, CONT-02)
 - ✓ Remaining OWASP standards citation-hardened with verified edition + official source URL + retrieval date (ASVS 5.0.0, MASVS 2.1.0, API Security 2023, LLM 2025, Agentic Apps 2026); Kubernetes cites 2022 stable with the 2025 edition explicitly footnoted as in-progress; `secure-coding-practices` re-anchored to living OWASP sources (Cheat Sheet Series / Proactive Controls 2024 / Developer Guide) with the archived SCP Quick Reference Guide noted as historical origin. ASVS reference reframed to disclose its 4.0.3 body numbering rather than falsely claim 5.0.0 taxonomy — Validated in Phase 3: Remaining Standards Verification & Refresh (CONT-03, CONT-04, CONT-05)
 - ✓ Both skills converted to spec-compliant Anthropic Agent Skills — each `SKILL.md` has a folder-matching `name` (≤64) + `description` (≤1024) and a body within the ~500-line progressive-disclosure budget with deep content in `references/` (LLM/Agentic split into `llm.md` + `agentic.md`); the legacy `owasp-css.instructions.md`, custom `skill.json`, `owasp-comprehensive-security-skills.md`, and the in-skill `owasp-security-audit.md` duplicate retired from the loaded path with routing preserved via per-skill descriptions; paired examples re-validated and relabeled to the 2025/2026 category IDs; a stdlib-only `scripts/lint_skill_md.py` enforces the frontmatter spec — Validated in Phase 4: SKILL.md Conversion & Legacy Retirement (FMT-01, FMT-02, FMT-03, FMT-04, FMT-05, CONT-06)
+- ✓ Public-release trust signals shipped and clean-environment install proven end-to-end: root MIT LICENSE; single canonical version (`plugin.json` 1.0.0) guarded by a stdlib-only `scripts/check_version_drift.py`; honest README (static-only badges, cited two-column coverage matrix + retrieval dates, a "What this is NOT" scope disclosure) with plugin/marketplace as the primary install path; CONTRIBUTING carrying the maintenance/versioning story, the example-secret placeholder convention, and a manual GitHub-topics command list; stale `DEPLOYMENT.md`/`TESTING.md` retired; example secrets normalized to self-labeling placeholders; `docs/SKILL-STRUCTURE.md` citations re-synced to the live SKILL.md editions; and a captured Checkpoint-1 transcript proving `claude plugin validate` + local-source install + discovery of BOTH skills (marketplace.json source override reverted clean) — Validated in Phase 5: Packaging Validation & Credibility Polish (PKG-04, PKG-05, QUAL-01, QUAL-02, QUAL-03, ADPT-01, ADPT-02, ADPT-03, ADPT-04)
 
 ### Active
 
 <!-- This milestone. All are hypotheses until shipped and validated. -->
 
-- [ ] Public-release polish: LICENSE (currently missing), strong README, clear docs, working examples, low-friction/cross-platform install, and discoverability aimed at broad adoption
-- [ ] Version accuracy verified — no OWASP edition, control ID, or standard change relies on unverified training-data recall
+- ✓ Public-release polish: LICENSE, strong README, clear docs, working examples, low-friction/cross-platform install, and discoverability — delivered and verified in Phase 5 (see Validated above)
+- ✓ Version accuracy verified — no OWASP edition, control ID, or standard change relies on unverified training-data recall — enforced by `check_version_drift.py` and cited owasp-urls.json provenance, validated in Phase 5
+
+_All milestone requirements are content-complete and verified (16/16 must-haves, Phase 5). Remaining before v1.0 is declared shipped: `/gsd-secure-phase 05`, `/gsd-validate-phase 05`, then push + the deferred Checkpoint-2 github-source install at ship time._
 
 ### Out of Scope
 
@@ -89,4 +92,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-07-24 after Phase 4 (SKILL.md Conversion & Legacy Retirement) completion*
+*Last updated: 2026-07-28 after Phase 5 (Packaging Validation & Credibility Polish) completion — final phase; milestone v1.0 content-complete and verified, pending ship gates (secure-phase, validate-phase, push + Checkpoint-2)*
