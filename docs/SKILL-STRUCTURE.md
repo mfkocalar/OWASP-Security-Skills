@@ -28,12 +28,17 @@ Every skill has exactly one `SKILL.md` at the root of its directory. Its frontma
 - **`name`** — kebab-case, and **MUST exactly match the parent directory name**. This is not a display label; it is the skill's identity key.
 - **`description`** — the long, trigger-rich activation text. This paragraph is the Agent Skills activation mechanism: it replaces the old `skill.json` keyword-trigger arrays entirely. There is no separate keywords/triggers field — activation detection is driven by this description matching the user's request.
 
+*The two blocks below are verbatim excerpts of the live SKILL.md frontmatter.
+`skills/owasp-security-audit/SKILL.md` and `skills/secure-coding-practices/SKILL.md`
+are the sole authoritative source for these skill descriptions — if either
+`description:` line changes, these excerpts must be updated in lockstep.*
+
 Real example (`skills/owasp-security-audit/SKILL.md`, first 3 lines):
 
 ```yaml
 ---
 name: owasp-security-audit
-description: Perform OWASP-aligned security audits of source code, API handlers, mobile apps, Kubernetes manifests, LLM/agent code, and deployment configuration. Covers the OWASP Top 10 (2021), ASVS 5.0, MASVS, API Security Top 10 (2023), Kubernetes Top 10 (2022), and the OWASP LLM Top 10 (2025) plus Agentic Applications Top 10 (2026). Use this skill whenever the user asks for a security review, vulnerability audit, threat assessment, compliance check, or hardening guidance — including indirect phrasings like "is this login flow secure?", "review this endpoint", "audit my pod spec", "what could go wrong with this prompt?", or when the user pastes auth, crypto, SQL, RBAC, or LLM-tool-calling code without explicitly asking for security review.
+description: Perform OWASP-aligned security audits of source code, API handlers, mobile apps, Kubernetes manifests, LLM/agent code, and deployment configuration. Covers the OWASP Top 10 (2025), ASVS (4.0.3-numbered verification requirements; 5.0.0 is the current edition), MASVS, API Security Top 10 (2023), Kubernetes Top 10 (2022), and the OWASP LLM Top 10 (2025) plus Agentic Applications Top 10 (2026). Use this skill whenever the user asks for a security review, vulnerability audit, threat assessment, compliance check, or hardening guidance — including indirect phrasings like "is this login flow secure?", "review this endpoint", "audit my pod spec", "what could go wrong with this prompt?", or when the user pastes auth, crypto, SQL, RBAC, or LLM-tool-calling code without explicitly asking for security review.
 ---
 ```
 
@@ -42,7 +47,7 @@ Second confirming example (`skills/secure-coding-practices/SKILL.md`, first 3 li
 ```yaml
 ---
 name: secure-coding-practices
-description: Audit code against the OWASP Secure Coding Practices Quick Reference Guide checklist. Covers 14 critical domains including input validation, output encoding, authentication, session management, access control, cryptographic practices, error handling & logging, data protection, communication security, system configuration, database security, file management, memory management, and general coding practices. Triggers on requests like "review this code for secure practices", "audit for SCP compliance", "check if this follows secure coding", or when examining code with data handling, authentication, database queries, file operations, or system configuration without explicit security context.
+description: Audit code against a 14-domain secure coding checklist derived from OWASP's living sources — the Developer Guide, Cheat Sheet Series, and Proactive Controls — with the original OWASP Secure Coding Practices Quick Reference Guide noted only as the archived historical origin. Covers 14 critical domains including input validation, output encoding, authentication, session management, access control, cryptographic practices, error handling & logging, data protection, communication security, system configuration, database security, file management, memory management, and general coding practices. Triggers on requests like "review this code for secure practices", "audit for SCP compliance", "check if this follows secure coding", or when examining code with data handling, authentication, database queries, file operations, or system configuration without explicit security context.
 ---
 ```
 
