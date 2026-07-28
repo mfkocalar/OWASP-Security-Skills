@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: OWASP Top 10 Version Refresh** - Rewrite the Top 10 reference from 2021 to 2025 (Final) with correct category IDs, consistent everywhere it's cited (completed 2026-07-21)
 - [x] **Phase 3: Remaining Standards Verification & Refresh** - Citation-harden ASVS, MASVS, API Security, LLM, Agentic Apps, and Kubernetes; re-derive secure-coding-practices against the living OWASP Developer Guide (gap closed + re-verified 3/3 automated 2026-07-22; awaiting human UAT) (completed 2026-07-23)
 - [x] **Phase 4: SKILL.md Conversion & Legacy Retirement** - Convert both skills to spec-compliant frontmatter, retire legacy routing/manifest files, remap examples to new category IDs (completed 2026-07-24)
-- [ ] **Phase 5: Packaging Validation & Credibility Polish** - Verify clean-environment install end-to-end and ship the public-release trust signals (LICENSE, coverage matrix, README, CONTRIBUTING, discoverability) (5/5 plans executed 2026-07-27; verification: gaps found — 1 open, run /gsd-plan-phase 05 --gaps)
+- [x] **Phase 5: Packaging Validation & Credibility Polish** - Verify clean-environment install end-to-end and ship the public-release trust signals (LICENSE, coverage matrix, README, CONTRIBUTING, discoverability) (6/6 plans executed; gap-closure plan 05-06 resolved the sole QUAL-01 verification gap) (completed 2026-07-28)
 
 ## Phase Details
 
@@ -128,7 +128,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. A LICENSE file exists at repo root; CONTRIBUTING plus a maintenance/versioning/update story is documented; repo topics/tags and marketplace category/keywords are set for discoverability
   5. Example credentials/secrets follow a clear placeholder convention — nothing that looks like a real, valid secret
 
-**Plans**: 5/5 plans complete
+**Plans**: 6/6 plans complete
 
 **Wave 1** *(independent — no file overlap)*
 
@@ -149,7 +149,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 **Gap Closure** *(post-verification — 1 gap found, QUAL-01)*
 
-- [ ] 05-06-PLAN.md — Re-sync docs/SKILL-STRUCTURE.md's two "verbatim" SKILL.md excerpts to the live descriptions (superseded Top 10 2021 / unqualified ASVS 5.0 / pre-rewrite SCP wording removed) + in-doc authoritative-source pointer (QUAL-01)
+- [x] 05-06-PLAN.md — Re-sync docs/SKILL-STRUCTURE.md's two "verbatim" SKILL.md excerpts to the live descriptions (superseded Top 10 2021 / unqualified ASVS 5.0 / pre-rewrite SCP wording removed) + in-doc authoritative-source pointer (QUAL-01)
 
 ## Progress
 
@@ -162,4 +162,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. OWASP Top 10 Version Refresh | 2/2 | Complete    | 2026-07-21 |
 | 3. Remaining Standards Verification & Refresh | 4/4 | Complete    | 2026-07-23 |
 | 4. SKILL.md Conversion & Legacy Retirement | 5/5 | Complete    | 2026-07-24 |
-| 5. Packaging Validation & Credibility Polish | 5/5 | Gaps Found | —          |
+| 5. Packaging Validation & Credibility Polish | 6/6 | Complete   | 2026-07-28 |
