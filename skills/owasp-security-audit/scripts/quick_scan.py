@@ -55,7 +55,7 @@ SKIP_DIRS = {
 class Finding:
     file: str
     line: int
-    standard: str       # e.g. "Top10:A02"
+    standard: str       # e.g. "Top10:A04"
     pattern: str        # short id like "hardcoded-openai-key"
     excerpt: str        # the matched line, trimmed
     note: str           # one-line human explanation
@@ -64,64 +64,64 @@ class Finding:
 # Patterns. Each is (id, owasp_code, compiled_regex, note).
 # Regexes must be anchored or strict enough to keep false positives low.
 PATTERNS: list[tuple[str, str, re.Pattern[str], str]] = [
-    # --- A02 Cryptographic Failures ---
-    ("hardcoded-openai-key", "Top10:A02",
+    # --- A04 Cryptographic Failures ---
+    ("hardcoded-openai-key", "Top10:A04",
      re.compile(r"sk-[A-Za-z0-9]{20,}"),
      "looks like an OpenAI-style secret key in source"),
-    ("hardcoded-aws-access-key", "Top10:A02",
+    ("hardcoded-aws-access-key", "Top10:A04",
      re.compile(r"AKIA[0-9A-Z]{16}"),
      "AWS access key ID present in source"),
-    ("hardcoded-aws-secret", "Top10:A02",
+    ("hardcoded-aws-secret", "Top10:A04",
      re.compile(r"aws_secret_access_key\s*=\s*['\"][A-Za-z0-9/+=]{30,}['\"]",
                 re.IGNORECASE),
      "AWS secret access key assigned inline"),
-    ("hardcoded-jwt-secret", "Top10:A02",
+    ("hardcoded-jwt-secret", "Top10:A04",
      re.compile(r"(?:jwt_secret|JWT_SECRET)\s*[:=]\s*['\"][^'\"]{8,}['\"]"),
      "JWT secret assigned inline — should come from env/secret store"),
-    ("md5-or-sha1-password", "Top10:A02",
+    ("md5-or-sha1-password", "Top10:A04",
      re.compile(r"(?:md5|sha1)\s*\(\s*.*password", re.IGNORECASE),
      "password hashed with md5/sha1 — use bcrypt/argon2"),
-    ("aes-ecb", "Top10:A02",
+    ("aes-ecb", "Top10:A04",
      re.compile(r"AES\.new\([^)]*MODE_ECB|AES/ECB/|kCCOptionECBMode"),
      "AES ECB mode — use an authenticated mode (GCM/CCM)"),
-    ("tls-verify-disabled", "Top10:A02",
+    ("tls-verify-disabled", "Top10:A04",
      re.compile(r"verify\s*=\s*False|rejectUnauthorized\s*:\s*false",
                 re.IGNORECASE),
      "TLS certificate verification disabled"),
 
-    # --- A03 Injection ---
-    ("shell-true", "Top10:A03",
+    # --- A05 Injection ---
+    ("shell-true", "Top10:A05",
      re.compile(r"\bsubprocess\.(?:run|Popen|call)\([^)]*shell\s*=\s*True"),
      "subprocess with shell=True — pass argv list instead"),
-    ("os-system", "Top10:A03",
+    ("os-system", "Top10:A05",
      re.compile(r"\bos\.system\s*\("),
      "os.system builds a shell string — prefer subprocess with argv"),
-    ("sql-fstring", "Top10:A03",
+    ("sql-fstring", "Top10:A05",
      re.compile(r"(?:execute|query)\s*\(\s*[fF]['\"][^'\"]*\{[^}]+\}"),
      "SQL built from f-string — use parameterized query"),
-    ("sql-concat", "Top10:A03",
+    ("sql-concat", "Top10:A05",
      re.compile(r"(?:execute|query)\s*\(\s*['\"][^'\"]*['\"]\s*\+\s*\w+"),
      "SQL built from string concatenation — use parameterized query"),
-    ("innerhtml-assignment", "Top10:A03",
+    ("innerhtml-assignment", "Top10:A05",
      re.compile(r"\.innerHTML\s*=\s*(?!['\"](?:\s*)['\"])[A-Za-z_$`]"),
      "innerHTML assigned a non-empty value — use textContent or sanitize"),
-    ("eval-call", "Top10:A03",
+    ("eval-call", "Top10:A05",
      re.compile(r"(?<![A-Za-z_])eval\s*\("),
      "eval() call — rarely safe; audit the input"),
 
-    # --- A05 Security Misconfiguration ---
-    ("flask-debug-true", "Top10:A05",
+    # --- A02 Security Misconfiguration ---
+    ("flask-debug-true", "Top10:A02",
      re.compile(r"(?:app\.debug\s*=\s*True|debug\s*=\s*True)"),
      "debug mode enabled — off in production"),
-    ("django-debug-true", "Top10:A05",
+    ("django-debug-true", "Top10:A02",
      re.compile(r"DEBUG\s*=\s*True"),
      "DEBUG=True in settings — must be False in production"),
-    ("cors-wildcard-with-credentials", "Top10:A05",
+    ("cors-wildcard-with-credentials", "Top10:A02",
      re.compile(
          r"(origin\s*:\s*['\"]\*['\"][^}]*credentials\s*:\s*true)",
          re.DOTALL | re.IGNORECASE),
      "CORS wildcard paired with credentials — incompatible security"),
-    ("express-cors-wildcard", "Top10:A05",
+    ("express-cors-wildcard", "Top10:A02",
      re.compile(r"cors\(\s*\{\s*origin\s*:\s*['\"]\*['\"]"),
      "CORS origin set to '*'"),
 
@@ -135,8 +135,8 @@ PATTERNS: list[tuple[str, str, re.Pattern[str], str]] = [
      re.compile(r"['\"]alg['\"]\s*:\s*['\"]none['\"]"),
      "JWT algorithm 'none' — always insecure"),
 
-    # --- A10 / API7 SSRF ---
-    ("requests-get-no-timeout", "Top10:A10",
+    # --- A01 (SSRF, CWE-918) / API7 ---
+    ("requests-get-no-timeout", "Top10:A01",
      re.compile(r"\brequests\.get\((?![^)]*\btimeout\s*=)[^)]*\)"),
      "requests.get without timeout — risks hangs; also check for SSRF"),
 

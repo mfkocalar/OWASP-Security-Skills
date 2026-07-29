@@ -17,11 +17,17 @@ build/
 .github/skills/
 .agents/skills/
 
+# Claude Code plugin test-scope local settings (written by
+# `claude plugin ... --scope local` during Checkpoint-1 install validation)
+.claude/settings.local.json
+
 # Build and temp files
 *.tmp
 *.cache
 .env
 .env.local
+__pycache__/
+*.pyc
 
 # IDE and editor files
 .eslintignore
@@ -29,3 +35,7 @@ build/
 
 # Skill-creator eval workspace (local scratch data — benchmark runs, grading outputs)
 owasp-security-audit-workspace/
+
+# GSD planning artifacts + Claude project instructions — internal, kept out of the public repo
+.planning/
+.claude/

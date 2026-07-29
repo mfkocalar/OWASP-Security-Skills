@@ -1,11 +1,11 @@
 ---
 name: secure-coding-practices
-description: Audit code against the OWASP Secure Coding Practices Quick Reference Guide checklist. Covers 14 critical domains including input validation, output encoding, authentication, session management, access control, cryptographic practices, error handling & logging, data protection, communication security, system configuration, database security, file management, memory management, and general coding practices. Triggers on requests like "review this code for secure practices", "audit for SCP compliance", "check if this follows secure coding", or when examining code with data handling, authentication, database queries, file operations, or system configuration without explicit security context.
+description: Audit code against a 14-domain secure coding checklist derived from OWASP's living sources — the Developer Guide, Cheat Sheet Series, and Proactive Controls — with the original OWASP Secure Coding Practices Quick Reference Guide noted only as the archived historical origin. Covers 14 critical domains including input validation, output encoding, authentication, session management, access control, cryptographic practices, error handling & logging, data protection, communication security, system configuration, database security, file management, memory management, and general coding practices. Triggers on requests like "review this code for secure practices", "audit for SCP compliance", "check if this follows secure coding", or when examining code with data handling, authentication, database queries, file operations, or system configuration without explicit security context.
 ---
 
 # OWASP Secure Coding Practices Audit
 
-This skill turns Claude into a rigorous auditor that applies the OWASP Secure Coding Practices (SCP) Quick Reference Guide checklist to evaluate code quality and security posture, grounds every finding in observable evidence, and produces a structured, actionable compliance report.
+This skill turns Claude into a rigorous auditor that applies the OWASP Secure Coding Practices (SCP) checklist — derived from OWASP's living sources (Developer Guide, Cheat Sheet Series, Proactive Controls), with the original SCP Quick Reference Guide as its archived historical origin — to evaluate code quality and security posture, grounds every finding in observable evidence, and produces a structured, actionable compliance report.
 
 ## When this skill applies
 

@@ -1,6 +1,6 @@
 ---
 name: owasp-security-audit
-description: Perform OWASP-aligned security audits of source code, API handlers, mobile apps, Kubernetes manifests, LLM/agent code, and deployment configuration. Covers the OWASP Top 10 (2021), ASVS 5.0, MASVS, API Security Top 10 (2023), Kubernetes Top 10 (2022), and the OWASP LLM Top 10 (2025) plus Agentic Applications Top 10 (2026). Use this skill whenever the user asks for a security review, vulnerability audit, threat assessment, compliance check, or hardening guidance — including indirect phrasings like "is this login flow secure?", "review this endpoint", "audit my pod spec", "what could go wrong with this prompt?", or when the user pastes auth, crypto, SQL, RBAC, or LLM-tool-calling code without explicitly asking for security review.
+description: Perform OWASP-aligned security audits of source code, API handlers, mobile apps, Kubernetes manifests, LLM/agent code, and deployment configuration. Covers the OWASP Top 10 (2025), ASVS (4.0.3-numbered verification requirements; 5.0.0 is the current edition), MASVS, API Security Top 10 (2023), Kubernetes Top 10 (2022), and the OWASP LLM Top 10 (2025) plus Agentic Applications Top 10 (2026). Use this skill whenever the user asks for a security review, vulnerability audit, threat assessment, compliance check, or hardening guidance — including indirect phrasings like "is this login flow secure?", "review this endpoint", "audit my pod spec", "what could go wrong with this prompt?", or when the user pastes auth, crypto, SQL, RBAC, or LLM-tool-calling code without explicitly asking for security review.
 ---
 
 # OWASP Security Audit
@@ -32,7 +32,8 @@ from the table below based on what the code shows.
 | REST / GraphQL endpoints, JWT, OAuth, rate limiting, API gateways         | `references/api-top10.md`               |
 | iOS (Swift/Obj-C), Android (Kotlin/Java), Keychain, Keystore, biometrics  | `references/masvs.md`                   |
 | `kind: Pod`, `ClusterRole`, `NetworkPolicy`, Helm charts, Dockerfile      | `references/kubernetes-top10.md`        |
-| LLM SDK calls, system prompts, tool/function calling, RAG, agent loops    | `references/llm-agentic.md`             |
+| LLM SDK calls, system prompts, RAG, model output handling                 | `references/llm.md`                     |
+| Agent loops, tool/function calling, multi-agent systems, MCP servers      | `references/agentic.md`                 |
 | Explicit compliance question: "what ASVS L2 requires…", "is this MASVS…" | `references/asvs.md` and/or `references/masvs.md`  |
 
 For a standard-by-standard compliance review ("check this against
@@ -178,7 +179,7 @@ once at the start of a review; for each code you use, resolve the
 entry and format the citation as:
 
 ```
-[A01 Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
+[A01 Broken Access Control](https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/)
 ```
 
 If a code isn't in the map, fetch the project index URL listed under
@@ -203,13 +204,13 @@ Use this structure unless the user asks for a different format.
 top concerns named without adjectives.>
 
 ## Standards applied
-- [OWASP Top 10 (2021)](https://owasp.org/Top10/)
+- [OWASP Top 10 (2025)](https://owasp.org/Top10/2025/)
 - [OWASP API Security Top 10 (2023)](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
 - <…others — always linked>
 
 ## Findings
 
-### [CRITICAL] [A01 Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/) — missing ownership check
+### [CRITICAL] [A01 Broken Access Control](https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/) — missing ownership check
 **File:** `app/routes/orders.py:42`
 
 **Evidence:**
@@ -380,7 +381,7 @@ the diff.
 
 ## Reference file index
 
-- `references/top10.md` — OWASP Top 10 (2021): A01–A10 with detection
+- `references/top10.md` — OWASP Top 10 (2025): A01–A10 with detection
   cues and mitigations. Default starting point.
 - `references/api-top10.md` — OWASP API Security Top 10 (2023): BOLA,
   broken auth, property-level auth, resource consumption, SSRF, and
@@ -391,13 +392,18 @@ the diff.
 - `references/kubernetes-top10.md` — OWASP Kubernetes Top 10 (2022
   edition): pod hardening, RBAC, secrets, network segmentation, policy
   enforcement, cluster component configuration.
-- `references/llm-agentic.md` — OWASP LLM Top 10 (2025) and Agentic
-  Applications Top 10 (2026): prompt injection, improper output
-  handling, excessive agency, supply chain, goal hijack, tool misuse,
-  cascading failures.
-- `references/asvs.md` — OWASP ASVS 5.0: L1/L2/L3 verification
+- `references/llm.md` — OWASP LLM Top 10 (2025): prompt injection,
+  sensitive information disclosure, supply chain, data/model
+  poisoning, improper output handling, excessive agency, and more.
+- `references/agentic.md` — OWASP Agentic Applications Top 10 (2026):
+  goal hijack, tool misuse, cascading failures, and the old
+  `AG##`-to-real-OWASP-code mapping table for agent loops,
+  tool-calling, and multi-agent systems.
+- `references/asvs.md` — OWASP ASVS: L1/L2/L3 verification
   requirements across authentication, access control, cryptography,
-  input validation, session management.
+  input validation, session management. ASVS 5.0.0 is the current
+  edition; this summary follows 4.0.3 chapter/requirement numbering
+  (see the file's numbering-disclosure note before citing exact IDs).
 - `references/vulnerable-patterns.md` — paired vulnerable/secure
   snippets by language (Python, JavaScript, YAML, Swift, Kotlin) and
   category.

@@ -48,7 +48,7 @@ install_skill() {
     mkdir -p "$(dirname "$install_dir")"
     
     # Verify current directory is OWASP-Security-Skills repo
-    if [ ! -f "owasp-comprehensive-security-skills.md" ]; then
+    if [ ! -f ".claude-plugin/plugin.json" ]; then
         echo -e "${RED}✗ Error: Please run this script from the OWASP-Security-Skills directory${NC}"
         return 1
     fi
@@ -81,10 +81,7 @@ verify_installation() {
     echo -e "\n${YELLOW}Verifying installation...${NC}"
     
     local required_files=(
-        "owasp-comprehensive-security-skills.md"
-        "owasp-css.instructions.md"
         "README.md"
-        "skill.json"
     )
     
     local all_present=true
@@ -98,11 +95,11 @@ verify_installation() {
     done
     
     # Check examples directory
-    local example_count=$(find "${install_dir}/examples" -type f | wc -l)
+    local example_count=$(find "${install_dir}/skills/owasp-security-audit/assets/examples" -type f | wc -l)
     if [ "$example_count" -ge 9 ]; then
-        echo -e "  ${GREEN}✓${NC} examples/ ($example_count files)"
+        echo -e "  ${GREEN}✓${NC} skills/owasp-security-audit/assets/examples/ ($example_count files)"
     else
-        echo -e "  ${RED}✗${NC} examples/ (expected 9, found $example_count)"
+        echo -e "  ${RED}✗${NC} skills/owasp-security-audit/assets/examples/ (expected 9, found $example_count)"
         all_present=false
     fi
     
@@ -137,18 +134,16 @@ fi
 
 case $choice in
     1)
-        install_skill "Claude Desktop" ".claude/skills/owasp-security"
-        if [ $? -eq 0 ]; then
+        if install_skill "Claude Desktop" ".claude/skills/owasp-security"; then
             verify_installation "${SKILLS_BASE}/.claude/skills/owasp-security"
             echo -e "\n${GREEN}Next steps:${NC}"
             echo "  1. Restart Claude Desktop"
             echo "  2. Ask: 'Review this code for OWASP vulnerabilities'"
-            echo "  3. Paste any example from examples/ folder"
+            echo "  3. Paste any example from skills/owasp-security-audit/assets/examples/ folder"
         fi
         ;;
     2)
-        install_skill "GitHub Copilot" ".copilot/skills/owasp-security"
-        if [ $? -eq 0 ]; then
+        if install_skill "GitHub Copilot" ".copilot/skills/owasp-security"; then
             verify_installation "${SKILLS_BASE}/.copilot/skills/owasp-security"
             echo -e "\n${GREEN}Next steps:${NC}"
             echo "  1. Restart GitHub Copilot"
@@ -165,9 +160,14 @@ case $choice in
             echo -e "${RED}Error: Custom path cannot be empty${NC}"
             exit 1
         fi
-        
-        install_skill "Custom" "$custom_path"
-        if [ $? -eq 0 ]; then
+
+        # Reject traversal segments so the install target cannot escape SKILLS_BASE
+        if [[ "$custom_path" == *".."* ]]; then
+            echo -e "${RED}Error: Custom path must not contain '..'${NC}"
+            exit 1
+        fi
+
+        if install_skill "Custom" "$custom_path"; then
             verify_installation "${SKILLS_BASE}/${custom_path}"
         fi
         ;;

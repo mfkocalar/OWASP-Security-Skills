@@ -8,7 +8,22 @@ a narrative standard like the Top 10.
 
 **Source:** OWASP Application Security Verification Standard —
 <https://owasp.org/www-project-application-security-verification-standard/>.
-Version 5.0 is the current release as of this writing.
+
+**Edition verification:** ASVS 5.0.0 confirmed as the current stable release
+(not a release candidate), released 2025-05-30 at Global AppSec EU Barcelona.
+Source: <https://owasp.org/www-project-application-security-verification-standard/>.
+Retrieved 2026-07-22. No newer stable edition found as of this date.
+
+**Numbering disclosure:** the chapter numbers and requirement-ID examples in
+this reference follow the ASVS **4.0.3** taxonomy, not 5.0.0 — for example,
+Authentication is Chapter 2 / the V2 series under 4.0.3. ASVS 5.0.0 renumbered
+the chapters into a new V-series: Authentication became V6, Session Management
+V7, Authorization V8, Cryptography V11, Configuration V13, and Validation was
+split into V1 (Encoding & Sanitization) / V2 (Validation & Business Logic). A
+full re-mapping of this summary to the 5.0.0 V-series is intentionally
+deferred and tracked as a known, documented limitation — treat the chapter
+structure below as a 4.0.3-numbered summary, and confirm exact requirement IDs
+against whichever ASVS edition you are actually auditing.
 
 ## Verification levels
 
@@ -230,9 +245,13 @@ When reviewing against ASVS:
    testable yes/no.
 3. Escalate to L2 for any sensitive-data app; L3 only when the user
    asks for it or the domain is regulated.
-4. In the report, cite the chapter + level: "Ch. 2 L2 — requirement
+4. In the report, cite the chapter + level, and label which ASVS
+   edition the requirement ID belongs to: "Ch. 2 L2 — requirement
    V2.1.5 (MFA for sensitive operations) — not met; no MFA step in
-   `/admin/users/delete`".
+   `/admin/users/delete`." `V2.1.5` here is a **4.0.3 identifier**;
+   under ASVS 5.0.0 the same control lives in the renumbered V6
+   (Authentication) series. Before this lands in a compliance
+   deliverable, confirm the exact requirement ID against the edition you are auditing.
 
 The OWASP ASVS checklist is published as a spreadsheet/CSV; pull it
 down and map findings to specific requirement IDs for a real

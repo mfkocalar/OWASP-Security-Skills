@@ -2,9 +2,9 @@
 
 **Skill Name:** `secure-coding-practices`
 
-**Purpose:** Conduct OWASP-aligned secure coding practices audits on source code, highlighting violations of the 14 critical domains in the OWASP Secure Coding Practices Quick Reference Guide.
+**Purpose:** Conduct OWASP-aligned secure coding practices audits on source code, highlighting violations of the 14 critical domains derived from OWASP's living sources — the Developer Guide, Cheat Sheet Series, and Proactive Controls — with the original catalog, the OWASP Secure Coding Practices Quick Reference Guide, now archived as historical origin.
 
-**Reference:** https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist.html
+**Reference:** OWASP's living sources (Developer Guide, Cheat Sheet Series, Proactive Controls) — see the Living-Source Crosswalk in `references/scp-checklist.md`. **Historical origin (archived):** https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist.html
 
 ---
 
@@ -186,7 +186,8 @@ Finding 2: [Next finding]
 
 ### External references
 
-- **OWASP Secure Coding Practices Quick Reference Guide:** https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/
+- **OWASP Developer Guide, Cheat Sheet Series, and Proactive Controls (living sources):** see the Living-Source Crosswalk in `references/scp-checklist.md`
+- **OWASP Secure Coding Practices Quick Reference Guide (archived historical origin):** https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/
 - **OWASP Top 10 (for comparison):** https://owasp.org/www-project-top-ten/
 - **CWE Top 25:** https://cwe.mitre.org/top25/
 

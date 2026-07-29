@@ -5,7 +5,25 @@
     "stable_version": "https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/",
     "checklist": "https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist.html",
     "introduction": "https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/01-introduction/05-introduction",
-    "github": "https://github.com/OWASP/www-project-secure-coding-practices-quick-reference-guide"
+    "github": "https://github.com/OWASP/www-project-secure-coding-practices-quick-reference-guide",
+    "status": "archived",
+    "retrieval_date": "2026-07-22"
+  },
+  "scp_domain_crosswalk": {
+    "1_input_validation": {"domain": "Input Validation", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html", "retrieval_date": "2026-07-22", "confidence": "verified"},
+    "2_output_encoding": {"domain": "Output Encoding", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html", "retrieval_date": "2026-07-22", "confidence": "cited"},
+    "3_authentication_and_password_management": {"domain": "Authentication and Password Management", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html", "retrieval_date": "2026-07-22", "confidence": "cited"},
+    "4_session_management": {"domain": "Session Management", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html", "retrieval_date": "2026-07-22", "confidence": "cited"},
+    "5_access_control": {"domain": "Access Control", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html", "retrieval_date": "2026-07-22", "confidence": "cited"},
+    "6_cryptographic_practices": {"domain": "Cryptographic Practices", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html", "retrieval_date": "2026-07-22", "confidence": "cited"},
+    "7_error_handling_and_logging": {"domain": "Error Handling and Logging", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html", "retrieval_date": "2026-07-22", "confidence": "verified"},
+    "8_data_protection": {"domain": "Data Protection", "url": "https://devguide.owasp.org/en/04-design/02-web-app-checklist/08-protect-data/", "retrieval_date": "2026-07-22", "confidence": "cited"},
+    "9_communication_security": {"domain": "Communication Security", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html", "retrieval_date": "2026-07-22", "confidence": "cited"},
+    "10_system_configuration": {"domain": "System Configuration", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html", "retrieval_date": "2026-07-22", "confidence": "cited"},
+    "11_database_security": {"domain": "Database Security", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Database_Security_Cheat_Sheet.html", "retrieval_date": "2026-07-22", "confidence": "verified"},
+    "12_file_management": {"domain": "File Management", "url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html", "retrieval_date": "2026-07-22", "confidence": "cited-weak"},
+    "13_memory_management": {"domain": "Memory Management", "url": "https://devguide.owasp.org/", "retrieval_date": "2026-07-22", "confidence": "assumed"},
+    "14_general_coding_practices": {"domain": "General Coding Practices", "url": "https://top10proactive.owasp.org/archive/2024/the-top-10/", "retrieval_date": "2026-07-22", "confidence": "verified"}
   },
   "related_owasp_projects": {
     "top_10": {

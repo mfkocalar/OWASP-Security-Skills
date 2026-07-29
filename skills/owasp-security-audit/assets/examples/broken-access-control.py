@@ -1,8 +1,12 @@
 # OWASP Top 10 - A01: Broken Access Control
-# For detailed guidance, see: owasp-comprehensive-security-skills.md#section-1-owasp-top-10-2021
+# For detailed guidance, see: references/top10.md
 #
 # This example demonstrates broken access control vulnerabilities where users can
 # access resources they shouldn't have permission to view or modify.
+#
+# Note (2025 edition): Server-Side Request Forgery (SSRF, CWE-918) — formerly its
+# own category (A10 in the 2021 edition) — is now assessed under this category,
+# A01 Broken Access Control. See references/top10.md's SSRF sub-section.
 
 from flask import Flask, request, jsonify, session
 from functools import wraps
