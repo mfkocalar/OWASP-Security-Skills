@@ -2,11 +2,12 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 05
-status: shipped
-stopped_at: "Phase 5 (final) shipped — PR #4 open (release/v1.0 → main); awaiting merge + post-merge Checkpoint 2"
-last_updated: "2026-07-29T09:40:15.966Z"
+current_phase: 0
+status: Awaiting next milestone
+stopped_at: Completed 05-06-PLAN.md (QUAL-01 gap closure) — Phase 05 complete
+last_updated: "2026-07-29T10:26:33.365Z"
 last_activity: 2026-07-29
+last_activity_desc: Milestone v1.0 completed and archived
 progress:
   total_phases: 5
   completed_phases: 5
@@ -20,19 +21,17 @@ current_phase_name: Packaging Validation & Credibility Polish
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-07-23)
+See: .planning/PROJECT.md (updated 2026-07-29)
 
 **Core value:** A security engineer or developer can install the collection into Claude Code and get accurate, current, OWASP-grounded security review — reference content matching the latest published OWASP editions, packaging matching the official skill spec.
-**Current focus:** Phase 05 — Packaging Validation & Credibility Polish
+**Current focus:** v1.0 shipped (PR #4 merged) — planning next milestone (run /gsd-new-milestone)
 
 ## Current Position
 
-Phase: 05 (Packaging Validation & Credibility Polish) — COMPLETE & SHIPPED
-Plan: 6 of 6 executed
-Status: Milestone v1.0 content-complete; PR #4 open (release/v1.0 → main) awaiting merge + post-merge Checkpoint 2
-Last activity: 2026-07-29 — shipped Phase 5 / milestone v1.0 as PR #4
-
-Progress: [██████████] 100%
+Phase: Milestone v1.0 complete
+Plan: —
+Status: Awaiting next milestone
+Last activity: 2026-07-29 — Milestone v1.0 completed and archived
 
 ## Performance Metrics
 
@@ -150,3 +149,7 @@ Items acknowledged and carried forward from previous milestone close:
 Last session: 2026-07-28T11:00:04.985Z
 Stopped at: Completed 05-06-PLAN.md (QUAL-01 gap closure) — Phase 05 complete
 Resume file: None
+
+## Operator Next Steps
+
+- Start the next milestone with /gsd-new-milestone

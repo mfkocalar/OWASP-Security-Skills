@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A pair of OWASP-focused security skills for Claude Code (and compatible AI coding assistants) that bring OWASP standards and secure-coding practices into automated code, infrastructure, and configuration review. This milestone modernizes the repo: OWASP content is refreshed to its newest published editions, both skills are restructured into Anthropic's official Agent Skills format, and the whole repo is polished for public distribution via the Claude Code plugin marketplace.
+A pair of OWASP-focused security skills for Claude Code (and compatible AI coding assistants) that bring OWASP standards and secure-coding practices into automated code, infrastructure, and configuration review. This milestone modernized the repo: OWASP content refreshed to its newest published editions, both skills restructured into Anthropic's official Agent Skills format, and the whole repo polished for public distribution via the Claude Code plugin marketplace.
 
 <!-- SCOPE NOTE (corrected 2026-07-19): This repository's skills/ directory contains only two skills — owasp-security-audit and secure-coding-practices. The 15 cyber-domain skills (recon, malware, red-team, etc.) are globally-installed skills living outside this repo (~/.claude/skills) and are NOT in scope for this milestone. -->
 
@@ -30,12 +30,9 @@ A security engineer or developer can install the collection into Claude Code and
 
 ### Active
 
-<!-- This milestone. All are hypotheses until shipped and validated. -->
+<!-- No active requirements — all v1.0 requirements shipped and validated. Next milestone's requirements will be defined via /gsd-new-milestone. -->
 
-- ✓ Public-release polish: LICENSE, strong README, clear docs, working examples, low-friction/cross-platform install, and discoverability — delivered and verified in Phase 5 (see Validated above)
-- ✓ Version accuracy verified — no OWASP edition, control ID, or standard change relies on unverified training-data recall — enforced by `check_version_drift.py` and cited owasp-urls.json provenance, validated in Phase 5
-
-_All milestone requirements are content-complete and verified (16/16 must-haves, Phase 5). Remaining before v1.0 is declared shipped: `/gsd-secure-phase 05`, `/gsd-validate-phase 05`, then push + the deferred Checkpoint-2 github-source install at ship time._
+_All v1.0 requirements shipped and validated (16/16 verification must-haves; security 12/12 threats closed, `threats_open: 0`; Nyquist 7 automated + 2 manual-only, 0 gaps). Shipped 2026-07-29 via PR #4 (merged to `main`). A one-off post-merge Checkpoint-2 (true github-source install) remains as a confidence check, not a gate._
 
 ### Out of Scope
 
@@ -48,9 +45,9 @@ _All milestone requirements are content-complete and verified (16/16 must-haves,
 ## Context
 
 - **Existing codebase is mature and mapped** — see `.planning/codebase/` (ARCHITECTURE, STACK, STRUCTURE, CONVENTIONS, INTEGRATIONS, TESTING, CONCERNS). This is a refactor/refresh milestone on a working system, not a greenfield build.
-- **Version landscape (verified 2026-07-19, see `.planning/research/STACK.md`):** Only OWASP Top 10 needs a hard bump (2021 → 2025 Final). ASVS 5.0.0, MASVS 2.1.0, API Security Top 10 (2023), LLM Top 10 (2025), Agentic Apps (2026) are already correctly labeled and need citation-hardening only. Kubernetes Top 10 2025 is still draft (cite 2022). The OWASP Secure Coding Practices Quick Reference Guide is archived (folded into the OWASP Developer Guide).
-- **Agent Skills readiness:** the existing `references/`/`scripts/`/`assets/` layout already matches the spec's progressive-disclosure convention, so the reformat is mostly `SKILL.md` frontmatter + content-format compliance and retiring legacy root files — not a directory teardown.
-- **No build system / package manager** — pure documentation + a small Python script; delivery is symlink install today, plugin packaging is a goal of this milestone.
+- **Version landscape (verified 2026-07-19, see `.planning/research/STACK.md`):** Only OWASP Top 10 needed a hard bump (2021 → 2025 Final). ASVS 5.0.0, MASVS 2.1.0, API Security Top 10 (2023), LLM Top 10 (2025), Agentic Apps (2026) were already correctly labeled and needed citation-hardening only. Kubernetes Top 10 2025 is still draft (cite 2022). The OWASP Secure Coding Practices Quick Reference Guide is archived (folded into the OWASP Developer Guide).
+- **Agent Skills readiness:** the existing `references/`/`scripts/`/`assets/` layout already matched the spec's progressive-disclosure convention, so the reformat was mostly `SKILL.md` frontmatter + content-format compliance and retiring legacy root files — not a directory teardown.
+- **No build system / package manager** — pure documentation + small stdlib Python tooling; delivery is now the Claude Code plugin/marketplace (with `install.sh` kept as a documented alternative).
 - **Public ambition** — the repo is intended to be attractive, widely useful, and adoption-worthy (GitHub stars as a signal), which sets a public-facing quality bar for accuracy, docs, and packaging.
 
 ## Constraints
@@ -61,24 +58,31 @@ _All milestone requirements are content-complete and verified (16/16 must-haves,
 - **Distribution**: Must be installable via Claude Code plugin/marketplace mechanisms — Why: this is the definition of "done" for reach and adoption.
 - **Compatibility**: Preserve the value of existing content (examples, checklists, scanner) through the restructure — Why: this is a refresh, not a teardown.
 
+## Current State
+
+**Shipped v1.0 — OWASP Security Skills Modernization** (2026-07-29, PR #4 merged to `main`). Both skills (`owasp-security-audit`, `secure-coding-practices`) are spec-compliant Anthropic Agent Skills packaged as a Claude Code plugin with validated `.claude-plugin/` manifests, refreshed to the latest OWASP editions (Top 10 2025, ASVS 5.0.0 disclosing 4.0.3 numbering, MASVS 2.1.0, API 2023, LLM 2025, Agentic 2026, Kubernetes 2022), MIT-licensed, with an honest README coverage matrix and a stdlib version-drift guard. Quality gates all green: verification 16/16, security 12/12 (`threats_open: 0`), Nyquist 7 automated + 2 manual-only. The public repo carries product only — GSD `.planning/` and `.claude/` are excluded and gitignored on the release.
+
+**Next-milestone candidates (deferred v2 — not yet planned):** evals/ for skill activation + finding accuracy (EVAL-01), OpenSSF Best Practices badge (EVAL-02), awesome-list / community-marketplace submissions (EVAL-03), import/modernize the 15 global cyber-domain skills (EXP-01), adopt Kubernetes Top 10 2025 once final/stable (EXP-02). Run `/gsd-new-milestone` to scope v1.1+.
+
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
 | Conform to the official Anthropic Agent Skills spec | Standard format installs cleanly in Claude Code and is marketplace-distributable | ✓ Done — Phase 4 (both `SKILL.md` pass lint 24/24; legacy routing/manifest files retired from the loaded path; examples remapped to 2025/2026 IDs) |
-| Verify all OWASP versions against official sources (no training-data recall) | Public credibility depends on edition/ID accuracy | In progress — Phases 2–3 verified Top 10 + all remaining standards against official URLs with retrieval dates; final QUAL-01 sweep in Phase 5 |
-| Scope = the 2 in-repo OWASP skills only (15 domain skills are global, out of scope) | Corrected after verifying actual repo contents; keeps milestone focused and shippable | — Pending |
+| Verify all OWASP versions against official sources (no training-data recall) | Public credibility depends on edition/ID accuracy | ✓ Done — v1.0 (Top 10 + all remaining standards verified against official URLs with retrieval dates; final QUAL-01 consistency sweep incl. `docs/SKILL-STRUCTURE.md` re-sync closed in Phase 5) |
+| Scope = the 2 in-repo OWASP skills only (15 domain skills are global, out of scope) | Corrected after verifying actual repo contents; keeps milestone focused and shippable | ✓ Validated — v1.0 (both in-repo skills shipped; the 15 global domain skills stayed out of scope) |
 | Re-derive `secure-coding-practices` against the living OWASP Developer Guide | The SCP Quick Reference Guide is officially archived by OWASP | ✓ Done — Phase 3 (D-01 light re-anchor: 14-row living-source crosswalk added, 100+-item checklist body frozen) |
 | Cite stable OWASP editions only; footnote drafts (e.g. K8s 2025) | Avoids presenting draft standards as final | ✓ Done — Phase 3 (K8s 2022 primary; 2025 footnoted in-progress; no formal 2025 release found, halt-and-flag did not fire) |
 | ASVS 5.0.0 reference: disclose 4.0.3 body numbering, don't re-anchor to the 5.0.0 V-series | Gap-closure locked decision — a source-free reframe removes the edition contradiction (5.0.0 banner over 4.0.3 chapters/`V2.1.5`) without inventing unverified 5.0.0 control IDs; full re-anchor deferred | ✓ Done — Phase 3 (03-04 gap plan) |
-| Target Claude Code plugin/marketplace distribution | Maximizes reach, adoption, and shareability | — Pending |
-| Refresh rather than rebuild | Existing content, examples, and scanner are valuable and mapped | — Pending |
+| Target Claude Code plugin/marketplace distribution | Maximizes reach, adoption, and shareability | ✓ Done — v1.0 (`plugin.json` + `marketplace.json` validate; install + both-skills discovery proven; shipped via PR #4) |
+| Refresh rather than rebuild | Existing content, examples, and scanner are valuable and mapped | ✓ Validated — v1.0 (existing content, examples, and scanner preserved through the restructure) |
+| Public release excludes GSD `.planning/` and `.claude/` internals | Keeps the public security-education repo professional and product-only | ✓ Done — v1.0 (clean single-commit release branch; both paths gitignored on the release) |
 
 ## Evolution
 
 This document evolves at phase transitions and milestone boundaries.
 
-**After each phase transition** (via `/gsd-transition`):
+**After each phase transition:**
 1. Requirements invalidated? → Move to Out of Scope with reason
 2. Requirements validated? → Move to Validated with phase reference
 3. New requirements emerged? → Add to Active
@@ -89,7 +93,7 @@ This document evolves at phase transitions and milestone boundaries.
 1. Full review of all sections
 2. Core Value check — still the right priority?
 3. Audit Out of Scope — reasons still valid?
-4. Update Context with current state
+4. Update Context / Current State with shipped reality
 
 ---
-*Last updated: 2026-07-28 after Phase 5 (Packaging Validation & Credibility Polish) completion — final phase; milestone v1.0 content-complete and verified, pending ship gates (secure-phase, validate-phase, push + Checkpoint-2)*
+*Last updated: 2026-07-29 after v1.0 milestone completion (OWASP Security Skills Modernization — shipped as PR #4, merged to `main`)*
