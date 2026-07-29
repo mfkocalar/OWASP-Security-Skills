@@ -3,11 +3,10 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 current_phase: 05
-status: completed
-stopped_at: Completed 05-06-PLAN.md (QUAL-01 gap closure) — Phase 05 complete
-last_updated: "2026-07-28T11:04:33.728Z"
-last_activity: 2026-07-28
-last_activity_desc: Phase 05 complete
+status: shipped
+stopped_at: "Phase 5 (final) shipped — PR #4 open (release/v1.0 → main); awaiting merge + post-merge Checkpoint 2"
+last_updated: "2026-07-29T09:40:15.966Z"
+last_activity: 2026-07-29
 progress:
   total_phases: 5
   completed_phases: 5
@@ -28,10 +27,10 @@ See: .planning/PROJECT.md (updated 2026-07-23)
 
 ## Current Position
 
-Phase: 05
-Plan: Not started
-Status: Phase 05 complete (QUAL-01 gap-closure plan 05-06 executed)
-Last activity: 2026-07-28 — Phase 05 complete
+Phase: 05 (Packaging Validation & Credibility Polish) — COMPLETE & SHIPPED
+Plan: 6 of 6 executed
+Status: Milestone v1.0 content-complete; PR #4 open (release/v1.0 → main) awaiting merge + post-merge Checkpoint 2
+Last activity: 2026-07-29 — shipped Phase 5 / milestone v1.0 as PR #4
 
 Progress: [██████████] 100%
 
