@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "owasp-security-skills",
+  "owner": { "name": "Security Education Community" },
+  "description": "OWASP-aligned security audit and secure-coding-practices skills for Claude Code.",
+  "plugins": [
+    {
+      "name": "owasp-security-skills",
+      "source": {
+        "source": "github",
+        "repo": "mfkocalar/OWASP-Security-Skills"
+      },
+      "description": "OWASP-aligned security audit and secure-coding-practices skills for Claude Code.",
+      "category": "security",
+      "keywords": ["security", "owasp", "top-10", "asvs", "masvs", "secure-coding", "kubernetes", "llm", "agentic", "api-security"],
+      "tags": ["security-audit", "code-review", "compliance"]
+    }
+  ]
+}

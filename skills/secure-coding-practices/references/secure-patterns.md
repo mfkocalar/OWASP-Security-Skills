@@ -1,6 +1,8 @@
 # Secure Coding Patterns & Remediation Examples
 
-> **Reference:** OWASP Secure Coding Practices Quick Reference Guide
+> **Historical origin:** These patterns derive from the OWASP Secure Coding
+> Practices Quick Reference Guide, now archived by OWASP; see
+> `scp-checklist.md`'s crosswalk table for current living sources.
 
 This file contains secure patterns organized by domain. Use these as templates when remediating findings.
 

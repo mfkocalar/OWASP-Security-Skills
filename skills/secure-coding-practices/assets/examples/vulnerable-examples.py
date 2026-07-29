@@ -208,9 +208,9 @@ def upload_file_vulnerable():
 # VULNERABLE: Hardcoded Credentials
 # ============================================
 
-API_KEY = "sk-abcd1234efgh5678ijkl9012"  # EXPOSED!
+API_KEY = "sk-EXAMPLE-not-a-real-key"  # EXPOSED!
 
-DB_PASSWORD = "MySecurePassword123"  # In source code!
+DB_PASSWORD = "PLACEHOLDER_PASSWORD"  # In source code!
 
 @app.route('/api/data')
 def get_api_data():

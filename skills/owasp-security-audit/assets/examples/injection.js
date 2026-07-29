@@ -1,6 +1,7 @@
-// SQL Injection Example
-// For detailed guidance, see: owasp-comprehensive-security-skills.md#section-1-owasp-top-10-2021
+// OWASP Top 10 - A05: Injection
+// For detailed guidance, see: references/top10.md
 //
+// SQL Injection Example
 // This example demonstrates SQL injection via unsafe string concatenation.
 // The 'id' parameter is directly concatenated into the SQL query without
 // parameterization, allowing attackers to inject malicious SQL code.
