@@ -35,3 +35,7 @@ __pycache__/
 
 # Skill-creator eval workspace (local scratch data — benchmark runs, grading outputs)
 owasp-security-audit-workspace/
+
+# GSD planning artifacts + Claude project instructions — internal, kept out of the public repo
+.planning/
+.claude/
