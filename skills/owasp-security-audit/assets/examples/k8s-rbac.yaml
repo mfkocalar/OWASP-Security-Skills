@@ -2,12 +2,12 @@
 # For detailed guidance, see: references/kubernetes-top10.md
 #
 # This YAML demonstrates Kubernetes security misconfigurations:
-# - K02: Overly Permissive RBAC (wildcard permissions)
+# - K03: Overly Permissive RBAC (wildcard permissions)
 # - K01: Insecure Workload Configurations (privileged pods, no resource limits)
-# - K03: Secrets Management Failures (unencrypted secrets)
+# - K08: Secrets Management Failures (unencrypted secrets)
 
 ---
-# VULNERABLE: Service account with wildcard permissions (K02)
+# VULNERABLE: Service account with wildcard permissions (K03)
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
@@ -58,7 +58,7 @@ spec:
       secretName: app-secret
 
 ---
-# VULNERABLE: Secret stored in plaintext YAML (K03)
+# VULNERABLE: Secret stored in plaintext YAML (K08)
 apiVersion: v1
 kind: Secret
 metadata:

@@ -168,12 +168,12 @@ PATTERNS: list[tuple[str, str, re.Pattern[str], str]] = [
      "secret manifest contains plaintext — use external store + CSI"),
 
     # --- LLM / Agentic ---
-    ("llm-prompt-fstring", "LLM01",
+    ("llm-prompt-fstring", "LLM01:2026",
      re.compile(
          r"(?:\.generate|\.complete|\.invoke)\s*\(\s*[fF]['\"][^'\"]*\{.*user",
          re.IGNORECASE),
      "LLM call uses f-string prompt with user input — role-separate instead"),
-    ("llm-exec-on-output", "LLM05",
+    ("llm-exec-on-output", "LLM10:2026",
      re.compile(r"(?:exec|eval)\s*\([^)]*(?:response|completion|llm_out)",
                 re.IGNORECASE),
      "exec/eval on LLM output — never safe; validate with schema first"),

@@ -7,12 +7,14 @@
       "top10_2025": "https://owasp.org/Top10/2025/",
       "api_top10_2023": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/",
       "kubernetes_top10_2022": "https://owasp.org/www-project-kubernetes-top-ten/2022/en/src/",
-      "llm_top10_2025": "https://genai.owasp.org/llm-top-10/",
+      "llm_top10_2026": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
       "agentic_top10_2026": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
       "asvs": "https://owasp.org/www-project-application-security-verification-standard/",
       "masvs": "https://mas.owasp.org/MASVS/"
     },
-    "kubernetes_2025_status": "2025 edition available for community feedback as of 2026-07-22; no formal release/version tag; not cited as primary — see kubernetes-top10.md footnote."
+    "kubernetes_2025_status": "2025 edition available for community feedback as of 2026-07-22; no formal release/version tag; not cited as primary — see kubernetes-top10.md footnote.",
+    "asvs_5_0_0_source": "ASVS 5.0.0 requirement IDs, names and levels cite OWASP's canonical files in the OWASP/ASVS repository, pinned to commit 2b300716ebbef654788d0a14d6c878cecc70c2e9: the CSV 5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.csv and the official mapping file 5.0/mappings/mapping_v5.0.0_to_v4.0.3.yml (release v5.0.0_release, published 2025-05-30). OWASP content is CC BY-SA 4.0.",
+    "llm_2026_source": "LLM01:2026-LLM10:2026 URLs cite OWASP's canonical per-item Markdown in the GenAI-Security-Project/GenAI-LLM-Top10 repository, pinned to commit 9253e38ade58e959b531c0c5c9a4842272c9cd0e (2026 edition, published 2026-08-04). genai.owasp.org publishes the edition at the _indexes.llm_top10_2026 resource page but has no per-item 2026 risk pages. OWASP content is CC BY-SA 4.0."
   },
 
   "A01": {"title": "Broken Access Control", "edition": "2025", "url": "https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/", "retrieval_date": "2026-07-21", "confidence": "verified"},
@@ -48,16 +50,16 @@
   "K09": {"title": "Misconfigured Cluster Components", "edition": "2022", "url": "https://owasp.org/www-project-kubernetes-top-ten/2022/en/src/K09-misconfigured-cluster-components", "retrieval_date": "2026-07-22", "confidence": "verified"},
   "K10": {"title": "Vulnerable Components", "edition": "2022", "url": "https://owasp.org/www-project-kubernetes-top-ten/2022/en/src/K10-vulnerable-components", "retrieval_date": "2026-07-22", "confidence": "verified"},
 
-  "LLM01:2025": {"title": "Prompt Injection", "edition": "2025", "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/", "retrieval_date": "2026-07-22", "confidence": "verified"},
-  "LLM02:2025": {"title": "Sensitive Information Disclosure", "edition": "2025", "url": "https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/", "retrieval_date": "2026-07-22", "confidence": "verified"},
-  "LLM03:2025": {"title": "Supply Chain", "edition": "2025", "url": "https://genai.owasp.org/llm-top-10/", "retrieval_date": "2026-07-22", "confidence": "verified"},
-  "LLM04:2025": {"title": "Data and Model Poisoning", "edition": "2025", "url": "https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/", "retrieval_date": "2026-07-22", "confidence": "verified"},
-  "LLM05:2025": {"title": "Improper Output Handling", "edition": "2025", "url": "https://genai.owasp.org/llmrisk/llm052025-improper-output-handling/", "retrieval_date": "2026-07-22", "confidence": "verified"},
-  "LLM06:2025": {"title": "Excessive Agency", "edition": "2025", "url": "https://genai.owasp.org/llm-top-10/", "retrieval_date": "2026-07-22", "confidence": "verified"},
-  "LLM07:2025": {"title": "System Prompt Leakage", "edition": "2025", "url": "https://genai.owasp.org/llmrisk/llm072025-system-prompt-leakage/", "retrieval_date": "2026-07-22", "confidence": "verified"},
-  "LLM08:2025": {"title": "Vector and Embedding Weaknesses", "edition": "2025", "url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/", "retrieval_date": "2026-07-22", "confidence": "verified"},
-  "LLM09:2025": {"title": "Misinformation", "edition": "2025", "url": "https://genai.owasp.org/llm-top-10/", "retrieval_date": "2026-07-22", "confidence": "verified"},
-  "LLM10:2025": {"title": "Unbounded Consumption", "edition": "2025", "url": "https://genai.owasp.org/llm-top-10/", "retrieval_date": "2026-07-22", "confidence": "verified"},
+  "LLM01:2026": {"title": "Prompt Injection", "edition": "2026", "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/9253e38ade58e959b531c0c5c9a4842272c9cd0e/2026/final/LLM01_PromptInjection.md", "retrieval_date": "2026-10-04", "confidence": "verified"},
+  "LLM02:2026": {"title": "Sensitive Information Disclosure", "edition": "2026", "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/9253e38ade58e959b531c0c5c9a4842272c9cd0e/2026/final/LLM02_SensitiveInformationDisclosure.md", "retrieval_date": "2026-10-04", "confidence": "verified"},
+  "LLM03:2026": {"title": "Excessive Agency", "edition": "2026", "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/9253e38ade58e959b531c0c5c9a4842272c9cd0e/2026/final/LLM03_ExcessiveAgency.md", "retrieval_date": "2026-10-04", "confidence": "verified"},
+  "LLM04:2026": {"title": "Supply Chain", "edition": "2026", "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/9253e38ade58e959b531c0c5c9a4842272c9cd0e/2026/final/LLM04_SupplyChain.md", "retrieval_date": "2026-10-04", "confidence": "verified"},
+  "LLM05:2026": {"title": "Data and Model Poisoning", "edition": "2026", "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/9253e38ade58e959b531c0c5c9a4842272c9cd0e/2026/final/LLM05_DataModelPoisoning.md", "retrieval_date": "2026-10-04", "confidence": "verified"},
+  "LLM06:2026": {"title": "Unbounded Consumption", "edition": "2026", "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/9253e38ade58e959b531c0c5c9a4842272c9cd0e/2026/final/LLM06_UnboundedConsumption.md", "retrieval_date": "2026-10-04", "confidence": "verified"},
+  "LLM07:2026": {"title": "Misinformation", "edition": "2026", "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/9253e38ade58e959b531c0c5c9a4842272c9cd0e/2026/final/LLM07_Misinformation.md", "retrieval_date": "2026-10-04", "confidence": "verified"},
+  "LLM08:2026": {"title": "Hidden Context Exposure", "edition": "2026", "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/9253e38ade58e959b531c0c5c9a4842272c9cd0e/2026/final/LLM08_HiddenContextExposure.md", "retrieval_date": "2026-10-04", "confidence": "verified"},
+  "LLM09:2026": {"title": "Vector and Embedding Weaknesses", "edition": "2026", "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/9253e38ade58e959b531c0c5c9a4842272c9cd0e/2026/final/LLM09_VectorAndEmbeddingWeaknesses.md", "retrieval_date": "2026-10-04", "confidence": "verified"},
+  "LLM10:2026": {"title": "Improper Output Handling", "edition": "2026", "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/blob/9253e38ade58e959b531c0c5c9a4842272c9cd0e/2026/final/LLM10_ImproperOutputHandling.md", "retrieval_date": "2026-10-04", "confidence": "verified"},
 
   "ASI01": {"title": "Agent Goal Hijack", "edition": "2026", "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/", "retrieval_date": "2026-07-22", "confidence": "verified"},
   "ASI02": {"title": "Tool Misuse", "edition": "2026", "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/", "retrieval_date": "2026-07-22", "confidence": "verified"},
@@ -70,7 +72,7 @@
   "ASI09": {"title": "Human-Agent Trust Exploitation", "edition": "2026", "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/", "retrieval_date": "2026-07-22", "confidence": "verified"},
   "ASI10": {"title": "Rogue Agents", "edition": "2026", "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/", "retrieval_date": "2026-07-22", "confidence": "verified"},
 
-  "ASVS": {"title": "Application Security Verification Standard", "edition": "5.0.0", "url": "https://owasp.org/www-project-application-security-verification-standard/", "retrieval_date": "2026-07-22", "confidence": "verified"},
+  "ASVS": {"title": "Application Security Verification Standard", "edition": "5.0.0", "url": "https://owasp.org/www-project-application-security-verification-standard/", "retrieval_date": "2026-10-04", "confidence": "verified"},
   "MASVS": {"title": "Mobile Application Security Verification Standard", "edition": "2.1.0", "url": "https://mas.owasp.org/MASVS/", "retrieval_date": "2026-07-22", "confidence": "verified"},
   "MASVS-STORAGE": {"title": "Storage", "url": "https://mas.owasp.org/MASVS/", "confidence": "index-fallback"},
   "MASVS-CRYPTO": {"title": "Cryptography", "url": "https://mas.owasp.org/MASVS/", "confidence": "index-fallback"},

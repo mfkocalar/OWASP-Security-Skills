@@ -13,8 +13,9 @@ at `/2022/en/src/`). Retrieved 2026-07-22.
 README states only "2025 Top 10 Risks now available — Feedback welcome,"
 with no version tag and no formal GitHub release published as of
 2026-07-22 — this is **in progress, not final**. Do not cite 2025 K0x
-codes as authoritative; if reviewing against 2025 draft content, verify
-each mapping against the 2025 per-item pages first [?].
+codes as authoritative; if reviewing against 2025 draft content, use
+the crosswalk in the Appendix below — each mapping has been
+spot-checked against the 2025 per-item source pages (see Sources).
 
 ## How to use
 
@@ -317,8 +318,9 @@ cluster, hit internal databases, and reach the cloud metadata endpoint.
 **Detection signals**
 - `kubectl get networkpolicies --all-namespaces` returns nothing (or
   only a handful on a multi-tenant cluster).
-- CNI in use doesn't enforce NetworkPolicy (plain Flannel without a
-  policy plugin) [?] — verify against the CNI's docs.
+- Some CNIs (such as flannel) don't support NetworkPolicy; clusters
+  using those CNIs silently ignore NetworkPolicies, allowing
+  unintended traffic.
 - Namespaces with databases or secrets operators have no ingress
   restrictions.
 - Pods can `curl http://169.254.169.254/` with no legitimate need.
@@ -510,8 +512,11 @@ Restrict API server exposure and enable audit:
 
 Keep the load balancer private; expose the API only via bastion / VPN
 / cloud-private endpoint. Enforce Pod Security Standards per
-namespace (see K04). Run CIS benchmarks (kube-bench CronJob pattern
-[?]) on a schedule and gate infra PRs on the result.
+namespace (see K04). Run CIS benchmarks on a schedule — kube-bench
+ships one-shot `Job` manifests per distribution (`job.yaml`,
+`job-eks.yaml`, `job-gke.yaml`, etc.; no official CronJob manifest is
+bundled); wrap the relevant Job in a Kubernetes `CronJob` to automate
+periodic runs, and gate infra PRs on the result.
 
 **Checklist**
 - [ ] kube-bench runs in CI against control-plane nodes.
@@ -586,15 +591,63 @@ SBOM review.
 
 ## Appendix: 2022 → 2025 cross-reference
 
-If you migrate this skill to the 2025 list, the rough mapping is [?]:
+**Provenance.** The mapping below is repo-inferred, not OWASP-published
+— OWASP's Kubernetes Top Ten project lists the 2022 and 2025
+categories side by side but publishes no crosswalk document between
+them. Per PROJECT.md's footnote-only decision, the 2022
+edition above remains this skill's active taxonomy; this table exists
+only to help a reader translate between the two numbering schemes, not
+to promote 2025 to primary status. Each row's Status cell states its
+own confidence rather than implying OWASP authored the mapping.
 
-- 2022 K06 Broken Authentication ≈ 2025 K09 Broken Authentication
-  Mechanisms.
-- 2022 K07 Network Segmentation ≈ 2025 K05 Missing Network
-  Segmentation Controls.
-- 2022 K08 Secrets Management ≈ 2025 K03 Secrets Management Failures.
-- 2022 K09 Misconfigured Cluster Components ≈ 2025 K07 Misconfigured
-  and Vulnerable Cluster Components (merged with old K10).
-- 2022 K10 Vulnerable Components ≈ folded into 2025 K07 [?].
+Source (shared, for all 2025 content in this Appendix): OWASP
+Kubernetes Top Ten project index,
+<https://raw.githubusercontent.com/OWASP/www-project-kubernetes-top-ten/main/index.md>
+(mirrored at <https://kubernetes-top10.owasp.org/>). Retrieved
+2026-09-19.
 
-Confirm against individual 2025 per-item pages before quoting codes.
+### 2022 → 2025 crosswalk
+
+| 2022 Code | 2022 Title | 2025 Code(s) | 2025 Title(s) | Status | Note |
+|---|---|---|---|---|---|
+| 2022 K01 | Insecure Workload Configurations | K01 | Insecure Workload Configurations | spot-checked | Same title, same topic (root user, dangerous Linux capabilities, seccomp, resource limits, host namespaces). Direct 1:1 carryover — high confidence. |
+| 2022 K02 | Supply Chain Vulnerabilities | K07 | Misconfigured And Vulnerable Cluster Components | spot-checked — best-inference | No 2025 category is titled "supply chain" or discusses image signing/SBOM/provenance verbatim. K07 is the closest topical match — it merges the concept of "vulnerable" components (old K10) with "misconfigured" components (old K09), and 2022's K02 and K10 sections already overlapped heavily on unscanned/unpinned/unpatched images. This mapping is repo-inferred; upstream text does not spell out this fold-in verbatim. |
+| 2022 K03 | Overly Permissive RBAC | K02 | Overly Permissive Authorization Configurations | spot-checked | Same core topic (cluster-admin misuse, wildcard verbs/resources, escalate/bind/impersonate, least-privilege). 2025 widens the title from "RBAC" to "Authorization Configurations" to cover non-RBAC authorizers too (adds a "multiple authorizers" / webhook-auth section). |
+| 2022 K04 | Lack of Centralized Policy Enforcement | K04 | Lack Of Cluster Level Policy Enforcement | spot-checked | Same topic (admission control: Pod Security Admission, Validating Admission Policy, OPA/Gatekeeper, Kyverno). Renamed "Centralized" to "Cluster Level"; meaning unchanged. |
+| 2022 K05 | Inadequate Logging and Monitoring | K10 | Inadequate Logging And Monitoring | spot-checked | Identical title and topic (API-server audit logging, node/workload logs, credential-creation events with no other permanent record). Rank dropped #5 to #10. |
+| 2022 K06 | Broken Authentication Mechanisms | K09 | Broken Authentication Mechanisms | spot-checked | Identical title and topic (unrevokable client certs, OIDC/MFA, short-lived tokens, disabling anonymous auth, avoiding default SA tokens). Rank dropped #6 to #9. |
+| 2022 K07 | Missing Network Segmentation Controls | K05 | Missing Network Segmentation Controls | spot-checked | Identical title and topic (flat pod networking by default, default-deny NetworkPolicy, metadata-endpoint egress blocking, CNI NetworkPolicy support). Rank improved #7 to #5. |
+| 2022 K08 | Secrets Management Failures | K03 | Secrets Management Failures | spot-checked | Identical title and topic (secrets in images/ConfigMaps/env vars/logs, LIST/WATCH exposure, encryption-at-rest, external secret stores). Rank improved #8 to #3. |
+| 2022 K09 | Misconfigured Cluster Components | K07 | Misconfigured And Vulnerable Cluster Components | spot-checked | 2025 K07 explicitly merges old K09 (misconfigured components) with old K10 (vulnerable components) — the 2025 title literally names both concepts ("Misconfigured And Vulnerable"). High confidence — legible from the title itself, not inferred from body text. |
+| 2022 K10 | Vulnerable Components | K07 | Misconfigured And Vulnerable Cluster Components | spot-checked | Same merge as the K09 row above — repeated target cell per this Appendix's many-to-one mapping convention, not a blank or dashed cell. |
+
+### New in 2025
+
+| 2025 Code | Title | 1-line description | Why it's net-new |
+|---|---|---|---|
+| 2025 K06 | Overly Exposed Kubernetes Components | Kubernetes API server, kubelet, or etcd reachable directly from the public internet, leaking version info via the unauthenticated `/version` endpoint and TLS certificate SANs, and giving any attacker who obtains valid credentials unrestricted use of them. | 2022's ten categories never separately named perimeter/internet-exposure of control-plane or node components as its own risk. The closest 2022-adjacent topics — K07 (internal flat networking) and K09 (component hardening) — addressed internal segmentation and configuration hardening, not public internet reachability of the components themselves. |
+| 2025 K08 | Cluster To Cloud Lateral Movement | A compromised pod abusing overly broad node IAM roles, static long-lived cloud credentials, or the cloud instance-metadata service (`169.254.169.254`) to pivot from inside the Kubernetes cluster into the surrounding cloud-provider account (e.g., exfiltrating from S3/RDS, spinning up new VMs). | 2022's list predates cloud-IAM-pivot as a distinct named risk. The closest 2022-adjacent topics — K06 (in-cluster auth) and K08 (in-cluster secrets) — covered credentials inside Kubernetes, not the boundary-crossing step into the cloud provider's own IAM plane. |
+
+**K06/K08 boundary.** K06 is outside-in: an attacker — who may not yet
+have a foothold — reaching Kubernetes's own components from the
+internet. Its source text never mentions cloud IAM, cloud credentials,
+or the metadata service. K08 is inside-out: an attacker who already
+has code execution in a pod, pivoting into the cloud account via IAM
+roles, static credentials, or the instance-metadata service. Its
+source text never mentions internet-facing exposure of the API
+server, kubelet, or etcd. Both 2025 source pages were read in full for
+this Appendix and neither cross-mentions the other's subject matter —
+this is a clean, non-overlapping boundary, not an inferred one.
+
+### 2025 category descriptions
+
+| 2025 Code | Title | What it covers |
+|---|---|---|
+| 2025 K01 | Insecure Workload Configurations | Pods/containers running with unhardened defaults — root user, dangerous Linux capabilities, missing seccomp, no resource limits, privileged mode, host namespaces. |
+| 2025 K02 | Overly Permissive Authorization Configurations | Excessive RBAC or other-authorizer grants — cluster-admin misuse, built-in ClusterRoles, wildcard verbs/resources, escalate/bind/impersonate, third-party "shadow RBAC" from Helm charts/Operators. |
+| 2025 K03 | Secrets Management Failures | Secrets mishandled via container images, ConfigMaps, env vars, source repos, or application logs, or exposed via overly broad LIST/WATCH access to Secret objects. |
+| 2025 K04 | Lack Of Cluster Level Policy Enforcement | No cluster-wide admission-control mechanism (Pod Security Admission, Validating Admission Policy, or webhook policy engines like Kyverno/Gatekeeper) blocking insecure resources before creation. |
+| 2025 K05 | Missing Network Segmentation Controls | Flat pod-to-pod and pod-to-control-plane networking by default, letting a compromised pod reach other workloads, cluster-admin services, or exfiltrate data, absent NetworkPolicies. |
+| 2025 K07 | Misconfigured And Vulnerable Cluster Components | Un-hardened default settings and unpatched vulnerabilities across kube-apiserver, controller-manager, scheduler, kubelet, kube-proxy, container runtime, and node OS. |
+| 2025 K09 | Broken Authentication Mechanisms | Weak or unrevokable Kubernetes API authentication — long-lived client certs, anonymous access left enabled, default ServiceAccount tokens, no MFA — instead of short-lived externally managed identity. |
+| 2025 K10 | Inadequate Logging And Monitoring | Missing or unretained Kubernetes audit logs and node/workload logs, especially for events (cert/token creation) that leave no other permanent record in the cluster. |

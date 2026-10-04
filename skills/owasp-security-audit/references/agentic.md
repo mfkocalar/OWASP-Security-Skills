@@ -26,7 +26,7 @@ Retrieved 2026-07-22.
 
 > Earlier drafts of this project called this list "Preview" and used
 > invented codes like `AG01–AG10`. Those codes are **not** part of any
-> OWASP publication. Use `ASI01`–`ASI10` only (and `LLM01`–`LLM10` for
+> OWASP publication. Use `ASI01`–`ASI10` only (and `LLM01:2026`–`LLM10:2026` for
 > the base LLM list in `references/llm.md`).
 
 > Risks below are verified against the December 9, 2025 OWASP
@@ -251,19 +251,19 @@ For anyone updating code or docs that used the old taxonomy:
 
 | Old (invented) | Real OWASP item(s) |
 |---|---|
-| AG01 Prompt Injection | LLM01 Prompt Injection; related ASI01 |
-| AG02 Insufficient Input Validation | **No OWASP item.** Folded into LLM01 / LLM05 |
-| AG03 Insecure Output Handling | LLM05 Improper Output Handling |
-| AG04 Model Poisoning | LLM04 Data and Model Poisoning |
-| AG05 Denial of Service | LLM10 Unbounded Consumption |
-| AG06 Unauthorized Tool Access | LLM06 Excessive Agency; ASI02; ASI03 |
-| AG07 Training Data Leakage | LLM02 Sensitive Information Disclosure |
-| AG08 Excessive Autonomy | LLM06 Excessive Agency |
+| AG01 Prompt Injection | LLM01:2026 Prompt Injection; related ASI01 |
+| AG02 Insufficient Input Validation | **No OWASP item.** Folded into LLM01:2026 / LLM10:2026 |
+| AG03 Insecure Output Handling | LLM10:2026 Improper Output Handling |
+| AG04 Model Poisoning | LLM05:2026 Data and Model Poisoning |
+| AG05 Denial of Service | LLM06:2026 Unbounded Consumption |
+| AG06 Unauthorized Tool Access | LLM03:2026 Excessive Agency; ASI02; ASI03 |
+| AG07 Training Data Leakage | LLM02:2026 Sensitive Information Disclosure |
+| AG08 Excessive Autonomy | LLM03:2026 Excessive Agency |
 | AG09 Inadequate Logging | **Not OWASP LLM/Agentic.** Closest: web A09 |
-| AG10 Supply Chain Risks | LLM03 Supply Chain; ASI04 |
+| AG10 Supply Chain Risks | LLM04:2026 Supply Chain; ASI04 |
 
 Use the real codes in findings. If you encounter an audit report or
 repo referencing `AG01`–`AG10`, translate it before acting. Note some
-entries resolve to `LLM0X` codes in `references/llm.md` rather than
+entries resolve to `LLM0X:2026` codes in `references/llm.md` rather than
 `ASI0X` codes in this file — both reference files may need loading to
 fully resolve an old `AG##` citation.
