@@ -1236,8 +1236,8 @@ When reviewing against ASVS:
    (Authorization), V14 (Data Protection) and V16, plus V4 (API and Web
    Service) when it is served as an API. The last column of the chapter table
    covers the rest.
-2. Within each chapter, check the documentation requirements (always its first
-   section) separately from the implementation requirements. Documentation that
+2. Within each chapter, check documented requirements separately from implementation
+   requirements; they are not always in the first section. Documentation that
    is not visible in the snippet is "cannot be determined", not "missing".
 3. Walk the L1 requirements first, then L2 and L3 up to the level the user or
    organization targets. Remember that V16 has no L1 requirements.
