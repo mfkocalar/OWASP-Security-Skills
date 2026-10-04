@@ -1,6 +1,6 @@
 ---
 name: owasp-security-audit
-description: Perform OWASP-aligned security audits of source code, API handlers, mobile apps, Kubernetes manifests, LLM/agent code, and deployment configuration. Covers the OWASP Top 10 (2025), ASVS (4.0.3-numbered verification requirements; 5.0.0 is the current edition), MASVS, API Security Top 10 (2023), Kubernetes Top 10 (2022), and the OWASP LLM Top 10 (2025) plus Agentic Applications Top 10 (2026). Use this skill whenever the user asks for a security review, vulnerability audit, threat assessment, compliance check, or hardening guidance — including indirect phrasings like "is this login flow secure?", "review this endpoint", "audit my pod spec", "what could go wrong with this prompt?", or when the user pastes auth, crypto, SQL, RBAC, or LLM-tool-calling code without explicitly asking for security review.
+description: Perform OWASP-aligned security audits of source code, API handlers, mobile apps, Kubernetes manifests, LLM/agent code, and deployment configuration. Covers the OWASP Top 10 (2025), ASVS 5.0.0 (V1-V17 chapter numbering), MASVS, API Security Top 10 (2023), Kubernetes Top 10 (2022), and the OWASP LLM Top 10 (2026) plus Agentic Applications Top 10 (2026). Use this skill whenever the user asks for a security review, vulnerability audit, threat assessment, compliance check, or hardening guidance — including indirect phrasings like "is this login flow secure?", "review this endpoint", "audit my pod spec", "what could go wrong with this prompt?", or when the user pastes auth, crypto, SQL, RBAC, or LLM-tool-calling code without explicitly asking for security review.
 ---
 
 # OWASP Security Audit
@@ -172,7 +172,7 @@ without naming the precondition lets a real exposure slip.
 
 ### Link every code you cite
 
-When you reference a standard code — `A01`, `API2:2023`, `LLM05:2025`,
+When you reference a standard code — `A01`, `API2:2023`, `LLM10:2026`,
 `K08`, `ASI03`, and so on — emit it as a markdown link to the canonical
 OWASP page. The URL map lives at `references/owasp-urls.json`. Read it
 once at the start of a review; for each code you use, resolve the
@@ -399,11 +399,11 @@ the diff.
   goal hijack, tool misuse, cascading failures, and the old
   `AG##`-to-real-OWASP-code mapping table for agent loops,
   tool-calling, and multi-agent systems.
-- `references/asvs.md` — OWASP ASVS: L1/L2/L3 verification
-  requirements across authentication, access control, cryptography,
-  input validation, session management. ASVS 5.0.0 is the current
-  edition; this summary follows 4.0.3 chapter/requirement numbering
-  (see the file's numbering-disclosure note before citing exact IDs).
+- `references/asvs.md` — OWASP ASVS 5.0.0: L1/L2/L3 verification
+  requirements in the official V1-V17 chapter numbering
+  (authentication V6, session management V7, authorization V8,
+  cryptography V11, configuration V13, and twelve more chapters),
+  each cited in OWASP's versioned form `v5.0.0-X.Y.Z`.
 - `references/vulnerable-patterns.md` — paired vulnerable/secure
   snippets by language (Python, JavaScript, YAML, Swift, Kotlin) and
   category.

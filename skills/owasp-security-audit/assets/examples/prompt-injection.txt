@@ -2,10 +2,10 @@
 # For detailed guidance, see: references/llm.md (agentic tool-access cross-refs: references/agentic.md)
 #
 # This file demonstrates LLM/AI security vulnerabilities in agentic applications
-# Status: Final - verified against OWASP LLM Top 10 (2025) and Agentic Apps Top 10 (2026)
+# Status: Final - verified against OWASP LLM Top 10 (2026) and Agentic Apps Top 10 (2026)
 
 ---
-## LLM01:2025 Prompt Injection - Direct and Indirect Attacks
+## LLM01:2026 Prompt Injection - Direct and Indirect Attacks
 
 ### VULNERABLE: Direct Prompt Injection
 User input directly concatenated into prompt: attacker can override system instructions.
@@ -78,7 +78,7 @@ response = conversation.predict(user_input=user_message)
 ```
 
 ---
-## LLM05:2025 Improper Output Handling - Data Leakage
+## LLM02:2026 Sensitive Information Disclosure - Data Leakage
 
 ### VULNERABLE: Raw LLM Output Displayed
 LLM trained on sensitive data outputs PII, API keys, or internal information.
@@ -129,7 +129,7 @@ print(sanitized_response)
 ```
 
 ---
-## LLM06:2025 Excessive Agency - Unauthorized Plugin/Tool Access (see also ASI02 Tool Misuse, ASI03 Identity & Privilege Abuse in references/agentic.md)
+## LLM03:2026 Excessive Agency - Unauthorized Plugin/Tool Access (see also ASI02 Tool Misuse, ASI03 Identity & Privilege Abuse in references/agentic.md)
 
 ### VULNERABLE: No Authorization for Tool Calls
 
@@ -212,7 +212,7 @@ except PermissionError:
 ```
 
 ---
-## LLM10:2025 Unbounded Consumption - Token Exhaustion / Denial of Service
+## LLM06:2026 Unbounded Consumption - Token Exhaustion / Denial of Service
 
 ### VULNERABLE: No Token Limits
 

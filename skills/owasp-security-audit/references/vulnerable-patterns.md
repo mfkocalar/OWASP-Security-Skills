@@ -22,7 +22,7 @@ reference.
 | Python     | A09 Logging Failures       | `assets/examples/logging-monitoring-failures.py` |
 | JavaScript | API1/API2/API5 auth bypass | `assets/examples/api-auth-bypass.js`        |
 | YAML       | K01/K03/K08 K8s            | `assets/examples/k8s-rbac.yaml`             |
-| Python     | LLM01/LLM05/LLM06/LLM10    | `assets/examples/prompt-injection.txt`      |
+| Python     | LLM01:2026/LLM02:2026/LLM03:2026/LLM06:2026 | `assets/examples/prompt-injection.txt`      |
 
 ---
 
