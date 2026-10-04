@@ -318,9 +318,9 @@ cluster, hit internal databases, and reach the cloud metadata endpoint.
 **Detection signals**
 - `kubectl get networkpolicies --all-namespaces` returns nothing (or
   only a handful on a multi-tenant cluster).
-- Some CNIs (such as flannel) don't support NetworkPolicy; clusters
-  using those CNIs silently ignore NetworkPolicies, allowing
-  unintended traffic.
+- Some CNI configurations (for example, plain flannel without a
+  policy plugin) don't enforce NetworkPolicy; verify that the deployed
+  CNI or policy plugin enforces it.
 - Namespaces with databases or secrets operators have no ingress
   restrictions.
 - Pods can `curl http://169.254.169.254/` with no legitimate need.
