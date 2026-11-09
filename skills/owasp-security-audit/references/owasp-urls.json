@@ -81,5 +81,8 @@
   "MASVS-PLATFORM": {"title": "Platform", "url": "https://mas.owasp.org/MASVS/", "confidence": "index-fallback"},
   "MASVS-CODE": {"title": "Code Quality", "url": "https://mas.owasp.org/MASVS/", "confidence": "index-fallback"},
   "MASVS-RESILIENCE": {"title": "Resilience", "url": "https://mas.owasp.org/MASVS/", "confidence": "index-fallback"},
-  "MASVS-PRIVACY": {"title": "Privacy", "url": "https://mas.owasp.org/MASVS/", "confidence": "index-fallback"}
+  "MASVS-PRIVACY": {"title": "Privacy", "url": "https://mas.owasp.org/MASVS/", "confidence": "index-fallback"},
+  "MASWE": {"title": "Mobile Application Security Weakness Enumeration", "edition": "1.0.0", "url": "https://mas.owasp.org/MASWE/", "retrieval_date": "2026-11-09", "confidence": "verified"},
+  "MASWE-0001": {"title": "Sensitive Data Stored Unencrypted in Private Storage", "url": "https://mas.owasp.org/MASWE/MASVS-STORAGE/MASWE-0001/", "retrieval_date": "2026-11-09", "confidence": "verified"},
+  "MASWE-0026": {"title": "Network Traffic Not Encrypted", "url": "https://mas.owasp.org/MASWE/MASVS-NETWORK/MASWE-0026/", "retrieval_date": "2026-11-09", "confidence": "verified"}
 }
