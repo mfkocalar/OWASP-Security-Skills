@@ -16,10 +16,14 @@ No newer tag found.
 
 ## Structure
 
-MASVS organizes requirements into **8 control groups**. Each has
-verification levels L1 (baseline), L2 (defense-in-depth for apps
-handling sensitive data), and — for apps requiring resilience against
-tampering — L3 / R (resiliency) requirements.
+MASVS organizes requirements into **8 control groups**. Since v2.0.0
+the standard defines no verification levels of its own: OWASP moved
+them to the MAS Testing Profiles (<https://mas.owasp.org/Profiles/>),
+namely the security profiles MAS-L1 (Essential Security), MAS-L2
+(Advanced Security) and MAS-R (Resilient Security), and the privacy
+profile MAS-P (Baseline Privacy). The tier subheadings in the group
+sections below are this skill's own review-depth checklist, not
+MASVS-defined levels.
 
 | Code         | Group             | Focus                                    |
 | ------------ | ----------------- | ---------------------------------------- |
@@ -31,6 +35,34 @@ tampering — L3 / R (resiliency) requirements.
 | MASVS-CODE    | Code quality     | Dependency mgmt, memory safety           |
 | MASVS-RESILIENCE | Resilience    | Anti-tamper, anti-debug (R-series)       |
 | MASVS-PRIVACY | Privacy          | PII handling, consent                    |
+
+## Related: MASWE
+
+MASVS controls are abstract by design. OWASP's companion project
+**MASWE** (Mobile Application Security Weakness Enumeration) is the
+layer between the standard and the tests: MASVS ➡ MASWE ➡ MASTG. A
+MASVS control states what must hold, a MASWE weakness is the
+platform-agnostic flaw that indicates the control failed, and a MASTG
+test (<https://mas.owasp.org/MASTG/>) is the platform-specific check
+that detects it. MASTG does not yet have a dedicated test for every
+weakness. MASWE is a separate project with its own versioning, not a
+new edition of MASVS.
+
+**Edition verification:** MASWE v1.0.0 — the first stable release,
+GitHub release tag `v1.0.0`, published 2026-08-17 — defines 78
+weaknesses (`MASWE-0001` to `MASWE-0078`) across the same 8 MASVS
+groups. Source: <https://mas.owasp.org/MASWE/> (also see
+<https://github.com/OWASP/maswe/releases/tag/v1.0.0>). Retrieved 2026-11-09.
+IDs were renumbered once at v1.0.0 and are stable from there on;
+beta-era IDs no longer apply.
+
+To migrate a legacy reference, OWASP maps every beta-era ID to its
+v1.0.0 weakness in the release's `OWASP_MASWE.yaml` asset.
+
+| MASWE ID   | Title                                                | MASVS group   |
+| ---------- | ---------------------------------------------------- | ------------- |
+| MASWE-0001 | Sensitive Data Stored Unencrypted in Private Storage | MASVS-STORAGE |
+| MASWE-0026 | Network Traffic Not Encrypted                        | MASVS-NETWORK |
 
 ## How to apply
 

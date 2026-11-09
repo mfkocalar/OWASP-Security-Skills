@@ -388,7 +388,8 @@ the diff.
   more. Load for REST/GraphQL code.
 - `references/masvs.md` — OWASP MASVS v2.1.0: mobile controls across
   eight groups (Storage, Crypto, Auth, Network, Platform, Code,
-  Resilience, Privacy).
+  Resilience, Privacy). See also its Related: MASWE section for the
+  companion MASWE v1.0.0 weakness catalogue.
 - `references/kubernetes-top10.md` — OWASP Kubernetes Top 10 (2022
   edition): pod hardening, RBAC, secrets, network segmentation, policy
   enforcement, cluster component configuration.
