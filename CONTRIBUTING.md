@@ -68,12 +68,29 @@ as drift — the check only matches plugin-version-shaped tokens (a
 shields.io `version-X.Y.Z` badge segment or an explicit `Version:` label),
 never a blanket `X.Y.Z` grep.
 
+`scripts/check_edition_consistency.py` guards the OWASP edition story, which
+the version-drift check ignores by design. It checks that each `SKILL.md`
+frontmatter description appears byte-for-byte in `docs/SKILL-STRUCTURE.md`.
+It checks that every row of the README coverage matrix names the expected
+edition and the same retrieval date as its reference file's edition banner.
+It checks that no superseded edition label or ID appears outside the
+historical sections (crosswalks and translation notes) that its allow-list
+names explicitly. It reads only the files git tracks, the same set `git grep`
+searches, so a new file must be added with `git add` before the check sees
+it:
+
+```bash
+python3 scripts/check_edition_consistency.py --format text
+```
+
 ### Cutting a release
 
 1. Bump `"version"` in `.claude-plugin/plugin.json` (semantic versioning).
 2. Update the version badge in `README.md` if present.
-3. Run `python3 scripts/check_version_drift.py --format text` and
-   `python3 scripts/lint_skill_md.py skills --format text` — both must pass.
+3. Run `python3 scripts/check_version_drift.py --format text`,
+   `python3 scripts/lint_skill_md.py skills --format text` and
+   `python3 scripts/check_edition_consistency.py --format text` — all three
+   must pass.
 4. Run `claude plugin validate .` — must exit 0.
 5. Commit, tag, and push. GitHub Releases document what changed for that
    version.
@@ -90,7 +107,12 @@ OWASP standard publishes a new edition:
    corresponding entry in `owasp-urls.json` (new edition, source URL, new
    retrieval date).
 3. Re-check every prose surface that mirrors that edition (README coverage
-   matrix, `SKILL.md` descriptions) for consistency.
+   matrix, `SKILL.md` descriptions and their verbatim copies in
+   `docs/SKILL-STRUCTURE.md`). Update that standard's expected edition in
+   `scripts/check_edition_consistency.py`, then run
+   `python3 scripts/check_edition_consistency.py --format text`. When the new
+   edition turns an old label into history, add a commented allow-list entry
+   for it there instead of deleting the history.
 4. Re-run `python3 scripts/lint_skill_md.py skills --format text` to confirm
    both `SKILL.md` files still pass.
 

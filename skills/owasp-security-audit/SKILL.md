@@ -1,6 +1,6 @@
 ---
 name: owasp-security-audit
-description: Perform OWASP-aligned security audits of source code, API handlers, mobile apps, Kubernetes manifests, LLM/agent code, and deployment configuration. Covers the OWASP Top 10 (2025), ASVS 5.0.0 (V1-V17 chapter numbering), MASVS, API Security Top 10 (2023), Kubernetes Top 10 (2022), and the OWASP LLM Top 10 (2026) plus Agentic Applications Top 10 (2026). Use this skill whenever the user asks for a security review, vulnerability audit, threat assessment, compliance check, or hardening guidance — including indirect phrasings like "is this login flow secure?", "review this endpoint", "audit my pod spec", "what could go wrong with this prompt?", or when the user pastes auth, crypto, SQL, RBAC, or LLM-tool-calling code without explicitly asking for security review.
+description: Perform OWASP-aligned security audits of source code, API handlers, mobile apps, Kubernetes manifests, LLM/agent code, and deployment configuration. Covers the OWASP Top 10 (2025), ASVS 5.0.0 (V1-V17 chapter numbering), MASVS 2.1.0 (with MASWE v1.0.0 as its companion weakness enumeration), API Security Top 10 (2023), Kubernetes Top 10 (2022), and the OWASP LLM Top 10 (2026) plus Agentic Applications Top 10 (2026). Use this skill whenever the user asks for a security review, vulnerability audit, threat assessment, compliance check, or hardening guidance — including indirect phrasings like "is this login flow secure?", "review this endpoint", "audit my pod spec", "what could go wrong with this prompt?", or when the user pastes auth, crypto, SQL, RBAC, or LLM-tool-calling code without explicitly asking for security review.
 ---
 
 # OWASP Security Audit
@@ -393,7 +393,7 @@ the diff.
 - `references/kubernetes-top10.md` — OWASP Kubernetes Top 10 (2022
   edition): pod hardening, RBAC, secrets, network segmentation, policy
   enforcement, cluster component configuration.
-- `references/llm.md` — OWASP LLM Top 10 (2025): prompt injection,
+- `references/llm.md` — OWASP LLM Top 10 (2026): prompt injection,
   sensitive information disclosure, supply chain, data/model
   poisoning, improper output handling, excessive agency, and more.
 - `references/agentic.md` — OWASP Agentic Applications Top 10 (2026):

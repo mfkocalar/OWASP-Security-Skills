@@ -38,7 +38,7 @@
     },
     "masvs": {
       "name": "OWASP Mobile Application Security Verification Standard (MASVS)",
-      "url": "https://owasp.org/www-project-mobile-app-security/",
+      "url": "https://mas.owasp.org/MASVS/",
       "note": "Mobile-specific security requirements"
     },
     "api_security": {

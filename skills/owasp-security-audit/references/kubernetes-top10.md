@@ -12,10 +12,11 @@ at `/2022/en/src/`). Retrieved 2026-07-22.
 **2025 edition status (footnote):** OWASP's own project page/GitHub
 README states only "2025 Top 10 Risks now available — Feedback welcome,"
 with no version tag and no formal GitHub release published as of
-2026-07-22 — this is **in progress, not final**. Do not cite 2025 K0x
+2026-11-09 — this is **in progress, not final**. Do not cite 2025 K0x
 codes as authoritative; if reviewing against 2025 draft content, use
 the crosswalk in the Appendix below — each mapping has been
-spot-checked against the 2025 per-item source pages (see Sources).
+spot-checked against the 2025 per-item source pages (the Appendix's
+shared Source line names the project index that links each one).
 
 ## How to use
 
@@ -604,7 +605,7 @@ Source (shared, for all 2025 content in this Appendix): OWASP
 Kubernetes Top Ten project index,
 <https://raw.githubusercontent.com/OWASP/www-project-kubernetes-top-ten/main/index.md>
 (mirrored at <https://kubernetes-top10.owasp.org/>). Retrieved
-2026-09-19.
+2026-11-09.
 
 ### 2022 → 2025 crosswalk
 

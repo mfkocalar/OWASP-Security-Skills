@@ -21,9 +21,10 @@ the standard defines no verification levels of its own: OWASP moved
 them to the MAS Testing Profiles (<https://mas.owasp.org/Profiles/>),
 namely the security profiles MAS-L1 (Essential Security), MAS-L2
 (Advanced Security) and MAS-R (Resilient Security), and the privacy
-profile MAS-P (Baseline Privacy). The tier subheadings in the group
-sections below are this skill's own review-depth checklist, not
-MASVS-defined levels.
+profile MAS-P (Baseline Privacy). The Baseline, Hardened and High-assurance
+tier subheadings in the group sections below are this skill's own
+review-depth checklist. They are not MASVS levels, and not MAS Testing
+Profiles such as MAS-L1, MAS-L2 or MAS-P.
 
 | Code         | Group             | Focus                                    |
 | ------------ | ----------------- | ---------------------------------------- |
@@ -76,13 +77,13 @@ MASVS-RESILIENCE.
 
 ## MASVS-STORAGE — Data at Rest
 
-**L1**
+**Baseline**
 - No sensitive credentials in plaintext.
 - Sensitive data excluded from device backups.
 - Use platform credential storage APIs (Keychain on iOS, EncryptedSharedPreferences
   or Android Keystore on Android).
 
-**L2**
+**Hardened**
 - Sensitive data never written to shared filesystem locations
   (external storage, world-readable directories).
 - Clipboard contents that contain credentials cleared after use.
@@ -138,19 +139,19 @@ prefs.edit().putString("api_token", token).apply()
 
 ## MASVS-CRYPTO — Cryptography
 
-**L1**
+**Baseline**
 - No hardcoded keys.
 - AES-256 for symmetric encryption; SHA-256 or better for hashing.
 - Cryptographically secure RNG (`SecRandomCopyBytes` on iOS,
   `SecureRandom` on Android).
 
-**L2**
+**Hardened**
 - Keys derived with PBKDF2 / Argon2 when password-based.
 - Authenticated encryption mode (GCM, CCM) — never raw CBC without
   MAC.
 - Keys protected by the hardware-backed keystore where available.
 
-**L3**
+**High-assurance**
 - Hardware Security Module / Secure Enclave binding.
 - Key rotation schedule; cryptographic agility (algorithm swap
   without code changes).
@@ -165,12 +166,12 @@ prefs.edit().putString("api_token", token).apply()
 
 ## MASVS-AUTH — Authentication
 
-**L1**
+**Baseline**
 - Credentials sent over TLS only (see MASVS-NETWORK).
 - Biometric flows require a user-presence event, not a cached
   success.
 
-**L2**
+**Hardened**
 - Step-up authentication before sensitive operations (transfers,
   profile edits, unlock of stored secrets).
 - Session binding to device; tokens invalidated on re-provisioning.
@@ -206,15 +207,15 @@ ctx.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics,
 
 ## MASVS-NETWORK — Transport Security
 
-**L1**
+**Baseline**
 - TLS 1.2+ on all network traffic; no cleartext HTTP.
 - Accept only valid certificates; no `trustManager.checkServerTrusted`
   no-ops.
 
-**L2**
+**Hardened**
 - Certificate or public-key pinning for sensitive endpoints.
 
-**L3**
+**High-assurance**
 - Mutual TLS (mTLS) for privileged APIs.
 - Automated monitoring for rogue CA issuance (CT log watching).
 
@@ -247,14 +248,14 @@ justified.
 
 ## MASVS-PLATFORM — OS Integration
 
-**L1**
+**Baseline**
 - Deep-link / custom-URL handlers validate their input; no
   `startActivity` on arbitrary attacker-controlled intents.
 - WebView: `setJavaScriptEnabled(false)` unless needed;
   `setAllowFileAccess(false)`; never load untrusted URLs.
 - IPC: explicit intents only; exported components have permissions.
 
-**L2**
+**Hardened**
 - Android App Links / iOS Universal Links (signed association,
   not just custom scheme).
 - Sensitive `Intent` filters guarded by signature-level permissions.
@@ -277,15 +278,15 @@ justified.
 
 ## MASVS-CODE — Code & Dependency Hygiene
 
-**L1**
+**Baseline**
 - Target the latest stable SDK; keep dependencies current.
 - No hardcoded secrets in the binary.
 
-**L2**
+**Hardened**
 - OTA update verification (signature + version pinning).
 - Release builds stripped of debug symbols and hidden logging.
 
-**L3**
+**High-assurance**
 - Obfuscation (R8 / ProGuard on Android, stripping on iOS) for code
   that contains defense-in-depth logic.
 
@@ -301,7 +302,7 @@ justified.
 
 ---
 
-## MASVS-RESILIENCE — Anti-Tamper (L3 / R)
+## MASVS-RESILIENCE — Anti-Tamper (MAS-R)
 
 Relevant for high-value apps (finance, DRM, enterprise MDM). Lower
 tiers may skip.
@@ -337,15 +338,15 @@ fun isRooted(): Boolean {
 
 ## MASVS-PRIVACY — Privacy
 
-**L1**
+**Baseline**
 - Only collect data the app needs.
 - Privacy policy linked in-app and in store listing.
 
-**L2**
+**Hardened**
 - In-context permission rationale before prompting the OS dialog.
 - User consent captured and revocable for optional data sharing.
 
-**L3**
+**High-assurance**
 - Privacy by design: data minimization, differential privacy, on-
   device processing where possible.
 
