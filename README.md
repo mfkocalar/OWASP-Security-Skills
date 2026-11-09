@@ -1,63 +1,91 @@
 # OWASP Security Skills
 
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-5A67D8)
 ![OWASP](https://img.shields.io/badge/OWASP-aligned-orange)
 
-A Claude Code plugin with two OWASP-aligned security skills:
-**`owasp-security-audit`**, covering seven OWASP standards (Top 10, ASVS,
-MASVS, API Security, Kubernetes, LLM, and Agentic Applications — LLM and
-Agentic Applications are counted separately), and **`secure-coding-practices`**,
-a 14-domain secure coding checklist re-derived from OWASP's living sources.
-Together they ground security-related prompts — code reviews, auth and crypto
-implementation, Kubernetes manifests, LLM/agent code — in standard-aligned
-analysis with citations.
+OWASP Security Skills is a Claude Code plugin that adds two security skills.
+`owasp-security-audit` reviews code and configuration against seven OWASP
+standards: Top 10, ASVS, MASVS, API Security, Kubernetes, LLM, and Agentic
+Applications (the last two are counted as separate standards).
+`secure-coding-practices` is a 14-domain secure coding checklist derived from
+OWASP's living sources. When you ask about code reviews, authentication,
+cryptography, Kubernetes manifests, or LLM and agent code, the skills answer
+with analysis tied to the relevant standard and cite their sources.
 
-Install the plugin into Claude Code and any security question automatically
-draws on the OWASP guidance most relevant to your context. See
+Once the plugin is installed, Claude Code picks the OWASP guidance that fits
+your question without being asked. Each skill's activation triggers and
+workflow are in
 [`skills/owasp-security-audit/SKILL.md`](skills/owasp-security-audit/SKILL.md)
-and [`skills/secure-coding-practices/SKILL.md`](skills/secure-coding-practices/SKILL.md)
-for the full activation triggers and workflow each skill follows, and each
-skill's `references/` directory for the underlying standard-specific lookup docs.
+and [`skills/secure-coding-practices/SKILL.md`](skills/secure-coding-practices/SKILL.md),
+and the standard-specific lookup docs are in each skill's `references/`
+directory.
+
+## What's new in 1.1
+
+Version 1.1, the OWASP Edition Refresh, updates the reference files to the
+newest published OWASP editions and adds a script that checks they stay
+consistent.
+
+- The LLM Top 10 moves to the 2026 edition. `llm.md` covers `LLM01:2026` to
+  `LLM10:2026` in the new rank order. Excessive Agency rises to LLM03, and the
+  previous edition's System Prompt Leakage is renamed and re-scoped as LLM08,
+  Hidden Context Exposure. Every LLM code the skill cites, including scanner
+  tags, examples, and the Agentic crosswalk, now uses its 2026 code. An
+  appendix maps each item to its predecessor in the previous edition.
+- ASVS follows the 5.0.0 chapter numbering, V1 to V17 (for example V6
+  Authentication, V8 Authorization, and V11 Cryptography). Requirement IDs use
+  OWASP's versioned form, `v5.0.0-X.Y.Z`, and each one was checked against
+  OWASP's official 5.0.0 mapping file at a pinned commit.
+- `masvs.md` stays on MASVS 2.1.0 and adds a section on its companion, MASWE
+  v1.0.0. MASWE defines 78 weaknesses across the 8 MASVS groups and links each
+  control to MASTG tests. It is a separate project with its own versioning, so
+  it does not count as a new MASVS edition.
+- Kubernetes coverage stays on the 2022 edition. A footnote records that the
+  2025 Kubernetes Top 10 is still a draft with no formal release, and a
+  labeled appendix (repo-inferred and spot-checked) translates between the 2022
+  and 2025 numbering. The RBAC example's category labels now match the
+  scanner's.
+- `scripts/check_edition_consistency.py` is new. It confirms that each
+  SKILL.md description is mirrored in `docs/SKILL-STRUCTURE.md`, that no
+  superseded edition label or ID appears outside the allow-listed history
+  sections, and that each Coverage row below matches its reference file's
+  edition and retrieval date. Run it with `--format text`.
 
 ## What it does
 
-- **Identifies risks** in code, configuration, or design across web, API, mobile,
-  container, and AI/LLM contexts.
-- **Cites the relevant OWASP standard** for the situation at hand.
-- **Recommends concrete fixes** with code and configuration examples.
-- **Flags bypasses and edge cases** attackers commonly exploit.
+The skills identify risks in code, configuration, and design across web, API,
+mobile, container, and AI/LLM work. For each finding they cite the OWASP
+standard that applies, recommend a fix with code or configuration examples,
+and point out the bypasses and edge cases attackers commonly use.
 
 ## Coverage
 
-Every edition and source URL below is sourced from the hardened
+Editions and source URLs come from the
 [`owasp-urls.json`](skills/owasp-security-audit/references/owasp-urls.json)
-citation files (Phases 2–3 of this project) — not re-derived here.
+citation files.
 
-| Standard | Edition covered | Scope / caveat |
+| Standard | Edition covered | Scope and caveats |
 |----------|------------------|-----------------|
-| **OWASP Top 10** | 2025 (Final) — [source](https://owasp.org/Top10/2025/), retrieved 2026-07-21 | Web application risks: access control (incl. SSRF), misconfiguration, supply chain, cryptographic failures, injection, insecure design, auth failures, integrity failures, logging/alerting, exceptional conditions |
-| **OWASP ASVS** | 5.0.0 current edition — [source](https://owasp.org/www-project-application-security-verification-standard/), retrieved 2026-10-04 | Requirement summaries use the official 5.0.0 V1-V17 chapter numbering and cite IDs as `v5.0.0-X.Y.Z`, each checked against OWASP's official 5.0.0 mapping file at a pinned commit; confirm IDs against the edition you audit against |
-| **OWASP MASVS** | 2.1.0 — [source](https://mas.owasp.org/MASVS/), retrieved 2026-07-22 | Mobile app security controls (iOS / Android). Companion: OWASP MASWE v1.0.0 weakness catalogue ([source](https://mas.owasp.org/MASWE/), retrieved 2026-11-09), tracked separately from the MASVS edition |
-| **OWASP API Security Top 10** | 2023 — [source](https://owasp.org/API-Security/editions/2023/en/0x11-t10/), retrieved 2026-07-22 | API-specific risks — BOLA, broken auth, resource consumption, SSRF, and more |
-| **OWASP Kubernetes Top 10** | 2022 (stable) — [source](https://owasp.org/www-project-kubernetes-top-ten/2022/en/src/), retrieved 2026-07-22 | **Not** the 2025 draft (feedback-stage only as of retrieval, no formal release). Container/cluster risks — RBAC, secrets, workload config, network policy |
-| **OWASP LLM Top 10** | 2025 — [source](https://genai.owasp.org/llm-top-10/), retrieved 2026-07-22 | Prompt injection, sensitive information disclosure, supply chain, output handling, unbounded consumption, and more |
-| **OWASP Agentic Applications Top 10** | 2026 — [source](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/), retrieved 2026-07-22 | Agent goal hijack, tool misuse, identity/privilege abuse, memory/context poisoning, and other agent-specific risks — tracked as its own standard, distinct from the LLM Top 10 row above |
-| **Secure Coding Practices** (`secure-coding-practices` skill) | Living-source derivation, no single dated edition — [Cheat Sheet Series](https://cheatsheetseries.owasp.org/), retrieved 2026-07-22 | 14-domain checklist re-derived from OWASP's living sources (Developer Guide, Cheat Sheet Series, Proactive Controls). The original [SCP Quick Reference Guide](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/) is **archived** and kept only as historical origin, not cited as a current edition |
+| **OWASP Top 10** | 2025 (Final), [source](https://owasp.org/Top10/2025/), retrieved 2026-07-21 | Web application risks: access control (including SSRF), misconfiguration, supply chain, cryptographic failures, injection, insecure design, authentication failures, integrity failures, logging and alerting, and exceptional conditions |
+| **OWASP ASVS** | 5.0.0 current edition, [source](https://owasp.org/www-project-application-security-verification-standard/), retrieved 2026-10-04 | Requirement summaries use the official 5.0.0 V1-V17 chapter numbering and cite IDs as `v5.0.0-X.Y.Z`. Each ID was checked against OWASP's official 5.0.0 mapping file at a pinned commit. Confirm IDs against the edition you audit against |
+| **OWASP MASVS** | 2.1.0, [source](https://mas.owasp.org/MASVS/), retrieved 2026-07-22 | Mobile app security controls for iOS and Android. The companion OWASP MASWE v1.0.0 weakness catalogue ([source](https://mas.owasp.org/MASWE/), retrieved 2026-11-09) is tracked separately from the MASVS edition |
+| **OWASP API Security Top 10** | 2023, [source](https://owasp.org/API-Security/editions/2023/en/0x11-t10/), retrieved 2026-07-22 | API-specific risks such as BOLA, broken authentication, resource consumption, and SSRF |
+| **OWASP Kubernetes Top 10** | 2022 (stable), [source](https://owasp.org/www-project-kubernetes-top-ten/2022/en/src/), retrieved 2026-07-22 | Container and cluster risks: RBAC, secrets, workload configuration, and network policy. This is not the 2025 draft, which was at the feedback stage with no formal release when retrieved |
+| **OWASP LLM Top 10** | 2026, [source](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/), retrieved 2026-10-04 | Prompt injection, sensitive information disclosure, supply chain, output handling, unbounded consumption, and other LLM risks |
+| **OWASP Agentic Applications Top 10** | 2026, [source](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/), retrieved 2026-07-22 | Agent goal hijack, tool misuse, identity and privilege abuse, memory and context poisoning, and other agent-specific risks. Tracked as its own standard, separate from the LLM Top 10 |
+| **Secure Coding Practices** (`secure-coding-practices` skill) | Living-source derivation with no single dated edition, [Cheat Sheet Series](https://cheatsheetseries.owasp.org/), retrieved 2026-07-22 | A 14-domain checklist derived from OWASP's living sources: the Developer Guide, the Cheat Sheet Series, and the Proactive Controls. The original [SCP Quick Reference Guide](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/) is archived. It is kept as the project's historical origin and is not cited as a current edition |
 
-### What this is NOT
+### Limitations
 
-- **This is guidance and reference material, not a runtime scanner.** It does
-  not execute code, run tests, or make network requests — it audits code you
-  paste or point it at, via inspection and pattern matching.
-- **The example files do not yet cover every 2025 Top 10 category.** As of
-  this release, no example demonstrates **A03 Software Supply Chain
-  Failures**, **A04 Insecure Design**, **A06 Vulnerable & Outdated
-  Components**, **A08 Software or Data Integrity Failures**, or **A10
-  Mishandling of Exceptional Conditions**. This table discloses that gap —
-  it does not fill it. Authoring examples for these categories is tracked as
-  future work.
+- The skills are guidance and reference material, not a runtime scanner. They
+  do not execute code, run tests, or make network requests. They review the
+  code you paste or point them at by reading it and matching known patterns.
+- The example files do not yet cover every 2025 Top 10 category. No example
+  demonstrates A03 Software Supply Chain Failures, A06 Insecure Design, A08
+  Software or Data Integrity Failures, or A10 Mishandling of Exceptional
+  Conditions. Examples for these categories are planned.
 
 ## Installation
 
@@ -68,18 +96,18 @@ claude plugin marketplace add mfkocalar/OWASP-Security-Skills
 claude plugin install owasp-security-skills@owasp-security-skills
 ```
 
-Then confirm both skills were discovered:
+Then confirm that both skills were discovered:
 
 ```bash
 claude plugin details owasp-security-skills@owasp-security-skills
 ```
 
-This is the primary, supported install path for Claude Code.
+This is the supported install path for Claude Code.
 
-### Option 2: `install.sh` (alternative — symlink-based, non-plugin assistants)
+### Option 2: `install.sh` (symlink-based, for assistants without plugin support)
 
-For assistants without plugin/marketplace support (or for a manual,
-symlink-based Claude Code install), clone the repo and run the installer:
+If your assistant does not support plugins, or you prefer a manual
+symlink-based install for Claude Code, clone the repo and run the installer:
 
 ```bash
 git clone https://github.com/mfkocalar/OWASP-Security-Skills.git
@@ -88,7 +116,7 @@ cd OWASP-Security-Skills
 ```
 
 The installer detects your OS, symlinks the skills into the right directory,
-and verifies the files. To link manually instead:
+and verifies the files. To create the links yourself:
 
 ```bash
 # Claude (macOS)
@@ -99,12 +127,12 @@ ln -s "$PWD" ~/.local/share/claude/skills/owasp-security
 ln -s "$PWD" ~/.copilot/skills/owasp-security
 ```
 
-Reload or restart the assistant afterward.
+Restart or reload the assistant afterward.
 
 ## Usage
 
-Just describe what you're working on and paste the code. The skill selects the
-matching standard automatically.
+Describe what you're working on and paste the code. The skill chooses the
+matching standard.
 
 ```
 Review this REST API endpoint for OWASP API security issues.
@@ -112,7 +140,7 @@ Review this REST API endpoint for OWASP API security issues.
 [paste code here]
 ```
 
-More examples:
+Other example prompts:
 
 | Domain | Example prompt |
 |--------|----------------|
@@ -142,6 +170,7 @@ skills/
 docs/
   SKILL-STRUCTURE.md                   Canonical skill-directory convention
 scripts/
+  check_edition_consistency.py         OWASP edition and stale-ID drift check
   check_version_drift.py               Version single-source-of-truth check
   lint_skill_md.py                      SKILL.md frontmatter linter
 LICENSE
@@ -152,12 +181,13 @@ install.sh                             Alternative symlink-based installer
 
 ## Examples
 
-Examples live per-skill under each skill's `assets/examples/` directory: **9 samples**
-in [`skills/owasp-security-audit/assets/examples/`](skills/owasp-security-audit/assets/examples/)
-covering the OWASP Top 10 and related standards, plus **2 samples** in
+Each skill keeps its examples in its own `assets/examples/` directory. There
+are 9 samples in
+[`skills/owasp-security-audit/assets/examples/`](skills/owasp-security-audit/assets/examples/)
+covering the OWASP Top 10 and related standards, and 2 in
 [`skills/secure-coding-practices/assets/examples/`](skills/secure-coding-practices/assets/examples/)
-for secure coding practices. Each pairs a vulnerable pattern with a secure implementation
-and an explanation.
+for secure coding practices. Each file pairs a vulnerable pattern with a
+secure implementation and explains the difference.
 
 | File | Focus |
 |------|-------|
@@ -171,7 +201,7 @@ and an explanation.
 | [k8s-rbac.yaml](skills/owasp-security-audit/assets/examples/k8s-rbac.yaml) | Overly permissive RBAC, unencrypted secrets (Kubernetes Top 10) |
 | [prompt-injection.txt](skills/owasp-security-audit/assets/examples/prompt-injection.txt) | Direct/indirect LLM prompt injection and tool misuse (LLM Top 10 / Agentic Applications) |
 
-Paste any sample into a prompt to see the skill in action:
+To try a skill, paste a sample into a prompt:
 
 ```
 Review this code for security vulnerabilities according to the OWASP Top 10.
@@ -181,10 +211,10 @@ Review this code for security vulnerabilities according to the OWASP Top 10.
 
 ## Documentation
 
-- [`skills/owasp-security-audit/SKILL.md`](skills/owasp-security-audit/SKILL.md) and its [`references/`](skills/owasp-security-audit/references/) — vulnerability descriptions, detection clues, mitigations, and checklists for the audit skill's standards.
-- [`skills/secure-coding-practices/SKILL.md`](skills/secure-coding-practices/SKILL.md) and its [`references/`](skills/secure-coding-practices/references/) — the 14-domain secure coding checklist and living-source crosswalk.
-- [`docs/SKILL-STRUCTURE.md`](docs/SKILL-STRUCTURE.md) — the canonical skill-directory convention followed by both skills.
-- [CONTRIBUTING.md](CONTRIBUTING.md) — how to contribute.
+- [`skills/owasp-security-audit/SKILL.md`](skills/owasp-security-audit/SKILL.md) and its [`references/`](skills/owasp-security-audit/references/) directory describe each vulnerability, with detection clues, mitigations, and checklists for the audit skill's standards.
+- [`skills/secure-coding-practices/SKILL.md`](skills/secure-coding-practices/SKILL.md) and its [`references/`](skills/secure-coding-practices/references/) directory hold the 14-domain secure coding checklist and the crosswalk to its living sources.
+- [`docs/SKILL-STRUCTURE.md`](docs/SKILL-STRUCTURE.md) defines the skill-directory convention both skills follow.
+- [CONTRIBUTING.md](CONTRIBUTING.md) explains how to contribute.
 
 ## Contributing
 

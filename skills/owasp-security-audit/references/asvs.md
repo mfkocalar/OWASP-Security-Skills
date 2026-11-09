@@ -1280,9 +1280,11 @@ Structural notes:
   and its surviving requirements were spread across several chapters.
 - Its malicious-code chapter has no 5.0.0 counterpart. Its one surviving
   requirement, `v4.0.3-10.3.2`, is now `v5.0.0-15.2.4`.
-- V3, V9, V10, V15 and V17 are new chapters. V10 and V17 hold wholly new
-  content; V3 and V9 gather material that used to sit in other chapters (the
-  token material was part of session management); V15 groups general practices
-  that fitted no existing chapter.
+- V17 is wholly new: none of its requirements has a 4.0.3 predecessor.
+- V9 and V10 are almost entirely new. Each carries one requirement over from
+  the old session-management chapter: `v4.0.3-3.5.3` is now `v5.0.0-9.1.1`,
+  and `v4.0.3-3.5.1` is now `v5.0.0-10.4.9`.
+- V3 and V15 are new by name, not by content: both gather requirements that
+  were moved or split from several old chapters.
 - Old chapters are referred to by name only here, because every V-number in
   this file means a 5.0.0 chapter.
